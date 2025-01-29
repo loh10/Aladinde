@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c331b7afed520274c88e93b8698235c4, type: 3}
+  m_Name: SO_SpiceJetAbility
+  m_EditorClassIdentifier: 
+  abilityName: Spice Jet
+  abilityDescription: Shoots a blend of spices in a straight line
+  cooldown: 0
+  range: 0
+  damages: 0
+  icon: {fileID: 0}
+  abilityPrefab: {fileID: 0}

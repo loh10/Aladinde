@@ -1,3 +1,4 @@
+using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "NewAbility", menuName = "Game/Ability")]
@@ -7,7 +8,7 @@ public class Ability : ScriptableObject
     public string abilityDescription;
     public float cooldown;
     public float range;
-    public float duration;
+    public float damages;
 
     public Sprite icon;
     public GameObject abilityPrefab;

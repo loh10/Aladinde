@@ -5,6 +5,7 @@ public class CharacterClass : ScriptableObject
 {
     public string className;
     public float maxHealth;
+    public float maxShield;
     public float speed;
     public float damageBonus;
 
