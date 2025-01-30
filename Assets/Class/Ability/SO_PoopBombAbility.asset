@@ -9,15 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74f0f67e8c2a7984f8cc2e3a68f93647, type: 3}
-  m_Name: SO_SmokedShieldAbility
+  m_Script: {fileID: 11500000, guid: 1570e4c7b17522f4dad35ac691b41b26, type: 3}
+  m_Name: SO_PoopBombAbility
   m_EditorClassIdentifier: 
-  abilityName: Smoked Shield
-  abilityDescription: 'Grants a temporary shield with a health bonus '
+  abilityName: Poop Bomb
+  abilityDescription: Throw a poop bomb that slows down the enemies it hits
   cooldown: 0
   range: 0
   damages: 0
   chargeGain: 0
   icon: {fileID: 0}
   abilityPrefab: {fileID: 0}
-  duration: 7
+  slowDuration: 5
+  slowPercentage: 0.2

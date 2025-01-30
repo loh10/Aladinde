@@ -3,11 +3,18 @@ using UnityEngine.InputSystem;
 
 public class PlayerUseAbilities : MonoBehaviour
 {
-    [SerializeField] private PlayerInfos _playerInfos;
+    private PlayerInfos _playerInfos;
+    private UltimateCharge _ultimateCharge;
+
+    private void Start()
+    {
+        _playerInfos = GetComponent<PlayerInfos>();
+        _ultimateCharge = GetComponent<UltimateCharge>();
+    }
 
     public void OnSimpleAttack(InputAction.CallbackContext ctx)
     {
-        if (ctx.phase == InputActionPhase.Started)
+        if (ctx.phase == InputActionPhase.Performed)
         {
             _playerInfos.characterClass.abilities[0].Activate(gameObject);
         }
@@ -15,9 +22,17 @@ public class PlayerUseAbilities : MonoBehaviour
 
     public void OnSpecialAttack(InputAction.CallbackContext ctx)
     {
-        if(ctx.phase == InputActionPhase.Started)
+        if (ctx.phase == InputActionPhase.Performed)
         {
-            _playerInfos.characterClass.abilities[1].Activate(gameObject);
+            if (_ultimateCharge != null && _ultimateCharge.CanUseUltimate())
+            {
+                _ultimateCharge.UseUltimate(gameObject);
+            }
+            else
+            {
+                Debug.Log("Ultimate not ready!");
+            }
         }
     }
+
 }

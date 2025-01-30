@@ -1,3 +1,4 @@
+using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "NewAbility", menuName = "Scriptable Objects/Ability")]
@@ -8,6 +9,7 @@ public class Ability : ScriptableObject
     public float cooldown;
     public float range;
     public float damages;
+    public float chargeGain;
 
     public Sprite icon;
     public GameObject abilityPrefab;
@@ -15,5 +17,7 @@ public class Ability : ScriptableObject
     public virtual void Activate(GameObject user)
     {
         Debug.Log(abilityName + "  triggered by  " + user.name);
+
+
     }
 }

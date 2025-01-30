@@ -17,5 +17,6 @@ MonoBehaviour:
   cooldown: 0
   range: 0
   damages: 0
+  chargeGain: 20
   icon: {fileID: 0}
   abilityPrefab: {fileID: 0}
