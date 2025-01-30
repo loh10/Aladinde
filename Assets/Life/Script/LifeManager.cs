@@ -7,14 +7,14 @@ public class LifeManager : MonoBehaviour
 
     public float maxHealth;
     public float currentHealth;
-    public float _maxShield;
+    public float maxShield;
     public float currentShield;
-    public bool _isBurning = false;
+    public bool isBurning = false;
 
     void Start()
     {
         maxHealth = _playerInfos.characterClass.maxHealth;
-        _maxShield = _playerInfos.characterClass.maxShield;
+        maxShield = _playerInfos.characterClass.maxShield;
          
         currentHealth = maxHealth;
     }
@@ -47,22 +47,20 @@ public class LifeManager : MonoBehaviour
 
     public void ActiShield(float duration)
     {
-        print("pipi");
         StartCoroutine(ActivateShield(duration));
     }
 
     private IEnumerator ActivateShield(float duration)
     {
         currentShield = 100;
-        print("caca");
         yield return new WaitForSeconds(duration);
         currentShield = 0;
     }
 
     public IEnumerator ApplyBurn(float burnDamage, float duration)
     {
-        if (_isBurning) yield break;
-        _isBurning = true;
+        if (isBurning) yield break;
+        isBurning = true;
 
         float timeElapsed = 0;
         while (timeElapsed < duration)
@@ -72,7 +70,7 @@ public class LifeManager : MonoBehaviour
             yield return new WaitForSeconds(1f);
         }
 
-        _isBurning = false;
+        isBurning = false;
     }
 
     public void ReduceShield(float amount)

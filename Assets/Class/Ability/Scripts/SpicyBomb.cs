@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "SpicyBombAbility", menuName = "Game/Abilities/Spicy Bomb")]
+[CreateAssetMenu(fileName = "SpicyBombAbility", menuName = "Scriptable Objects/Abilities/Spicy Bomb")]
 public class SpicyBomb : Ability
 {
     public override void Activate(GameObject user)

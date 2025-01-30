@@ -1,7 +1,6 @@
-using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "NewAbility", menuName = "Game/Ability")]
+[CreateAssetMenu(fileName = "NewAbility", menuName = "Scriptable Objects/Ability")]
 public class Ability : ScriptableObject
 {
     public string abilityName;

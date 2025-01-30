@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "NewCharacterClass", menuName = "Game/Character Class")]
+[CreateAssetMenu(fileName = "NewCharacterClass", menuName = "Scriptable Objects/Character Class")]
 public class CharacterClass : ScriptableObject
 {
     public string className;

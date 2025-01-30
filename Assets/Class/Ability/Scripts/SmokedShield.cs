@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "SmokedShieldAbility", menuName = "Game/Abilities/Smoked Shield")]
+[CreateAssetMenu(fileName = "SmokedShieldAbility", menuName = "Scriptable Objects/Abilities/Smoked Shield")]
 public class SmokedShield : Ability
 {
     public float duration ;
