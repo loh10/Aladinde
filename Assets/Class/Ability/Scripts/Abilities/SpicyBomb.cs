@@ -5,7 +5,8 @@ public class SpicyBomb : Ability
 {
     public override void Activate(GameObject user)
     {
-        Debug.Log(abilityName + " activated");       
-        
+        base.Activate(user);
+
+        Debug.Log(abilityName + " activated");  
     }
 }

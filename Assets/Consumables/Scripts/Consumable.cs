@@ -6,13 +6,13 @@ public class Consumable : ScriptableObject
     public string consumableName;
     public ConsumableType type;
     public float increaseHealth;
-    public float increaseUltimateCharge;
+    public float increaseAbilityCharge;
     public float increaseDamageBonus;
     public float increaseSpeed;
     public float slowDuration;
     public float slowPercentageValue;
 
-    public void ApplyEffect(PlayerInfos player, LifeManager lifeManager, UltimateCharge ultimateCharge)
+    public void ApplyEffect(PlayerInfos player, LifeManager lifeManager)
     {
         switch (type)
         {
@@ -21,7 +21,10 @@ public class Consumable : ScriptableObject
                 lifeManager.currentHealth = lifeManager.maxHealth;
                 break;
             case ConsumableType.IncreaseUltimateCharge:
-                ultimateCharge.IncreaseCharge(increaseUltimateCharge);
+                player.characterClass.abilities[2].IncreaseCharge(increaseAbilityCharge);
+                break;
+            case ConsumableType.IncreasePoopCharge:
+                player.characterClass.abilities[0].IncreaseCharge(increaseAbilityCharge);
                 break;
             case ConsumableType.IncreaseDamage:
                 player.characterClass.damageBonus += increaseDamageBonus;
@@ -37,6 +40,7 @@ public enum ConsumableType
 {
     HealAndIncreaseHP,
     IncreaseUltimateCharge,
+    IncreasePoopCharge,
     IncreaseDamage,
     IncreaseSpeed,
     SlowEnemy

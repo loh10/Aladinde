@@ -18,6 +18,8 @@ MonoBehaviour:
   range: 0
   damages: 0
   chargeGain: 0
+  isChargingCapacity: 1
+  maxCharge: 100
   icon: {fileID: 0}
   abilityPrefab: {fileID: 0}
   duration: 7

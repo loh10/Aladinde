@@ -18,5 +18,6 @@ MonoBehaviour:
   speed: 3
   damageBonus: 20
   abilities:
+  - {fileID: 11400000, guid: 18fa99f3616ecaf47ab07445fdc4ffb3, type: 2}
   - {fileID: 11400000, guid: b4d7b50af47bf654fbc7abcdbfab6ba4, type: 2}
   - {fileID: 11400000, guid: 8655bf43f437fb44da69bd53b8cafbb1, type: 2}

@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41d5b5bbfbf5639428c38969e644310d, type: 3}
   m_Name: SO_Poop
   m_EditorClassIdentifier: 
-  consumableName: 
-  type: 0
+  consumableName: Poop
+  type: 2
   increaseHealth: 0
-  increaseUltimateCharge: 0
+  increaseAbilityCharge: 1
   increaseDamageBonus: 0
   increaseSpeed: 0
   slowDuration: 0
+  slowPercentageValue: 0

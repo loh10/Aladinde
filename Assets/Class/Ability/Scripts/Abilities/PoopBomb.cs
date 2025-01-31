@@ -8,8 +8,8 @@ public class PoopBomb : Ability
 
     public override void Activate(GameObject user)
     {
-        Debug.Log(abilityName + " activated by " + user.name);
+        base.Activate(user);
 
-        Debug.Log("Enemies slowed by " + slowPercentage * 100 + "% for " + slowDuration + " seconds.");
+        Debug.Log("poop bomb");
     }
 }

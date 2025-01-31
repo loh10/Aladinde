@@ -15,7 +15,7 @@ MonoBehaviour:
   consumableName: Corn
   type: 1
   increaseHealth: 0
-  increaseUltimateCharge: 25
+  increaseAbilityCharge: 25
   increaseDamageBonus: 0
   increaseSpeed: 0
   slowDuration: 0

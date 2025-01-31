@@ -4,19 +4,25 @@ using UnityEngine.InputSystem;
 public class PlayerUseAbilities : MonoBehaviour
 {
     private PlayerInfos _playerInfos;
-    private UltimateCharge _ultimateCharge;
+    private Ability _ultimate;
 
     private void Start()
     {
         _playerInfos = GetComponent<PlayerInfos>();
-        _ultimateCharge = GetComponent<UltimateCharge>();
+        _ultimate = _playerInfos.characterClass.abilities[2];
+
+        //set abilities charges to 0 else they save the charge from the previous game 
+        foreach (Ability ability in _playerInfos.characterClass.abilities)
+        {
+            ability.ResetCharge();
+        }
     }
 
     public void OnSimpleAttack(InputAction.CallbackContext ctx)
     {
         if (ctx.phase == InputActionPhase.Performed)
         {
-            _playerInfos.characterClass.abilities[0].Activate(gameObject);
+            _playerInfos.characterClass.abilities[1].Activate(gameObject);
         }
     }
 
@@ -24,9 +30,9 @@ public class PlayerUseAbilities : MonoBehaviour
     {
         if (ctx.phase == InputActionPhase.Performed)
         {
-            if (_ultimateCharge != null && _ultimateCharge.CanUseUltimate())
+            if (_ultimate != null && _ultimate.CanUseUltimate())
             {
-                _ultimateCharge.UseUltimate(gameObject);
+                _ultimate.Activate(gameObject);
             }
             else
             {
@@ -34,5 +40,4 @@ public class PlayerUseAbilities : MonoBehaviour
             }
         }
     }
-
 }

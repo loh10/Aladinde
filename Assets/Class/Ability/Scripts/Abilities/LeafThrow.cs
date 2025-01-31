@@ -5,13 +5,8 @@ public class LeafThrow : Ability
 {
     public override void Activate(GameObject user)
     {
-        Debug.Log(abilityName + " activated");
+        base.Activate(user);
 
-        UltimateCharge ultimateCharge = user.GetComponent<UltimateCharge>();
-        if (ultimateCharge != null)
-        {
-            Debug.Log("utlitmate increase");
-            ultimateCharge.IncreaseCharge(chargeGain);
-        }
+        Debug.Log(abilityName + " activated");
     }
 }
