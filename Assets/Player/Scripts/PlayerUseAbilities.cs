@@ -9,6 +9,7 @@ public class PlayerUseAbilities : MonoBehaviour
     {
         if (ctx.phase == InputActionPhase.Started)
         {
+            Debug.Log("Simple Attack");
             _playerInfos.characterClass.abilities[0].Activate(gameObject);
         }
     }
@@ -17,6 +18,7 @@ public class PlayerUseAbilities : MonoBehaviour
     {
         if(ctx.phase == InputActionPhase.Started)
         {
+            Debug.Log("Special Attack");
             _playerInfos.characterClass.abilities[1].Activate(gameObject);
         }
     }
