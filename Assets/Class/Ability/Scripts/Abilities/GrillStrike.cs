@@ -5,7 +5,8 @@ public class GrillStrike : Ability
 {
     public override void Activate(GameObject user)
     {
+        base.Activate(user);
         Debug.Log(abilityName + " activated");
-
     }
+
 }
