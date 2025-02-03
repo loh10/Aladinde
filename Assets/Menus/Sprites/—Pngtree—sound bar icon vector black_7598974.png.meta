@@ -1,0 +1,2230 @@
+fileFormatVersion: 2
+guid: f52b725fbaa35a4469f235725682d065
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4743692090259105770
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_0"
+  - first:
+      213: 6982649407821256123
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_1"
+  - first:
+      213: -4975273961932657901
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_2"
+  - first:
+      213: -4251358062095135255
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_3"
+  - first:
+      213: -4487277820321141409
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_4"
+  - first:
+      213: -8232649966077958381
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_5"
+  - first:
+      213: 2707749065828230376
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_6"
+  - first:
+      213: 2308871308547928196
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_7"
+  - first:
+      213: -7187678269054517644
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_8"
+  - first:
+      213: 2052393024214920317
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_9"
+  - first:
+      213: -4784185490458822777
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_10"
+  - first:
+      213: -681909528498264485
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_11"
+  - first:
+      213: -2900348590329995568
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_12"
+  - first:
+      213: -2499025568037296648
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_13"
+  - first:
+      213: -1832857070642067348
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_14"
+  - first:
+      213: 1067831374024774178
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_15"
+  - first:
+      213: -7477403610226703069
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_16"
+  - first:
+      213: -3928248192793757229
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_17"
+  - first:
+      213: -2098400748339469776
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_18"
+  - first:
+      213: 450901146709486730
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_19"
+  - first:
+      213: 7008607959668664608
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_20"
+  - first:
+      213: -4646455229065649840
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_21"
+  - first:
+      213: 6265043265087558713
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_22"
+  - first:
+      213: 5571564968147124527
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_23"
+  - first:
+      213: -7770152894171115737
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_24"
+  - first:
+      213: 1200775770920387328
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_25"
+  - first:
+      213: 4641600346857612177
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_26"
+  - first:
+      213: 2069075045833877404
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_27"
+  - first:
+      213: -4339994272214910368
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_28"
+  - first:
+      213: 5582342281729101623
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_29"
+  - first:
+      213: 487618155631578256
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_30"
+  - first:
+      213: -3556567702345526783
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_31"
+  - first:
+      213: -3911282593959405974
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_32"
+  - first:
+      213: -1232473422761498979
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_33"
+  - first:
+      213: 1152790783233547692
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_34"
+  - first:
+      213: -9160842188941538275
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_35"
+  - first:
+      213: 7728446497914461080
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_36"
+  - first:
+      213: -2470969358670755264
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_37"
+  - first:
+      213: 2836649683522992031
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_38"
+  - first:
+      213: -6661997603524331742
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_39"
+  - first:
+      213: -1839085406005134101
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_40"
+  - first:
+      213: -5103712658862620475
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_41"
+  - first:
+      213: -9114189203992247511
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_42"
+  - first:
+      213: -1661744538000819391
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_43"
+  - first:
+      213: -1128564215172973848
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_44"
+  - first:
+      213: -369611126960700232
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_45"
+  - first:
+      213: 2724352240100298851
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_46"
+  - first:
+      213: 45351142002152193
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_47"
+  - first:
+      213: -589183239991377989
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_48"
+  - first:
+      213: -6370955079089317855
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_49"
+  - first:
+      213: 5510254840991734244
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_50"
+  - first:
+      213: 3213216674140048238
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_51"
+  - first:
+      213: -6522060948588254688
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_52"
+  - first:
+      213: -6611199832948113275
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_53"
+  - first:
+      213: 8665095158877773194
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_54"
+  - first:
+      213: 423858218988394691
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_55"
+  - first:
+      213: 7824127697970175090
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_56"
+  - first:
+      213: -2131598195943444901
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_57"
+  - first:
+      213: 6506418446101172432
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_58"
+  - first:
+      213: -5948408245952184903
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_59"
+  - first:
+      213: 6481948853999090980
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_60"
+  - first:
+      213: -1588966017205838584
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_61"
+  - first:
+      213: 2448792361847208781
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_62"
+  - first:
+      213: -8060769805013720359
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_63"
+  - first:
+      213: 8715676104208679616
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_64"
+  - first:
+      213: 4037215714389683421
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_65"
+  - first:
+      213: 1744186693565349404
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_66"
+  - first:
+      213: 1014202277681286155
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_67"
+  - first:
+      213: -8206221751240016367
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_68"
+  - first:
+      213: 2944848703824188635
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_69"
+  - first:
+      213: 6649289675816728993
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_70"
+  - first:
+      213: 7748218360103192447
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_71"
+  - first:
+      213: -2212827478030208324
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_72"
+  - first:
+      213: 4043691255930285769
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_73"
+  - first:
+      213: 7759903094961095342
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_74"
+  - first:
+      213: -2389663555249725682
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_75"
+  - first:
+      213: -5680602180775883120
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_76"
+  - first:
+      213: 6622610460720379583
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_77"
+  - first:
+      213: 6495448330628163362
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_78"
+  - first:
+      213: -1793050993234820169
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_79"
+  - first:
+      213: -1046557970872964393
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_80"
+  - first:
+      213: 3907594172866865910
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_81"
+  - first:
+      213: 1724229585724310555
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_82"
+  - first:
+      213: 9214952486130681395
+    second: "\u2014Pngtree\u2014sound bar icon vector black_7598974_83"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_0"
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 1477
+        width: 31
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae769bba2daf4d140800000000000000
+      internalID: 4743692090259105770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_1"
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 1464
+        width: 31
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb5174804aa57e060800000000000000
+      internalID: 6982649407821256123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_2"
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 1455
+        width: 31
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31be0c611b644fab0800000000000000
+      internalID: -4975273961932657901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_3"
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 1446
+        width: 30
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ed83dffd542005c0800000000000000
+      internalID: -4251358062095135255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_4"
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 1414
+        width: 30
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5de447d89cf9b1c0800000000000000
+      internalID: -4487277820321141409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_5"
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 1390
+        width: 30
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 317aacb6970cfbd80800000000000000
+      internalID: -8232649966077958381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_6"
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 1360
+        width: 30
+        height: 279
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e46699dd6bd39520800000000000000
+      internalID: 2707749065828230376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_7"
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 1372
+        width: 30
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4803712e832ca0020800000000000000
+      internalID: 2308871308547928196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_8"
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 1430
+        width: 30
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47ef53d32bc304c90800000000000000
+      internalID: -7187678269054517644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_9"
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 1454
+        width: 30
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7ce1dbd4909b7c10800000000000000
+      internalID: 2052393024214920317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_10"
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 1477
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 787bf95e4a82b9db0800000000000000
+      internalID: -4784185490458822777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_11"
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 1423
+        width: 30
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5628e095ee5986f0800000000000000
+      internalID: -681909528498264485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_12"
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 1460
+        width: 30
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0de5394e254efb7d0800000000000000
+      internalID: -2900348590329995568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_13"
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 1418
+        width: 30
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f5a48c7c7da15dd0800000000000000
+      internalID: -2499025568037296648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_14"
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 1390
+        width: 30
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c68015484326096e0800000000000000
+      internalID: -1832857070642067348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_15"
+      rect:
+        serializedVersion: 2
+        x: 893
+        y: 1368
+        width: 30
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22293c02af2b1de00800000000000000
+      internalID: 1067831374024774178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_16"
+      rect:
+        serializedVersion: 2
+        x: 949
+        y: 1345
+        width: 30
+        height: 309
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 325c632980dea3890800000000000000
+      internalID: -7477403610226703069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_17"
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 1318
+        width: 30
+        height: 363
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d935f6d41f0c79c0800000000000000
+      internalID: -3928248192793757229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_18"
+      rect:
+        serializedVersion: 2
+        x: 1061
+        y: 1346
+        width: 30
+        height: 307
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 032efce13abf0e2e0800000000000000
+      internalID: -2098400748339469776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_19"
+      rect:
+        serializedVersion: 2
+        x: 1117
+        y: 1373
+        width: 30
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8c6f66343ce14600800000000000000
+      internalID: 450901146709486730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_20"
+      rect:
+        serializedVersion: 2
+        x: 1173
+        y: 1405
+        width: 30
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 029a60e5ec3934160800000000000000
+      internalID: 7008607959668664608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_21"
+      rect:
+        serializedVersion: 2
+        x: 1229
+        y: 1433
+        width: 30
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05129ce4699748fb0800000000000000
+      internalID: -4646455229065649840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_22"
+      rect:
+        serializedVersion: 2
+        x: 1285
+        y: 1367
+        width: 30
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9345ffde7a7e1f650800000000000000
+      internalID: 6265043265087558713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_23"
+      rect:
+        serializedVersion: 2
+        x: 1341
+        y: 1312
+        width: 30
+        height: 375
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f218b61b1dc225d40800000000000000
+      internalID: 5571564968147124527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_24"
+      rect:
+        serializedVersion: 2
+        x: 1397
+        y: 1236
+        width: 30
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72f057c5c1fda2490800000000000000
+      internalID: -7770152894171115737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_25"
+      rect:
+        serializedVersion: 2
+        x: 1452
+        y: 1255
+        width: 31
+        height: 489
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0030b90a3330aa010800000000000000
+      internalID: 1200775770920387328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_26"
+      rect:
+        serializedVersion: 2
+        x: 1508
+        y: 1293
+        width: 31
+        height: 413
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19327c75ce64a6040800000000000000
+      internalID: 4641600346857612177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_27"
+      rect:
+        serializedVersion: 2
+        x: 1564
+        y: 1329
+        width: 31
+        height: 341
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c97ad80bac4d6bc10800000000000000
+      internalID: 2069075045833877404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_28"
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 1301
+        width: 31
+        height: 397
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06a7665243e35c3c0800000000000000
+      internalID: -4339994272214910368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_29"
+      rect:
+        serializedVersion: 2
+        x: 1676
+        y: 1292
+        width: 31
+        height: 415
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73f4b1d8ab6787d40800000000000000
+      internalID: 5582342281729101623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_30"
+      rect:
+        serializedVersion: 2
+        x: 1732
+        y: 1366
+        width: 31
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09c8378012e54c600800000000000000
+      internalID: 487618155631578256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_31"
+      rect:
+        serializedVersion: 2
+        x: 1788
+        y: 1403
+        width: 31
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 102511aa48884aec0800000000000000
+      internalID: -3556567702345526783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_32"
+      rect:
+        serializedVersion: 2
+        x: 1844
+        y: 1436
+        width: 31
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6691e2243558b9c0800000000000000
+      internalID: -3911282593959405974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_33"
+      rect:
+        serializedVersion: 2
+        x: 1900
+        y: 1367
+        width: 31
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d96e031b3ff55eee0800000000000000
+      internalID: -1232473422761498979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_34"
+      rect:
+        serializedVersion: 2
+        x: 1959
+        y: 1313
+        width: 31
+        height: 373
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caddafe0c198fff00800000000000000
+      internalID: 1152790783233547692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_35"
+      rect:
+        serializedVersion: 2
+        x: 2015
+        y: 1336
+        width: 31
+        height: 327
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1c4abcb0962ed080800000000000000
+      internalID: -9160842188941538275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_36"
+      rect:
+        serializedVersion: 2
+        x: 2071
+        y: 1306
+        width: 31
+        height: 387
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89b9dcd8425f04b60800000000000000
+      internalID: 7728446497914461080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_37"
+      rect:
+        serializedVersion: 2
+        x: 2127
+        y: 1382
+        width: 31
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04a0e85c57a55bdd0800000000000000
+      internalID: -2470969358670755264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_38"
+      rect:
+        serializedVersion: 2
+        x: 2183
+        y: 1318
+        width: 31
+        height: 363
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f97bc92abddcd5720800000000000000
+      internalID: 2836649683522992031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_39"
+      rect:
+        serializedVersion: 2
+        x: 2239
+        y: 1265
+        width: 31
+        height: 469
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 227bd63f974db83a0800000000000000
+      internalID: -6661997603524331742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_40"
+      rect:
+        serializedVersion: 2
+        x: 2295
+        y: 1247
+        width: 31
+        height: 505
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bec757f21914a76e0800000000000000
+      internalID: -1839085406005134101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_41"
+      rect:
+        serializedVersion: 2
+        x: 2351
+        y: 1202
+        width: 31
+        height: 595
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c044dc9068fb29b0800000000000000
+      internalID: -5103712658862620475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_42"
+      rect:
+        serializedVersion: 2
+        x: 2404
+        y: 1202
+        width: 31
+        height: 595
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92387504535e38180800000000000000
+      internalID: -9114189203992247511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_43"
+      rect:
+        serializedVersion: 2
+        x: 2460
+        y: 1247
+        width: 31
+        height: 505
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14bf301a52c40f8e0800000000000000
+      internalID: -1661744538000819391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_44"
+      rect:
+        serializedVersion: 2
+        x: 2516
+        y: 1265
+        width: 31
+        height: 469
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8eab56063d88650f0800000000000000
+      internalID: -1128564215172973848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_45"
+      rect:
+        serializedVersion: 2
+        x: 2572
+        y: 1318
+        width: 31
+        height: 363
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b4c97863a0eedaf0800000000000000
+      internalID: -369611126960700232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_46"
+      rect:
+        serializedVersion: 2
+        x: 2628
+        y: 1382
+        width: 30
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 360d73a9de7dec520800000000000000
+      internalID: 2724352240100298851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_47"
+      rect:
+        serializedVersion: 2
+        x: 2684
+        y: 1306
+        width: 30
+        height: 387
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10352359f9e11a000800000000000000
+      internalID: 45351142002152193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_48"
+      rect:
+        serializedVersion: 2
+        x: 2740
+        y: 1336
+        width: 30
+        height: 327
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbf33b007fcc2d7f0800000000000000
+      internalID: -589183239991377989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_49"
+      rect:
+        serializedVersion: 2
+        x: 2796
+        y: 1313
+        width: 30
+        height: 373
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12819ee3c12d597a0800000000000000
+      internalID: -6370955079089317855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_50"
+      rect:
+        serializedVersion: 2
+        x: 2855
+        y: 1367
+        width: 31
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e95033559b587c40800000000000000
+      internalID: 5510254840991734244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_51"
+      rect:
+        serializedVersion: 2
+        x: 2911
+        y: 1436
+        width: 31
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6bca707a83a79c20800000000000000
+      internalID: 3213216674140048238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_52"
+      rect:
+        serializedVersion: 2
+        x: 2967
+        y: 1403
+        width: 30
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02a23f36f1cfc75a0800000000000000
+      internalID: -6522060948588254688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_53"
+      rect:
+        serializedVersion: 2
+        x: 3023
+        y: 1366
+        width: 30
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 580810297cc4044a0800000000000000
+      internalID: -6611199832948113275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_54"
+      rect:
+        serializedVersion: 2
+        x: 3079
+        y: 1292
+        width: 30
+        height: 415
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8dddd9232a904870800000000000000
+      internalID: 8665095158877773194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_55"
+      rect:
+        serializedVersion: 2
+        x: 3135
+        y: 1301
+        width: 30
+        height: 397
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c8dee1fdc8d1e500800000000000000
+      internalID: 423858218988394691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_56"
+      rect:
+        serializedVersion: 2
+        x: 3191
+        y: 1329
+        width: 30
+        height: 341
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27c9ec2ffa2e49c60800000000000000
+      internalID: 7824127697970175090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_57"
+      rect:
+        serializedVersion: 2
+        x: 3247
+        y: 1293
+        width: 30
+        height: 413
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5e6de60cba0b62e0800000000000000
+      internalID: -2131598195943444901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_58"
+      rect:
+        serializedVersion: 2
+        x: 3303
+        y: 1255
+        width: 30
+        height: 489
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d0d8efaa117b4a50800000000000000
+      internalID: 6506418446101172432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_59"
+      rect:
+        serializedVersion: 2
+        x: 3359
+        y: 1236
+        width: 30
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bdf3016732037da0800000000000000
+      internalID: -5948408245952184903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_60"
+      rect:
+        serializedVersion: 2
+        x: 3415
+        y: 1312
+        width: 30
+        height: 375
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42dbddec32284f950800000000000000
+      internalID: 6481948853999090980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_61"
+      rect:
+        serializedVersion: 2
+        x: 3471
+        y: 1367
+        width: 30
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80d574873dbd2f9e0800000000000000
+      internalID: -1588966017205838584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_62"
+      rect:
+        serializedVersion: 2
+        x: 3527
+        y: 1433
+        width: 30
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4bb798cdabdbf120800000000000000
+      internalID: 2448792361847208781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_63"
+      rect:
+        serializedVersion: 2
+        x: 3583
+        y: 1405
+        width: 30
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d266f3f194622090800000000000000
+      internalID: -8060769805013720359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_64"
+      rect:
+        serializedVersion: 2
+        x: 3639
+        y: 1373
+        width: 30
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c208b83d3d44f870800000000000000
+      internalID: 8715676104208679616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_65"
+      rect:
+        serializedVersion: 2
+        x: 3695
+        y: 1346
+        width: 30
+        height: 307
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddc62d95d42170830800000000000000
+      internalID: 4037215714389683421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_66"
+      rect:
+        serializedVersion: 2
+        x: 3751
+        y: 1318
+        width: 30
+        height: 363
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1efce38e88943810800000000000000
+      internalID: 1744186693565349404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_67"
+      rect:
+        serializedVersion: 2
+        x: 3807
+        y: 1345
+        width: 30
+        height: 309
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0cc59b199b231e00800000000000000
+      internalID: 1014202277681286155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_68"
+      rect:
+        serializedVersion: 2
+        x: 3863
+        y: 1368
+        width: 30
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11e3141bbc4ad1e80800000000000000
+      internalID: -8206221751240016367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_69"
+      rect:
+        serializedVersion: 2
+        x: 3919
+        y: 1390
+        width: 30
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd4d5bc2b443ed820800000000000000
+      internalID: 2944848703824188635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_70"
+      rect:
+        serializedVersion: 2
+        x: 3975
+        y: 1418
+        width: 30
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a97abf0bb5074c50800000000000000
+      internalID: 6649289675816728993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_71"
+      rect:
+        serializedVersion: 2
+        x: 4031
+        y: 1460
+        width: 30
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f774c14fb83378b60800000000000000
+      internalID: 7748218360103192447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_72"
+      rect:
+        serializedVersion: 2
+        x: 4087
+        y: 1423
+        width: 30
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb239cef1257a41e0800000000000000
+      internalID: -2212827478030208324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_73"
+      rect:
+        serializedVersion: 2
+        x: 4143
+        y: 1477
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cee31bd5c31e1830800000000000000
+      internalID: 4043691255930285769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_74"
+      rect:
+        serializedVersion: 2
+        x: 4198
+        y: 1454
+        width: 31
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea24c9a40c6b0bb60800000000000000
+      internalID: 7759903094961095342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_75"
+      rect:
+        serializedVersion: 2
+        x: 4254
+        y: 1430
+        width: 31
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0f94a058a536ded0800000000000000
+      internalID: -2389663555249725682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_76"
+      rect:
+        serializedVersion: 2
+        x: 4310
+        y: 1372
+        width: 31
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09e4b88e9627a21b0800000000000000
+      internalID: -5680602180775883120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_77"
+      rect:
+        serializedVersion: 2
+        x: 4366
+        y: 1360
+        width: 31
+        height: 279
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb6360d302d38eb50800000000000000
+      internalID: 6622610460720379583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_78"
+      rect:
+        serializedVersion: 2
+        x: 4422
+        y: 1390
+        width: 31
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 227eef3a7d7742a50800000000000000
+      internalID: 6495448330628163362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_79"
+      rect:
+        serializedVersion: 2
+        x: 4478
+        y: 1414
+        width: 31
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b3c3142f9dcd17e0800000000000000
+      internalID: -1793050993234820169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_80"
+      rect:
+        serializedVersion: 2
+        x: 4534
+        y: 1446
+        width: 31
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7da63450211e971f0800000000000000
+      internalID: -1046557970872964393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_81"
+      rect:
+        serializedVersion: 2
+        x: 4590
+        y: 1455
+        width: 31
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6faad1862309a3630800000000000000
+      internalID: 3907594172866865910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_82"
+      rect:
+        serializedVersion: 2
+        x: 4646
+        y: 1464
+        width: 31
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1401504ca1bde710800000000000000
+      internalID: 1724229585724310555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014sound bar icon vector black_7598974_83"
+      rect:
+        serializedVersion: 2
+        x: 4702
+        y: 1477
+        width: 31
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3360ce5967612ef70800000000000000
+      internalID: 9214952486130681395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
