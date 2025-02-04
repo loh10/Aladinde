@@ -8,37 +8,53 @@ public class Attack : Node
     private float _damageAmount;
     private float _attackInterval;
     private bool _isAttacking = false;
+    private Ability _firstAbility;
+    private GameObject _botGameObject;
 
-    public Attack(GameObject player, float damage, float interval)
+    public Attack(GameObject player, float damage, float interval, GameObject botGameObject, Ability firstAbility)
     {
         _player = player;
         _damageAmount = damage;
         _attackInterval = interval;
         _playerLifeManager = player.GetComponent<LifeManager>();
+        _botGameObject = botGameObject;
+        _firstAbility = firstAbility;
     }
 
     public override NodeState Evaluate()
     {
-        if (!_isAttacking)
+        float distance = Vector3.Distance(_botGameObject.transform.position, _player.transform.position);
+        if (distance >= _attackInterval)
+        {
+            _isAttacking = false;
+            _nodeState = NodeState.FAILURE;
+        }
+        else if (!_isAttacking)
         {
             _isAttacking = true;
-            _player.GetComponent<MonoBehaviour>().StartCoroutine(InflictDamage());
+            _botGameObject.GetComponent<MonoBehaviour>().StartCoroutine(UseAbility());
+            _nodeState = NodeState.RUNNING;
         }
 
-        _nodeState = NodeState.RUNNING;
         return _nodeState;
     }
 
-    private IEnumerator InflictDamage()
+
+    private IEnumerator UseAbility()
     {
-        while (true)
+        while (_isAttacking)
         {
-            if (_playerLifeManager != null)
+            float distance = Vector3.Distance(_botGameObject.transform.position, _player.transform.position);
+            if (distance >= _attackInterval)
             {
-                Debug.Log("attack");
-                _playerLifeManager.TakeDamage(_damageAmount);
+                Debug.Log("Enemy out of range, stopping attack.");
+                _isAttacking = false;
+                yield break;
             }
+
+            _firstAbility.Activate(_botGameObject);
             yield return new WaitForSeconds(_attackInterval);
         }
     }
+
 }

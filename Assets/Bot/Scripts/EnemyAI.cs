@@ -11,8 +11,9 @@ public class EnemyAI : MonoBehaviour
     public float patrolRange;
     public Node start;
     public float damage;
-    public float interval;
-    public float stoppingDistance;
+    public float cooldown;
+
+    public Ability firstAbility;
 
     private GameObject _playerTarget;
     private Vector3 _patrolCenter;
@@ -32,8 +33,17 @@ public class EnemyAI : MonoBehaviour
         agent.updateUpAxis = false;
 
         _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        GetAbilityValues();
 
         StartCoroutine(UpdateClosestPlayer());
+    }
+
+    private void GetAbilityValues()
+    {
+        firstAbility = GetComponentInChildren<PlayerInfos>().characterClass.abilities[1];
+        cooldown = firstAbility.cooldown;
+        closeRange = firstAbility.range;
+        damage = firstAbility.damages;
     }
 
     void Update()
@@ -83,7 +93,7 @@ public class EnemyAI : MonoBehaviour
         SeePlayer seePlayer = new SeePlayer(agent, _playerTarget, sightRange);
         ChasePlayer chasePlayer = new ChasePlayer(agent, _playerTarget);
         CloseEnough closeEnough = new CloseEnough(agent, _playerTarget, closeRange);
-        Attack attack = new Attack(_playerTarget, damage, interval);
+        Attack attack = new Attack(_playerTarget, damage, cooldown, gameObject, firstAbility);
 
         Sequence sequence1 = new Sequence(new List<Node> { closeEnough, attack });
         Selector selector1 = new Selector(new List<Node> { sequence1, chasePlayer });

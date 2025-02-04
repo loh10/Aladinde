@@ -14,9 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityName: Grill Strike
   abilityDescription: A powerful blow with a heated grill
-  cooldown: 0
-  range: 0
-  damages: 0
+  cooldown: 0.8
+  range: 1
+  damages: 20
   chargeGain: 20
+  isChargingCapacity: 0
+  maxCharge: 0
   icon: {fileID: 0}
   abilityPrefab: {fileID: 0}

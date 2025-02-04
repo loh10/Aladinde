@@ -14,9 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityName: Spice Jet
   abilityDescription: Shoots a blend of spices in a straight line
-  cooldown: 0
-  range: 0
-  damages: 0
+  cooldown: 0.6
+  range: 3
+  damages: 18
   chargeGain: 20
+  isChargingCapacity: 0
+  maxCharge: 0
   icon: {fileID: 0}
   abilityPrefab: {fileID: 0}

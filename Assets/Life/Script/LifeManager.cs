@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class LifeManager : MonoBehaviour
 {
-    [SerializeField] private PlayerInfos _playerInfos;
+    private PlayerInfos _playerInfos;
 
     public float maxHealth;
     public float currentHealth;
@@ -11,13 +11,15 @@ public class LifeManager : MonoBehaviour
     public float currentShield;
     public bool isBurning = false;
 
-    void Start()
+    private void Start()
     {
+        _playerInfos = GetComponent<PlayerInfos>();
         maxHealth = _playerInfos.characterClass.maxHealth;
         maxShield = _playerInfos.characterClass.maxShield;
-         
+
         currentHealth = maxHealth;
     }
+
 
     public void TakeDamage(float damage)
     {
