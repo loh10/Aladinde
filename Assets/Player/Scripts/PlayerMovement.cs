@@ -7,13 +7,14 @@ public class PlayerMovement : NetworkBehaviour
 {
     private Vector2 _move;
     private float _speed;
+    private Rigidbody2D _rb;
 
     public override void OnNetworkSpawn()
     {
         gameObject.name = "Player "+OwnerClientId.ToString();
         if (!IsOwner)
         {
-            Debug.Log("here");
+            Debug.Log(gameObject.name + " is connected");
             enabled = false;
             GetComponent<PlayerInput>().enabled = false;
             GetComponentInChildren<Camera>().enabled = false;
@@ -22,6 +23,9 @@ public class PlayerMovement : NetworkBehaviour
             GetComponent<PlayerLifeManager>().enabled = false;
             return;
         }
+        _rb = GetComponent<Rigidbody2D>();
+        GetComponentInChildren<Camera>().tag = "MainCamera";
+        gameObject.layer = 2;
         GetStats();
     }
 
@@ -32,12 +36,12 @@ public class PlayerMovement : NetworkBehaviour
 
     private void Update()
     {
-        transform.Translate(_move);
+        _rb.linearVelocity = _move;
     }
 
     public void MovementPlayer(InputAction.CallbackContext ctx)
     {
         Vector2 input = ctx.ReadValue<Vector2>();
-        _move = new Vector2(input.x, input.y) * _speed * Time.deltaTime;
+        _move = new Vector2(input.x, input.y) * _speed;
     }
 }

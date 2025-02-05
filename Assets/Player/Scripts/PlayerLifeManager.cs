@@ -47,14 +47,16 @@ public class PlayerLifeManager : NetworkBehaviour
         return null;
     }
 
+    // ReSharper disable Unity.PerformanceAnalysis
     [ServerRpc]
-    void TakeDamageServerRpc(float damage, ulong targetClientId)
+    public void TakeDamageServerRpc(float damage, ulong targetClientId)
     {
         NetworkObject[] players = GameObject.FindObjectsByType<NetworkObject>(FindObjectsInactive.Include, FindObjectsSortMode.None);
         foreach (var player in players)
         {
             if (player.OwnerClientId == targetClientId)
             {
+                Debug.Log("Player " + player.OwnerClientId + " took " + damage + " damage");
                 player.GetComponent<PlayerLifeManager>()._currentHealth.Value -= damage;
                 player.GetComponent<PlayerLifeManager>().UpdateHealthBarClientRpc(player.GetComponent<PlayerLifeManager>()._currentHealth.Value);
             }

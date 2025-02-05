@@ -324,7 +324,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1439395848277829762, guid: 4bed31d3917ba39499db9113c928cd13, type: 3}
       propertyPath: ConnectionData.Address
-      value: 127.0.0.1
+      value: 192.168.1.251
       objectReference: {fileID: 0}
     - target: {fileID: 1439395848277829762, guid: 4bed31d3917ba39499db9113c928cd13, type: 3}
       propertyPath: ConnectionData.ServerListenAddress
