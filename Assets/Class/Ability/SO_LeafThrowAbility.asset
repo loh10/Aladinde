@@ -14,9 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityName: Leaf Throw
   abilityDescription: Throws a sharp leaf that pierces through enemies
-  cooldown: 0
-  range: 0
-  damages: 0
+  cooldown: 0.7
+  range: 6
+  damages: 15
   chargeGain: 20
+  isChargingCapacity: 0
+  maxCharge: 0
   icon: {fileID: 0}
   abilityPrefab: {fileID: 0}
