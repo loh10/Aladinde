@@ -1,4 +1,6 @@
 using UnityEditor.Playables;
+using System;
+using Unity.Netcode;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "NewAbility", menuName = "Scriptable Objects/Ability")]
@@ -14,6 +16,8 @@ public class Ability : ScriptableObject
     public bool isChargingCapacity;
     public float maxCharge;
     private float _currentCharge;
+    public Vector2 mousePos;
+    public Vector2 spawnTransform;
 
     public Sprite icon;
     public GameObject abilityPrefab;
@@ -71,4 +75,5 @@ public class Ability : ScriptableObject
     {
         _currentCharge = 0f;
     }
+
 }
