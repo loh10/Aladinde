@@ -34,9 +34,7 @@ public class PlayerUseAbilities : NetworkBehaviour
         if (ctx.phase == InputActionPhase.Started && _canSimpleAttack)
         {
             Debug.Log("Simple Attack");
-
-            var ability = _playerInfos.characterClass.abilities[0];
-            ability.Activate(gameObject);
+            _playerInfos.characterClass.abilities[0].Activate(gameObject);
             _currentTime = 0;
         }
     }

@@ -7,11 +7,9 @@ public class SmokedShield : Ability
 
     public override void Activate(GameObject user)
     {
-        LifeManager lifeManager = user.GetComponent<LifeManager>();
-        if (lifeManager != null)
-        {
-            lifeManager.ActiShield(duration);
+
+            user.GetComponent<PlayerLifeManager>().ActiShield(duration);
             Debug.Log(abilityName + " activated");
-        }
+
     }
 }

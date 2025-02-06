@@ -17,5 +17,8 @@ MonoBehaviour:
   cooldown: 0
   range: 0
   damages: 0
+  mousePos: {x: 0, y: 0}
+  spawnTransform: {x: 0, y: 0}
   icon: {fileID: 0}
   abilityPrefab: {fileID: 0}
+  duration: 10

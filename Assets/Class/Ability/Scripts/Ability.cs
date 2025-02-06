@@ -20,8 +20,8 @@ public class Ability : ScriptableObject
     {
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 direction = (mousePos - (Vector2)user.transform.position).normalized;
-        RaycastHit2D[] hits = Physics2D.RaycastAll(user.transform.position, direction, range * 5);
-        foreach (RaycastHit2D hit in hits)
+        RaycastHit2D hit = Physics2D.Raycast(user.transform.position, direction, range * 5);
+        if (hit)
         {
             if (hit.collider.gameObject != user)
             {
