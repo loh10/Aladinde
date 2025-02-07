@@ -1,13 +1,13 @@
-using System.Collections.Generic;
-using Unity.Netcode;
-using Unity.VisualScripting;
 using UnityEngine;
+using Unity.Netcode;
 
 [CreateAssetMenu(fileName = "GrillStrikeAbility", menuName = "Scriptable Objects/Abilities/Grill Strike")]
 public class GrillStrike : Ability
 {
     private float _currentTime;
     private bool _canUse;
+    
+    [SerializeField] private float _staggerDuration = 0.5f;
 
     public override void Activate(GameObject user)
     {
@@ -27,11 +27,18 @@ public class GrillStrike : Ability
         if (hit && hit.collider.gameObject != user)
         {
             // Apply damage to the hit target using its NetworkObject's OwnerClientId
-            user.GetComponent<PlayerLifeManager>().TakeDamageServerRpc(damages, hit.collider.GetComponent<NetworkObject>().OwnerClientId);
+            user.GetComponent<PlayerLifeManager>()
+                .TakeDamageServerRpc(damages, hit.collider.GetComponent<NetworkObject>().OwnerClientId);
+            
+            // Get the target's PlayerMovement component.
+            PlayerMovement targetMovement = hit.collider.GetComponent<PlayerMovement>();
+            if (targetMovement != null)
+            {
+                // Instead of calling ApplyStagger directly, call the ServerRpc to propagate the effect.
+                targetMovement.ApplyStaggerServerRpc(_staggerDuration);
+            }
         }
         
-        // Log that the ability has been activated
         Debug.Log(abilityName + " activated");
     }
-
 }
