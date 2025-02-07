@@ -7,7 +7,9 @@ public class GrillStrike : Ability
     private float _currentTime;
     private bool _canUse;
     
+    [Header("Grill Strike Settings")]
     [SerializeField] private float _staggerDuration = 0.5f;
+    [SerializeField] private float _staggerSpeedMultiplier = 0.5f;
 
     public override void Activate(GameObject user)
     {
@@ -34,8 +36,8 @@ public class GrillStrike : Ability
             PlayerMovement targetMovement = hit.collider.GetComponent<PlayerMovement>();
             if (targetMovement != null)
             {
-                // Instead of calling ApplyStagger directly, call the ServerRpc to propagate the effect.
-                targetMovement.ApplyStaggerServerRpc(_staggerDuration);
+                // Use the ServerRpc to propagate the stagger effect,
+                targetMovement.ApplyStaggerServerRpc(_staggerDuration, _staggerSpeedMultiplier);
             }
         }
         

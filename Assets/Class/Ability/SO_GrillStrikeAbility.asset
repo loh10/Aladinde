@@ -20,8 +20,9 @@ MonoBehaviour:
   chargeGain: 20
   isChargingCapacity: 0
   maxCharge: 0
-  mousePos: {x: 4.3887596, y: 4.8793116}
+  mousePos: {x: 0.16774368, y: -1.5433898}
   spawnTransform: {x: 2.9135332, y: 3.8136535}
   icon: {fileID: 0}
   abilityPrefab: {fileID: 6912215052845606259, guid: b74a464c74227ac42859acda48cb09b4, type: 3}
-  _staggerDuration: 10
+  _staggerDuration: 0.5
+  _staggerSpeedMultiplier: 0.5

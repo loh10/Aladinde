@@ -8,7 +8,7 @@ public class PlayerMovement : NetworkBehaviour
     private Vector2 _move;
     private float _speed;
     private Rigidbody2D _rb;
-    private float _originalSpeed; // to store the default speed
+    private float _originalSpeed;
 
     public override void OnNetworkSpawn()
     {
@@ -49,35 +49,35 @@ public class PlayerMovement : NetworkBehaviour
         _move = new Vector2(input.x, input.y) * _speed;
     }
 
-    // This is the local method that applies the stagger effect.
-    public void ApplyStagger(float duration)
+    // Applies a stagger effect by temporarily reducing the speed,
+    public void ApplyStagger(float duration, float speedMultiplier)
     {
-        Debug.Log("Local ApplyStagger called");
-        StartCoroutine(StaggerCoroutine(duration));
+        // Debug.Log("Local ApplyStagger called with multiplier " + speedMultiplier);
+        StartCoroutine(StaggerCoroutine(duration, speedMultiplier));
     }
 
-    private IEnumerator StaggerCoroutine(float duration)
+    private IEnumerator StaggerCoroutine(float duration, float speedMultiplier)
     {
-        Debug.Log("Original speed: " + _originalSpeed);
-        _speed = _originalSpeed * 0.1f; // reduce speed to 10%
-        Debug.Log("Stagger applied, new speed: " + _speed);
+        // Debug.Log("Original speed: " + _originalSpeed);
+        _speed = _originalSpeed * speedMultiplier;
+        // Debug.Log("Stagger applied, new speed: " + _speed);
         yield return new WaitForSeconds(duration);
         _speed = _originalSpeed;
-        Debug.Log("Stagger ended, speed restored: " + _speed);
+        // Debug.Log("Stagger ended, speed restored: " + _speed);
     }
 
-    // NEW: ServerRpc that any client (even non-owners) can call on this object
+    // ServerRpc (non-ownership required) to apply stagger remotely.
     [ServerRpc(RequireOwnership = false)]
-    public void ApplyStaggerServerRpc(float duration, ServerRpcParams rpcParams = default)
+    public void ApplyStaggerServerRpc(float duration, float speedMultiplier, ServerRpcParams rpcParams = default)
     {
-        // On the server, call the ClientRpc to update all clients.
-        ApplyStaggerClientRpc(duration);
+        // Propagate to all clients.
+        ApplyStaggerClientRpc(duration, speedMultiplier);
     }
 
-    // NEW: ClientRpc that tells all clients (including the owner) to apply the stagger locally
+    // ClientRpc to tell all clients (including the owner) to apply the stagger locally.
     [ClientRpc]
-    private void ApplyStaggerClientRpc(float duration)
+    private void ApplyStaggerClientRpc(float duration, float speedMultiplier)
     {
-        ApplyStagger(duration);
+        ApplyStagger(duration, speedMultiplier);
     }
 }
