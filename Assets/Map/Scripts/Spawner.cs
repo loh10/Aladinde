@@ -5,7 +5,7 @@ using UnityEngine.Tilemaps;
 public class Spawner : MonoBehaviour
 {
     [SerializeField] private int _amountOfConsumables;
-    [SerializeField] private GameObject[] _consumables;
+    [SerializeField] private Consumable[] _consumables;
     [SerializeField] private Vector2 _spawnRange = new Vector2(-5f, 5f);
     [SerializeField] private Tilemap _collisionTilemap;
     [SerializeField] private Grid _grid;
@@ -56,7 +56,7 @@ public class Spawner : MonoBehaviour
 
             if (IsValidSpawnPosition(cellPosition, cellCenter))
             {
-                GameObject randomPrefab = _consumables[Random.Range(0, _consumables.Length)];
+                Consumable randomPrefab = _consumables[Random.Range(0, _consumables.Length)];
 
                 Instantiate(randomPrefab, cellCenter, Quaternion.identity);
                 _occupiedCells.Add(cellPosition);

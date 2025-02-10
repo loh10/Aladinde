@@ -45,7 +45,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _amountOfConsumables: 0
-  _consumables: []
+  _consumables:
+  - {fileID: 11400000, guid: d3354a64872709c49a73e25e14b433e3, type: 2}
+  - {fileID: 11400000, guid: f77f0209ef8cf8e4392caf43cbfeaa99, type: 2}
+  - {fileID: 11400000, guid: 03777f725ee1ed449a5c40ab84ac3e25, type: 2}
+  - {fileID: 11400000, guid: 10af6a239f465d247b7c3cd1c9b03b78, type: 2}
   _spawnRange: {x: -5, y: 5}
   _collisionTilemap: {fileID: 0}
   _grid: {fileID: 0}
