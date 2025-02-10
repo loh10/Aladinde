@@ -33,6 +33,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "PoopAttack",
+                    "type": "Button",
+                    "id": "8443924b-4737-4934-a98d-971cdd78e888",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Pause",
                     "type": "Button",
                     "id": "39e60b33-cd90-4f6a-a809-1c677876b896",
@@ -117,6 +126,17 @@
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
                     "action": "SpecialAttack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "02223863-0ad1-4427-a597-1a5d664bac24",
+                    "path": "<Keyboard>/p",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "PoopAttack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

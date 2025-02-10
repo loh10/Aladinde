@@ -40,22 +40,29 @@ public class PlayerUseAbilities : NetworkBehaviour
     [ServerRpc(RequireOwnership = false)]
     public void SpawnProjectileServerRpc(string prefabName, Vector3 spawnPosition, Vector3 targetPosition, float projectileSpeed, ServerRpcParams rpcParams = default)
     {
-        // Load the prefab from the Resources folder.
         GameObject prefab = Resources.Load<GameObject>(prefabName);
         if (prefab != null)
         {
             GameObject projectile = Instantiate(prefab, spawnPosition, Quaternion.identity);
             projectile.GetComponent<NetworkObject>()?.Spawn();
 
-            // Call the initialization method if present.
-            SpicyBombProjectile sp = projectile.GetComponent<SpicyBombProjectile>();
-            if (sp != null)
+            // Try to get either a SpicyBombProjectile or a PoopBombProjectile.
+            SpicyBombProjectile spicyProj = projectile.GetComponent<SpicyBombProjectile>();
+            if (spicyProj != null)
             {
-                sp.Initialize(targetPosition, projectileSpeed);
+                spicyProj.Initialize(targetPosition, projectileSpeed);
             }
             else
             {
-                Debug.LogWarning("SpawnProjectileServerRpc: The projectile prefab does not have a SpicyBombProjectile component!");
+                PoopBombProjectile poopProj = projectile.GetComponent<PoopBombProjectile>();
+                if (poopProj != null)
+                {
+                    poopProj.Initialize(targetPosition, projectileSpeed);
+                }
+                else
+                {
+                    Debug.LogWarning("SpawnProjectileServerRpc: The projectile prefab does not have a recognized projectile component!");
+                }
             }
         }
         else
@@ -87,6 +94,16 @@ public class PlayerUseAbilities : NetworkBehaviour
             {
                 Debug.Log("Ultimate not ready!");
             }
+        }
+    }
+    
+    public void OnPoopAttack(InputAction.CallbackContext ctx)
+    {
+        Debug.Log("OnPoopAttack called, phase: " + ctx.phase);
+        if (ctx.phase == InputActionPhase.Started)
+        {
+            Debug.Log("Poop Attack triggered");
+            _playerInfos.characterClass.abilities[0].Activate(gameObject);
         }
     }
 }

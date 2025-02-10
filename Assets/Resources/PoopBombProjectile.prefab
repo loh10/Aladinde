@@ -10,12 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 6490257935425863814}
   - component: {fileID: 8634811447424876815}
-  - component: {fileID: 3731160498301329120}
+  - component: {fileID: 7464025036033865154}
   - component: {fileID: 3214750382478891126}
   - component: {fileID: 7148696105885296422}
-  - component: {fileID: 5187911486892012633}
+  - component: {fileID: -2223236876874340685}
   m_Layer: 0
-  m_Name: SpicyBombProjectile
+  m_Name: PoopBombProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 917552386
+  GlobalObjectIdHash: 1990530029
   InScenePlacedSourceGlobalObjectIdHash: 0
   DeferredDespawnTick: 0
   Ownership: 1
@@ -61,7 +61,7 @@ MonoBehaviour:
   AutoObjectParentSync: 1
   SyncOwnerTransformWhenParented: 1
   AllowOwnerToParent: 0
---- !u!114 &3731160498301329120
+--- !u!114 &7464025036033865154
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -70,15 +70,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 7717569807027110694}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e905131e54d748799f8687b8fa845df4, type: 3}
+  m_Script: {fileID: 11500000, guid: 4226ce5c4d48445da38c46e53d391b7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
-  explosionRadius: 3
-  immediateDamage: 30
-  burnDamagePerSecond: 5
-  burnDuration: 3
-  cloudDuration: 4
+  explosionRadius: 2
+  slowDuration: 5
+  slowMultiplier: 0.8
   explosionEffectPrefab: {fileID: 0}
 --- !u!212 &3214750382478891126
 SpriteRenderer:
@@ -125,7 +123,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 5
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 0.54509807, b: 0, a: 1}
+  m_Color: {r: 0.381132, g: 0.24799101, b: 0.08845136, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -171,7 +169,7 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
---- !u!114 &5187911486892012633
+--- !u!114 &-2223236876874340685
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
