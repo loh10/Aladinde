@@ -27,7 +27,7 @@ public class PlayerUseAbilities : NetworkBehaviour
     private void Update()
     {
         _currentTime += Time.deltaTime;
-        CheckAttack(ref _canSimpleAttack, _playerInfos.characterClass.abilities[0].cooldown);
+        CheckAttack(ref _canSimpleAttack, _playerInfos.characterClass.abilities[1].cooldown);
     }
 
     private void CheckAttack(ref bool boolAttack, float cooldown)
@@ -47,7 +47,7 @@ public class PlayerUseAbilities : NetworkBehaviour
         if (ctx.phase == InputActionPhase.Started && _canSimpleAttack)
         {
             Debug.Log("Simple Attack");
-            _playerInfos.characterClass.abilities[0].Activate(gameObject);
+            _playerInfos.characterClass.abilities[1].Activate(gameObject);
             _currentTime = 0;
         }
     }

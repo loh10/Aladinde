@@ -16,20 +16,27 @@ public class SeePlayer : Node
 
     public override NodeState Evaluate()
     {
-        //distance enemy-player
-        float distanceToPlayer = Vector3.Distance(_agent.transform.position, _player.transform.position);
-
-        //check if player is in sight range
-        if (distanceToPlayer <= _sightRange)
+        if (_player != null)
         {
-            Debug.Log("See Player");
-            _nodeState = NodeState.SUCCESS;
+            //distance enemy-player
+            float distanceToPlayer = Vector3.Distance(_agent.transform.position, _player.transform.position);
+
+            //check if player is in sight range
+            if (distanceToPlayer <= _sightRange)
+            {
+                Debug.Log("See Player");
+                _nodeState = NodeState.SUCCESS;
+            }
+            else
+            {
+                _nodeState = NodeState.FAILURE;
+            }
         }
         else
         {
             _nodeState = NodeState.FAILURE;
         }
-
         return _nodeState;
+
     }
 }
