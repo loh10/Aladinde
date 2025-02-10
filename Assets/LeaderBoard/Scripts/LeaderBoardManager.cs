@@ -1,10 +1,8 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using TMPro;
 using DG.Tweening;
-using UnityEngine.Serialization;
 
 public class LeaderboardManager : MonoBehaviour
 {
@@ -12,17 +10,20 @@ public class LeaderboardManager : MonoBehaviour
     public Transform leaderboardUiParent;
     
     [Space(10)]
-    public List<Transform> leaderboardUI = new List<Transform>();
-    public List<PlayerScore> listConnectedPlayer = new List<PlayerScore>();
+    private List<Transform> _leaderboardUI = new List<Transform>();
+    private List<PlayerScore> _listConnectedPlayer = new List<PlayerScore>();
 
+    [Space(25)]
+    [Header("Feedback")]
+    public float scaleFactor = 1.25f;
+    public float duration = 0.5f;
+    
     private void Start()
     {
         SpawnPlayer("est", 10);
         SpawnPlayer("marre", 5);
         SpawnPlayer("Jean", 20);
     }
-
-    
 
     public void SpawnPlayer(string playerName, int score)
     {
@@ -35,15 +36,13 @@ public class LeaderboardManager : MonoBehaviour
             nameText = newPlayerUI.transform.Find("NameText").GetComponent<TextMeshProUGUI>(),
             scoreText = newPlayerUI.transform.Find("ScoreText").GetComponent<TextMeshProUGUI>()
         };
-
         
-        
-        listConnectedPlayer.Add(newPlayer);
-        listConnectedPlayer = listConnectedPlayer.OrderByDescending(p => p.score).ToList();
+        _listConnectedPlayer.Add(newPlayer);
+        _listConnectedPlayer = _listConnectedPlayer.OrderByDescending(p => p.score).ToList();
         
         newPlayerUI.name = $"username : {newPlayer.playerName}";
-        leaderboardUI.Add(newPlayerUI.transform);
-        leaderboardUI = listConnectedPlayer.Select(p => p.uiElement.transform).ToList();
+        _leaderboardUI.Add(newPlayerUI.transform);
+        _leaderboardUI = _listConnectedPlayer.Select(p => p.uiElement.transform).ToList();
 
         ReorderLeaderboardUiParent();
         UpdateLeaderboard();
@@ -51,9 +50,9 @@ public class LeaderboardManager : MonoBehaviour
     
     private void ReorderLeaderboardUiParent()
     {
-        for (int i = 0; i < leaderboardUI.Count; i++)
+        for (int i = 0; i < _leaderboardUI.Count; i++)
         {
-            leaderboardUI[i].SetSiblingIndex(i);
+            _leaderboardUI[i].SetSiblingIndex(i);
         }
     }
 
@@ -61,38 +60,48 @@ public class LeaderboardManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            var playerToFind = listConnectedPlayer.FirstOrDefault(p => p.playerName == "est");
+            var playerToFind = _listConnectedPlayer.FirstOrDefault(p => p.playerName == "est");
             if (playerToFind != null)
             {
                 playerToFind.score += 10;
                 UpdateLeaderboard();
+                PlayFeedback(playerToFind.scoreText);
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            var playerToFind = _listConnectedPlayer.FirstOrDefault(p => p.playerName == "marre");
+            if (playerToFind != null)
+            {
+                playerToFind.score += 10;
+                UpdateLeaderboard();
+                PlayFeedback(playerToFind.scoreText);
             }
         }
     }
 
     private void UpdateLeaderboard()
     {
-        listConnectedPlayer = listConnectedPlayer.OrderByDescending(p => p.score).ToList();
-        leaderboardUI = listConnectedPlayer.Select(p => p.uiElement.transform).ToList();
+        _listConnectedPlayer = _listConnectedPlayer.OrderByDescending(p => p.score).ToList();
+        _leaderboardUI = _listConnectedPlayer.Select(p => p.uiElement.transform).ToList();
 
-        for (int i = 0; i < listConnectedPlayer.Count; i++)
+        for (int i = 0; i < _listConnectedPlayer.Count; i++)
         {
             switch (i)
             {
                 case < 5:
-                    UpdatePlayerUI(listConnectedPlayer[i], leaderboardUI[i], i + 1);
+                    UpdatePlayerUI(_listConnectedPlayer[i], _leaderboardUI[i], i + 1);
                     break;
                 case 5:
-                    listConnectedPlayer[i].uiElement.SetActive(true);
-                    UpdatePlayerUI(listConnectedPlayer[i], leaderboardUI[5], 6);
+                    _listConnectedPlayer[i].uiElement.SetActive(true);
+                    UpdatePlayerUI(_listConnectedPlayer[i], _leaderboardUI[5], 6);
                     break;
                 default:
-                    listConnectedPlayer[i].uiElement.SetActive(false);
+                    _listConnectedPlayer[i].uiElement.SetActive(false);
                     break;
             }
         }
-
-        //UpdateOutsideTop6();
+        
         ReorderLeaderboardUiParent();
     }
 
@@ -100,9 +109,17 @@ public class LeaderboardManager : MonoBehaviour
     {
         player.nameText.text = $"{rank}. {player.playerName}";
         player.scoreText.text = player.score.ToString();
-        
-        //player.uiElement.transform.DOMove(targetSlot.position, 0.5f).SetEase(Ease.OutQuad);
     }
+
+    public void PlayFeedback(TextMeshProUGUI scoreText)
+    {
+        DG.Tweening.Sequence sequence = DOTween.Sequence();
+        sequence.Append(scoreText.transform.DOScale(scaleFactor, duration / 2).SetEase(Ease.OutQuad));
+        sequence.Append(scoreText.transform.DOScale(1f, duration / 2).SetEase(Ease.InQuad));
+        sequence.Play();
+    }
+    
+    
 
     /*private void UpdateOutsideTop6()
     {
