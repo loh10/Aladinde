@@ -23,12 +23,17 @@ public class PlayerLifeManager : NetworkBehaviour
         _maxHealth = GetComponent<PlayerInfos>().characterClass.maxHealth;
         _healthBar.maxValue = _maxHealth;
         _healthBar.value = _maxHealth;
-        _currentHealth = new NetworkVariable<float>(_maxHealth);
-
-
+    
         _maxShield = GetComponent<PlayerInfos>().characterClass.maxShield;
         _shieldBar.maxValue = _maxShield;
         _shieldBar.value = 0;
+
+        // Only the server should initialize the NetworkVariables.
+        if (IsServer)
+        {
+            _currentHealth.Value = _maxHealth;
+            _currentShield.Value = 0;
+        }
     }
 
     public void ActiShield(float duration)
@@ -61,8 +66,9 @@ public class PlayerLifeManager : NetworkBehaviour
 
     public void ReduceShield(float amount)
     {
-        _currentShield = new NetworkVariable<float>(Mathf.Max(0, _currentShield.Value - amount));
+        _currentShield.Value = Mathf.Max(0, _currentShield.Value - amount);
     }
+    
     [ServerRpc]
     public void TakeDamageServerRpc(float damage, ulong targetClientId)
     {
@@ -118,4 +124,5 @@ public class PlayerLifeManager : NetworkBehaviour
     {
         _shieldBar.value = newShield;
     }
+
 }

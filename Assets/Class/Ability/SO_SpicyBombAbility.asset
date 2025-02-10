@@ -20,5 +20,9 @@ MonoBehaviour:
   chargeGain: 0
   isChargingCapacity: 1
   maxCharge: 100
+  mousePos: {x: 0, y: 0}
+  spawnTransform: {x: 0, y: 0}
   icon: {fileID: 0}
-  abilityPrefab: {fileID: 0}
+  abilityPrefab: {fileID: 7717569807027110694, guid: 066b7cf3e0dcfc441af7733b3dd0f9ac, type: 3}
+  maxRange: 5
+  projectileSpeed: 10

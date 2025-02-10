@@ -20,7 +20,8 @@ MonoBehaviour:
   chargeGain: 0
   isChargingCapacity: 1
   maxCharge: 100
+  mousePos: {x: 0, y: 0}
+  spawnTransform: {x: 0, y: 0}
   icon: {fileID: 0}
   abilityPrefab: {fileID: 0}
   duration: 7
-  mousePos: {x: 0, y: 0}
