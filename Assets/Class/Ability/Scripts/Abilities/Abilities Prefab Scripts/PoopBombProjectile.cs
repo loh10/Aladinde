@@ -13,7 +13,6 @@ public class PoopBombProjectile : NetworkBehaviour
     [SerializeField] private float explosionRadius = 2f;      // 2 meters radius.
     [SerializeField] private float slowDuration = 5f;         // Slow lasts 5 seconds.
     [SerializeField] private float slowMultiplier = 0.8f;     // 80% of original speed.
-    
     [SerializeField] private GameObject explosionEffectPrefab;
     
     public void Initialize(Vector2 targetPos, float projectileSpeed)
@@ -28,9 +27,7 @@ public class PoopBombProjectile : NetworkBehaviour
         Collider2D projCollider = GetComponent<Collider2D>();
         Collider2D ownerCollider = owner.GetComponent<Collider2D>();
         if (projCollider != null && ownerCollider != null)
-        {
             Physics2D.IgnoreCollision(projCollider, ownerCollider);
-        }
     }
     
     private void Update()
@@ -57,8 +54,7 @@ public class PoopBombProjectile : NetworkBehaviour
     
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject == owner)
-            return;
+        if (collision.gameObject == owner) return;
         if (!exploded && NetworkManager.Singleton.IsServer)
             Explode();
     }
@@ -67,7 +63,7 @@ public class PoopBombProjectile : NetworkBehaviour
     {
         if (exploded) return;
         exploded = true;
-        Debug.Log("Poop Bomb exploded at " + transform.position);
+        Debug.Log("PoopBombProjectile exploded at " + transform.position);
         
         Collider2D col = GetComponent<Collider2D>();
         if (col != null)
@@ -82,15 +78,14 @@ public class PoopBombProjectile : NetworkBehaviour
     private void TriggerExplosionEffectsClientRpc(Vector2 explosionPos)
     {
         if (explosionEffectPrefab != null)
-        {
             Instantiate(explosionEffectPrefab, explosionPos, Quaternion.identity);
-        }
     }
     
     private void ApplySlowToEnemies()
     {
-        Debug.Log("Poop Bomb applying slow effect");
+        Debug.Log("PoopBombProjectile applying slow effect");
         Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, explosionRadius);
+        Debug.Log("PoopBombProjectile found " + hitColliders.Length + " colliders");
         foreach (Collider2D collider in hitColliders)
         {
             if (collider.CompareTag("Player") && collider.gameObject != owner)
@@ -98,10 +93,9 @@ public class PoopBombProjectile : NetworkBehaviour
                 Debug.Log("Applying slow to " + collider.name);
                 PlayerMovement movement = collider.GetComponent<PlayerMovement>();
                 if (movement != null)
-                {
-                    // Call the new local method to apply the stagger effect.
                     movement.ApplyStaggerEffect(slowDuration, slowMultiplier);
-                }
+                else
+                    Debug.LogWarning("PoopBombProjectile: No PlayerMovement on " + collider.name);
             }
         }
     }
@@ -109,13 +103,9 @@ public class PoopBombProjectile : NetworkBehaviour
     private void DespawnSelf()
     {
         if (TryGetComponent<NetworkObject>(out NetworkObject netObj))
-        {
             netObj.Despawn();
-        }
         else
-        {
             Destroy(gameObject);
-        }
     }
     
     private void OnDrawGizmosSelected()

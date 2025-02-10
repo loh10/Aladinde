@@ -12,29 +12,16 @@ public class PoopBomb : Ability
         // Execute common ability logic (charge management, etc.)
         base.Activate(user);
 
-        // Calculate the target explosion position:
+        // Calculate the explosion position from the client's mouse position.
         Vector2 userPos = user.transform.position;
-        // Get the current mouse position in world space.
         Vector2 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        // Compute the vector and its magnitude.
         Vector2 direction = mouseWorldPos - userPos;
         float travelDistance = Mathf.Min(direction.magnitude, maxRange);
-        // If the mouse is within maxRange, explode at that point;
-        // otherwise, explode at maxRange along the direction.
         Vector2 explosionPosition = userPos + direction.normalized * travelDistance;
 
-        // If we are on the server, spawn the projectile immediately.
-        if (NetworkManager.Singleton.IsServer)
-        {
-            SpawnProjectile(userPos, explosionPosition, user);
-        }
-        else
-        {
-            // Otherwise, ask the server to spawn the projectile.
-            // (Your existing SpawnProjectileServerRpc method in PlayerUseAbilities may be re‐used.)
-            string prefabName = abilityPrefab.name;
-            user.GetComponent<PlayerUseAbilities>().SpawnProjectileServerRpc(prefabName, userPos, explosionPosition, projectileSpeed);
-        }
+        // Always call the ServerRPC branch (using the client's computed explosion position).
+        string prefabName = abilityPrefab.name;
+        user.GetComponent<PlayerUseAbilities>().SpawnProjectileServerRpc(prefabName, userPos, explosionPosition, projectileSpeed);
 
         Debug.Log("Poop Bomb activated, explosion position: " + explosionPosition);
     }

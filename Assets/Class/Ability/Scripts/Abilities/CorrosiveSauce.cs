@@ -9,26 +9,19 @@ public class CorrosiveSauce : Ability
 
     public override void Activate(GameObject user)
     {
-        // Execute common ability logic (like charge management)
+        // Execute common ability logic (e.g., charge management)
         base.Activate(user);
 
-        // Calculate target position based on mouse position
+        // Calculate target position based on the client's mouse position.
         Vector2 userPos = user.transform.position;
         Vector2 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 direction = mouseWorldPos - userPos;
         float travelDistance = Mathf.Min(direction.magnitude, maxRange);
         Vector2 targetPosition = userPos + direction.normalized * travelDistance;
 
-        if (NetworkManager.Singleton.IsServer)
-        {
-            SpawnProjectile(userPos, targetPosition, user);
-        }
-        else
-        {
-            // Use your generic RPC that spawns a projectile.
-            string prefabName = abilityPrefab.name;
-            user.GetComponent<PlayerUseAbilities>().SpawnProjectileServerRpc(prefabName, userPos, targetPosition, projectileSpeed);
-        }
+        // Always ask the server (via RPC) to spawn the projectile with the client-provided target.
+        string prefabName = abilityPrefab.name;
+        user.GetComponent<PlayerUseAbilities>().SpawnProjectileServerRpc(prefabName, userPos, targetPosition, projectileSpeed);
 
         Debug.Log("Corrosive Sauce activated, target position: " + targetPosition);
     }
