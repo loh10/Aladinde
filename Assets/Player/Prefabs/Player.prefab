@@ -580,7 +580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cd6c45c9279eac42bbcae1cbb6f339b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterClass: {fileID: 11400000, guid: 3027b5649b4ed764b9cee890f969be65, type: 2}
+  characterClass: {fileID: 11400000, guid: db995e482d45c4643bf39e4a1bf2be49, type: 2}
   _isBot: 0
   _classes: []
 --- !u!114 &1926682325211748933
