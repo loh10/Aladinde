@@ -36,7 +36,7 @@ public class PlayerUseAbilities : NetworkBehaviour
         canAttack = _currentTime > cooldown;
     }
 
-    // ServerRpc to spawn a networked projectile.
+    // This ServerRpc now checks for three possible projectile components:
     [ServerRpc(RequireOwnership = false)]
     public void SpawnProjectileServerRpc(string prefabName, Vector3 spawnPosition, Vector3 targetPosition, float projectileSpeed, ServerRpcParams rpcParams = default)
     {
@@ -46,24 +46,32 @@ public class PlayerUseAbilities : NetworkBehaviour
             GameObject projectile = Instantiate(prefab, spawnPosition, Quaternion.identity);
             projectile.GetComponent<NetworkObject>()?.Spawn();
 
-            // Try to get either a SpicyBombProjectile or a PoopBombProjectile.
+            // Try to get a SpicyBombProjectile.
             SpicyBombProjectile spicyProj = projectile.GetComponent<SpicyBombProjectile>();
             if (spicyProj != null)
             {
                 spicyProj.Initialize(targetPosition, projectileSpeed);
+                spicyProj.SetOwner(gameObject);
+                return;
             }
-            else
+            // Otherwise, try to get a PoopBombProjectile.
+            PoopBombProjectile poopProj = projectile.GetComponent<PoopBombProjectile>();
+            if (poopProj != null)
             {
-                PoopBombProjectile poopProj = projectile.GetComponent<PoopBombProjectile>();
-                if (poopProj != null)
-                {
-                    poopProj.Initialize(targetPosition, projectileSpeed);
-                }
-                else
-                {
-                    Debug.LogWarning("SpawnProjectileServerRpc: The projectile prefab does not have a recognized projectile component!");
-                }
+                poopProj.Initialize(targetPosition, projectileSpeed);
+                poopProj.SetOwner(gameObject);
+                return;
             }
+            // Otherwise, try to get a CorrosiveSauceProjectile.
+            CorrosiveSauceProjectile corrosiveProj = projectile.GetComponent<CorrosiveSauceProjectile>();
+            if (corrosiveProj != null)
+            {
+                corrosiveProj.Initialize(targetPosition, projectileSpeed);
+                corrosiveProj.SetOwner(gameObject);
+                return;
+            }
+            // If none of the known projectile components were found:
+            Debug.LogWarning("SpawnProjectileServerRpc: The projectile prefab does not have a recognized projectile component!");
         }
         else
         {
