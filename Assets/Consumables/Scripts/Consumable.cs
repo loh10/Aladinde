@@ -12,13 +12,12 @@ public class Consumable : ScriptableObject
     public float slowDuration;
     public float slowPercentageValue;
 
-    public void ApplyEffect(PlayerInfos player, LifeManager lifeManager)
+    public void ApplyEffect(PlayerInfos player, PlayerLifeManager lifeManager)
     {
         switch (type)
         {
             case ConsumableType.HealAndIncreaseHP:
-                lifeManager.maxHealth += increaseHealth;
-                lifeManager.currentHealth = lifeManager.maxHealth;
+                lifeManager.IncreaseMaxHealth(increaseHealth);
                 break;
             case ConsumableType.IncreaseUltimateCharge:
                 player.characterClass.abilities[2].IncreaseCharge(increaseAbilityCharge);

@@ -107,9 +107,30 @@ public class PlayerLifeManager : NetworkBehaviour
         }
     }
 
+    public void IncreaseMaxHealth(float amount)
+    {
+        IncreaseMaxHealthServerRpc(amount, OwnerClientId);
+    }
+
+    [ServerRpc]
+    private void IncreaseMaxHealthServerRpc(float amount, ulong targetClientId)
+    {
+        PlayerLifeManager[] players = FindObjectsByType<PlayerLifeManager>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+        foreach (var player in players)
+        {
+            if (player.OwnerClientId == targetClientId)
+            {
+                player._maxHealth += amount;
+                player._currentHealth.Value = player._maxHealth;
+                player.UpdateHealthBarClientRpc(player._maxHealth);
+            }
+        }
+    }
+
     [ClientRpc]
     void UpdateHealthBarClientRpc(float newHealth)
     {
+        _healthBar.maxValue = newHealth;
         _healthBar.value = newHealth;
     }
 
