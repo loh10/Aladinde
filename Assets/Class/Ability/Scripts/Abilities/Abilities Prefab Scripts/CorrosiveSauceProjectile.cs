@@ -10,26 +10,19 @@ public class CorrosiveSauceProjectile : NetworkBehaviour
     private GameObject owner;
 
     [Header("Explosion Settings")]
-    [SerializeField] private float explosionRadius = 3f;   // Zone d'effet: 3 m.
-    [SerializeField] private float damage = 20f;           // Deals 20 points of damage.
-    [SerializeField] private float shieldReduction = 50f;  // Reduces enemy shields by 50 points.
-    [SerializeField] private float cloudDuration = 4f;     // Explosion effect lasts 4 seconds.
+    [SerializeField] private float explosionRadius = 3f;   // 3 m radius.
+    [SerializeField] private float damage = 20f;           // 20 points of damage.
+    [SerializeField] private float shieldReduction = 50f;  // Reduces enemy shields by 50.
+    [SerializeField] private float cloudDuration = 4f;     // Cloud effect lasts 4 seconds.
 
-    // (Optional) Explosion effect prefab.
     [SerializeField] private GameObject explosionEffectPrefab;
 
-    /// <summary>
-    /// Initializes the projectile with its target position and speed.
-    /// </summary>
     public void Initialize(Vector2 targetPos, float projectileSpeed)
     {
         targetPosition = targetPos;
         speed = projectileSpeed;
     }
 
-    /// <summary>
-    /// Sets the owner so that the projectile does not affect its thrower.
-    /// </summary>
     public void SetOwner(GameObject ownerGameObject)
     {
         owner = ownerGameObject;
@@ -43,7 +36,6 @@ public class CorrosiveSauceProjectile : NetworkBehaviour
 
     private void Update()
     {
-        // Only the server drives the projectile’s movement.
         if (!NetworkManager.Singleton.IsServer) return;
         if (exploded) return;
 
@@ -78,16 +70,12 @@ public class CorrosiveSauceProjectile : NetworkBehaviour
         exploded = true;
         Debug.Log("Corrosive Sauce exploded at " + transform.position);
 
-        // Disable collider so no further collisions are processed.
         Collider2D col = GetComponent<Collider2D>();
         if (col != null)
             col.enabled = false;
 
-        // Trigger explosion effects on clients.
         TriggerExplosionEffectsClientRpc(transform.position);
-        // Apply the corrosive effects (shield reduction and damage) to enemy players.
         ApplyEffectsToEnemies();
-        // Despawn the projectile after a delay.
         Invoke(nameof(DespawnSelf), cloudDuration);
     }
 
@@ -100,9 +88,6 @@ public class CorrosiveSauceProjectile : NetworkBehaviour
         }
     }
 
-    /// <summary>
-    /// Finds enemy players within the explosion radius (except the owner) and applies the corrosive effect.
-    /// </summary>
     private void ApplyEffectsToEnemies()
     {
         Debug.Log("Corrosive Sauce applying effects");
@@ -113,13 +98,12 @@ public class CorrosiveSauceProjectile : NetworkBehaviour
             {
                 Debug.Log("Applying corrosive effect to " + collider.name);
                 PlayerLifeManager lifeManager = collider.GetComponent<PlayerLifeManager>();
-                NetworkObject netObj = collider.GetComponent<NetworkObject>();
-                if (lifeManager != null && netObj != null)
+                if (lifeManager != null)
                 {
-                    // First, reduce shield by the specified amount.
+                    // First, reduce the shield.
                     lifeManager.ReduceShield(shieldReduction);
-                    // Then, apply damage.
-                    lifeManager.TakeDamageServerRpc(damage, netObj.OwnerClientId);
+                    // Then, apply damage using the local method.
+                    lifeManager.ApplyDamage(damage);
                 }
             }
         }

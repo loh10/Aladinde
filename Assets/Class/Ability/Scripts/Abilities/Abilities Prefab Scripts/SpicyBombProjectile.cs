@@ -16,7 +16,6 @@ public class SpicyBombProjectile : NetworkBehaviour
     [SerializeField] private float burnDuration = 3f;    // seconds of burn effect
     [SerializeField] private float cloudDuration = 4f;   // seconds explosion cloud persists
 
-    // Optional: a prefab or particle system for explosion effects.
     [SerializeField] private GameObject explosionEffectPrefab;
     
     public void Initialize(Vector2 targetPos, float projectileSpeed)
@@ -27,7 +26,7 @@ public class SpicyBombProjectile : NetworkBehaviour
 
     private void Update()
     {
-        // Only the server should drive the explosion
+        // Only the server drives the projectile’s movement.
         if (!NetworkManager.Singleton.IsServer) return;
         if (exploded) return;
 
@@ -51,7 +50,6 @@ public class SpicyBombProjectile : NetworkBehaviour
     public void SetOwner(GameObject ownerGameObject)
     {
         owner = ownerGameObject;
-        // Optionally, tell the physics engine to ignore collisions between the projectile and its owner:
         Collider2D projCollider = GetComponent<Collider2D>();
         Collider2D ownerCollider = owner.GetComponent<Collider2D>();
         if (projCollider != null && ownerCollider != null)
@@ -62,24 +60,18 @@ public class SpicyBombProjectile : NetworkBehaviour
     
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // Skip collisions with the owner.
         if (collision.gameObject == owner)
             return;
-    
-        Debug.Log("Projectile collided with " + collision.gameObject.name);
-    
         if (!exploded && NetworkManager.Singleton.IsServer)
             Explode();
     }
 
     private void Explode()
     {
-        // Only run the explosion logic once.
         if (exploded) return;
         exploded = true;
         Debug.Log("Explosion method called");
 
-        // (Optional) Disable your collider so you won’t get further collision events.
         Collider2D col = GetComponent<Collider2D>();
         if (col != null)
             col.enabled = false;
@@ -96,7 +88,6 @@ public class SpicyBombProjectile : NetworkBehaviour
         {
             Instantiate(explosionEffectPrefab, explosionPos, Quaternion.identity);
         }
-        // (Optional) Play explosion sounds here.
     }
 
     private IEnumerator ExplosionCoroutine()
@@ -126,14 +117,12 @@ public class SpicyBombProjectile : NetworkBehaviour
             if (collider.CompareTag("Player"))
             {
                 Debug.Log("Player detected: " + collider.name);
-                
-                // Here we call the networked damage method.
                 PlayerLifeManager lifeManager = collider.GetComponent<PlayerLifeManager>();
-                NetworkObject netObj = collider.GetComponent<NetworkObject>();
-                if (lifeManager != null && netObj != null)
+                if (lifeManager != null)
                 {
                     Debug.Log("Dealing damage to " + collider.name);
-                    lifeManager.TakeDamageServerRpc(damage, netObj.OwnerClientId);
+                    // Call the local damage method directly.
+                    lifeManager.ApplyDamage(damage);
                 }
             }
         }
@@ -151,7 +140,6 @@ public class SpicyBombProjectile : NetworkBehaviour
         }
     }
 
-    // For debugging in the Scene view.
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
