@@ -23,17 +23,24 @@ public class Attack : Node
 
     public override NodeState Evaluate()
     {
-        float distance = Vector3.Distance(_botGameObject.transform.position, _player.transform.position);
-        if (distance >= _attackInterval)
+        if(_player != null)
         {
-            _isAttacking = false;
-            _nodeState = NodeState.FAILURE;
+            float distance = Vector3.Distance(_botGameObject.transform.position, _player.transform.position);
+            if (distance >= _attackInterval)
+            {
+                _isAttacking = false;
+                _nodeState = NodeState.FAILURE;
+            }
+            else if (!_isAttacking)
+            {
+                _isAttacking = true;
+                _botGameObject.GetComponent<MonoBehaviour>().StartCoroutine(UseAbility());
+                _nodeState = NodeState.RUNNING;
+            }
         }
-        else if (!_isAttacking)
+        else
         {
-            _isAttacking = true;
-            _botGameObject.GetComponent<MonoBehaviour>().StartCoroutine(UseAbility());
-            _nodeState = NodeState.RUNNING;
+            return NodeState.FAILURE;
         }
 
         return _nodeState;
