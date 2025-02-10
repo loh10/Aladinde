@@ -101,7 +101,7 @@ public class LeaderboardManager : MonoBehaviour
         player.nameText.text = $"{rank}. {player.playerName}";
         player.scoreText.text = player.score.ToString();
         
-        player.uiElement.transform.DOMove(targetSlot.position, 0.5f).SetEase(Ease.OutQuad);
+        //player.uiElement.transform.DOMove(targetSlot.position, 0.5f).SetEase(Ease.OutQuad);
     }
 
     /*private void UpdateOutsideTop6()
