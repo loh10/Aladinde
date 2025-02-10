@@ -25,7 +25,6 @@ public class CorrosiveSauceProjectile : NetworkBehaviour
     {
         targetPosition = targetPos;
         speed = projectileSpeed;
-        Debug.Log($"[CorrosiveSauceProjectile] Initialized. TargetPosition: {targetPosition}, Speed: {speed}");
     }
 
     /// <summary>
@@ -53,8 +52,6 @@ public class CorrosiveSauceProjectile : NetworkBehaviour
         float step = speed * Time.deltaTime;
         float remainingDistance = Vector2.Distance(currentPos, targetPosition);
         float threshold = 0.05f;
-
-        Debug.Log($"[CorrosiveSauceProjectile] Update: currentPos: {currentPos}, targetPosition: {targetPosition}, remainingDistance: {remainingDistance}");
 
         if (remainingDistance <= threshold || step >= remainingDistance)
         {

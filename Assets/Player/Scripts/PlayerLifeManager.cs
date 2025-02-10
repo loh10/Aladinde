@@ -1,7 +1,5 @@
-using System;
 using System.Collections;
 using Unity.Netcode;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,7 +14,6 @@ public class PlayerLifeManager : NetworkBehaviour
 
     private NetworkVariable<float> _currentHealth = new NetworkVariable<float>();
     private NetworkVariable<float> _currentShield = new NetworkVariable<float>();
-
 
     public override void OnNetworkSpawn()
     {
@@ -56,7 +53,8 @@ public class PlayerLifeManager : NetworkBehaviour
         float timeElapsed = 0;
         while (timeElapsed < duration)
         {
-            TakeDamageServerRpc(burnDamage, OwnerClientId);
+            // Instead of calling the ServerRPC, apply damage locally.
+            ApplyDamage(burnDamage);
             timeElapsed += 1f;
             yield return new WaitForSeconds(1f);
         }
@@ -67,8 +65,35 @@ public class PlayerLifeManager : NetworkBehaviour
     public void ReduceShield(float amount)
     {
         _currentShield.Value = Mathf.Max(0, _currentShield.Value - amount);
+        UpdateShieldBarClientRpc(_currentShield.Value);
     }
     
+    // *** NEW: Local damage application method ***
+    public void ApplyDamage(float damage)
+    {
+        // First, apply damage to the shield.
+        if (_currentShield.Value > 0)
+        {
+            float shieldDamage = Mathf.Min(_currentShield.Value, damage);
+            _currentShield.Value -= shieldDamage;
+            UpdateShieldBarClientRpc(_currentShield.Value);
+            damage -= shieldDamage;
+        }
+        
+        // Then, apply any remaining damage to health.
+        if (damage > 0)
+        {
+            _currentHealth.Value -= damage;
+            UpdateHealthBarClientRpc(_currentHealth.Value);
+        }
+        
+        if (_currentHealth.Value <= 0)
+        {
+            Debug.Log($"{gameObject.name} has died.");
+            // (Insert any death/respawn logic here.)
+        }
+    }
+
     [ServerRpc]
     public void TakeDamageServerRpc(float damage, ulong targetClientId)
     {
@@ -93,7 +118,7 @@ public class PlayerLifeManager : NetworkBehaviour
 
                 if (player._currentHealth.Value <= 0)
                 {
-                    //TODO: BackToLobby();
+                    // TODO: Handle player death.
                 }
             }
         }
@@ -124,5 +149,4 @@ public class PlayerLifeManager : NetworkBehaviour
     {
         _shieldBar.value = newShield;
     }
-
 }
