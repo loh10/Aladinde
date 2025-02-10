@@ -1,0 +1,2005 @@
+fileFormatVersion: 2
+guid: eb37688035fafdf4fbececa2d93020de
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2745147897228211624
+    second: skill_shot_feathers0002_0
+  - first:
+      213: -9120293795411803951
+    second: skill_shot_feathers0002_1
+  - first:
+      213: -1570653644507628578
+    second: skill_shot_feathers0002_2
+  - first:
+      213: 7437971247912173706
+    second: skill_shot_feathers0002_3
+  - first:
+      213: -5326997721876766855
+    second: skill_shot_feathers0002_4
+  - first:
+      213: 3786798839149155083
+    second: skill_shot_feathers0002_5
+  - first:
+      213: 6816228255692213296
+    second: skill_shot_feathers0002_6
+  - first:
+      213: 1753130930800595469
+    second: skill_shot_feathers0002_7
+  - first:
+      213: 775375265995816563
+    second: skill_shot_feathers0002_8
+  - first:
+      213: -5391840787485631231
+    second: skill_shot_feathers0002_9
+  - first:
+      213: -8343410566242211535
+    second: skill_shot_feathers0002_10
+  - first:
+      213: 6927376458907190345
+    second: skill_shot_feathers0002_11
+  - first:
+      213: 7597631373404263864
+    second: skill_shot_feathers0002_12
+  - first:
+      213: -4535059059854228425
+    second: skill_shot_feathers0002_13
+  - first:
+      213: 556934887638928537
+    second: skill_shot_feathers0002_14
+  - first:
+      213: 6914665039990312292
+    second: skill_shot_feathers0002_15
+  - first:
+      213: -956408478618812683
+    second: skill_shot_feathers0002_16
+  - first:
+      213: -5644068968493131864
+    second: skill_shot_feathers0002_17
+  - first:
+      213: -832955870583356974
+    second: skill_shot_feathers0002_18
+  - first:
+      213: 6071337211932110565
+    second: skill_shot_feathers0002_19
+  - first:
+      213: -7133799417219203584
+    second: skill_shot_feathers0002_20
+  - first:
+      213: -5882564003188365340
+    second: skill_shot_feathers0002_21
+  - first:
+      213: -2232268507603906005
+    second: skill_shot_feathers0002_22
+  - first:
+      213: -6866908566355490178
+    second: skill_shot_feathers0002_23
+  - first:
+      213: 141823218760885500
+    second: skill_shot_feathers0002_24
+  - first:
+      213: 6865826822768980038
+    second: skill_shot_feathers0002_25
+  - first:
+      213: 3691179746019607793
+    second: skill_shot_feathers0002_26
+  - first:
+      213: -3160719004390523394
+    second: skill_shot_feathers0002_27
+  - first:
+      213: -3509784759952096412
+    second: skill_shot_feathers0002_28
+  - first:
+      213: -8424624060221998996
+    second: skill_shot_feathers0002_29
+  - first:
+      213: -8655025750407263734
+    second: skill_shot_feathers0002_30
+  - first:
+      213: 4797339002190392440
+    second: skill_shot_feathers0002_31
+  - first:
+      213: -3372284002238480118
+    second: skill_shot_feathers0002_32
+  - first:
+      213: -3011829767496363744
+    second: skill_shot_feathers0002_33
+  - first:
+      213: 7547647239156768861
+    second: skill_shot_feathers0002_34
+  - first:
+      213: 5864118067071571387
+    second: skill_shot_feathers0002_35
+  - first:
+      213: 1106487799589022440
+    second: skill_shot_feathers0002_36
+  - first:
+      213: -3038344655167088825
+    second: skill_shot_feathers0002_37
+  - first:
+      213: 6333237476723295009
+    second: skill_shot_feathers0002_38
+  - first:
+      213: 9030283858153080690
+    second: skill_shot_feathers0002_39
+  - first:
+      213: -5456256615991966364
+    second: skill_shot_feathers0002_40
+  - first:
+      213: -827692897988548192
+    second: skill_shot_feathers0002_41
+  - first:
+      213: -4138394508133822692
+    second: skill_shot_feathers0002_42
+  - first:
+      213: -1249611478886534313
+    second: skill_shot_feathers0002_43
+  - first:
+      213: 4503206676806108132
+    second: skill_shot_feathers0002_44
+  - first:
+      213: -3787548772839097220
+    second: skill_shot_feathers0002_45
+  - first:
+      213: -3517480312253330062
+    second: skill_shot_feathers0002_46
+  - first:
+      213: -2919472798916597383
+    second: skill_shot_feathers0002_47
+  - first:
+      213: 8058767894860121849
+    second: skill_shot_feathers0002_48
+  - first:
+      213: -5523079030351696560
+    second: skill_shot_feathers0002_49
+  - first:
+      213: 2055459796530976426
+    second: skill_shot_feathers0002_50
+  - first:
+      213: -6468412936864239429
+    second: skill_shot_feathers0002_51
+  - first:
+      213: 6566707778844685907
+    second: skill_shot_feathers0002_52
+  - first:
+      213: -5265957739216149669
+    second: skill_shot_feathers0002_53
+  - first:
+      213: -1145536983281765595
+    second: skill_shot_feathers0002_54
+  - first:
+      213: 8263604228618964402
+    second: skill_shot_feathers0002_55
+  - first:
+      213: 9176961248798576083
+    second: skill_shot_feathers0002_56
+  - first:
+      213: -6183946984937524384
+    second: skill_shot_feathers0002_57
+  - first:
+      213: 1866263144992186820
+    second: skill_shot_feathers0002_58
+  - first:
+      213: -536608520144015040
+    second: skill_shot_feathers0002_59
+  - first:
+      213: 7989472672600584719
+    second: skill_shot_feathers0002_60
+  - first:
+      213: 2648021405554702928
+    second: skill_shot_feathers0002_61
+  - first:
+      213: -2075130603386792301
+    second: skill_shot_feathers0002_62
+  - first:
+      213: -1750184877277297076
+    second: skill_shot_feathers0002_63
+  - first:
+      213: 4701718818130504342
+    second: skill_shot_feathers0002_64
+  - first:
+      213: 2091831603441151326
+    second: skill_shot_feathers0002_65
+  - first:
+      213: 2353225714675000096
+    second: skill_shot_feathers0002_66
+  - first:
+      213: 4542209021167402766
+    second: skill_shot_feathers0002_67
+  - first:
+      213: 7100725516443046642
+    second: skill_shot_feathers0002_68
+  - first:
+      213: 2182614533842505654
+    second: skill_shot_feathers0002_69
+  - first:
+      213: 6870532231132919730
+    second: skill_shot_feathers0002_70
+  - first:
+      213: 7756598514117068930
+    second: skill_shot_feathers0002_71
+  - first:
+      213: -6889556162553864808
+    second: skill_shot_feathers0002_72
+  - first:
+      213: -4226162032440293605
+    second: skill_shot_feathers0002_73
+  - first:
+      213: -1064440215113621682
+    second: skill_shot_feathers0002_74
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_0
+      rect:
+        serializedVersion: 2
+        x: 1777
+        y: 1781
+        width: 31
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85a4dc9288647e9d0800000000000000
+      internalID: -2745147897228211624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_1
+      rect:
+        serializedVersion: 2
+        x: 1781
+        y: 806
+        width: 534
+        height: 1793
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d0c74d4d153e6180800000000000000
+      internalID: -9120293795411803951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_2
+      rect:
+        serializedVersion: 2
+        x: 2288
+        y: 1781
+        width: 31
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edb33fdf4dae33ae0800000000000000
+      internalID: -1570653644507628578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_3
+      rect:
+        serializedVersion: 2
+        x: 1767
+        y: 1734
+        width: 11
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a80cf51217bf83760800000000000000
+      internalID: 7437971247912173706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_4
+      rect:
+        serializedVersion: 2
+        x: 1773
+        y: 1722
+        width: 9
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97f583cabc3b216b0800000000000000
+      internalID: -5326997721876766855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_5
+      rect:
+        serializedVersion: 2
+        x: 1779
+        y: 1712
+        width: 7
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b03d85b1b796d8430800000000000000
+      internalID: 3786798839149155083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_6
+      rect:
+        serializedVersion: 2
+        x: 2310
+        y: 1712
+        width: 7
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03cc3801c7b189e50800000000000000
+      internalID: 6816228255692213296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_7
+      rect:
+        serializedVersion: 2
+        x: 2314
+        y: 1722
+        width: 9
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d029e170b4f545810800000000000000
+      internalID: 1753130930800595469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_8
+      rect:
+        serializedVersion: 2
+        x: 2318
+        y: 1734
+        width: 11
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37efd4142bfa2ca00800000000000000
+      internalID: 775375265995816563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_9
+      rect:
+        serializedVersion: 2
+        x: 1747
+        y: 1610
+        width: 23
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10dd478fe555c25b0800000000000000
+      internalID: -5391840787485631231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_10
+      rect:
+        serializedVersion: 2
+        x: 1751
+        y: 1587
+        width: 30
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13964e79b40463c80800000000000000
+      internalID: -8343410566242211535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_11
+      rect:
+        serializedVersion: 2
+        x: 1771
+        y: 1607
+        width: 15
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9440192cf2cf22060800000000000000
+      internalID: 6927376458907190345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_12
+      rect:
+        serializedVersion: 2
+        x: 2310
+        y: 1607
+        width: 15
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b5df1aea75307960800000000000000
+      internalID: 7597631373404263864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_13
+      rect:
+        serializedVersion: 2
+        x: 2315
+        y: 1587
+        width: 30
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 734c8f510db3011c0800000000000000
+      internalID: -4535059059854228425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_14
+      rect:
+        serializedVersion: 2
+        x: 2326
+        y: 1610
+        width: 23
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99c8dbc5451aab700800000000000000
+      internalID: 556934887638928537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_15
+      rect:
+        serializedVersion: 2
+        x: 1743
+        y: 1582
+        width: 6
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46d4f69e733d5ff50800000000000000
+      internalID: 6914665039990312292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_16
+      rect:
+        serializedVersion: 2
+        x: 1746
+        y: 1552
+        width: 8
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fef0c35e872ab2f0800000000000000
+      internalID: -956408478618812683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_17
+      rect:
+        serializedVersion: 2
+        x: 1762
+        y: 1541
+        width: 9
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a7592d3d2d3ca1b0800000000000000
+      internalID: -5644068968493131864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_18
+      rect:
+        serializedVersion: 2
+        x: 2325
+        y: 1541
+        width: 9
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d18d448c0fb074f0800000000000000
+      internalID: -832955870583356974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_19
+      rect:
+        serializedVersion: 2
+        x: 2342
+        y: 1552
+        width: 8
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5eee2d4e609b14450800000000000000
+      internalID: 6071337211932110565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_20
+      rect:
+        serializedVersion: 2
+        x: 2347
+        y: 1582
+        width: 6
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00eb2cdf937affc90800000000000000
+      internalID: -7133799417219203584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_21
+      rect:
+        serializedVersion: 2
+        x: 1686
+        y: 1148
+        width: 61
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e7257dc43fec5ea0800000000000000
+      internalID: -5882564003188365340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_22
+      rect:
+        serializedVersion: 2
+        x: 1756
+        y: 1466
+        width: 8
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b225af09e936501e0800000000000000
+      internalID: -2232268507603906005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_23
+      rect:
+        serializedVersion: 2
+        x: 2332
+        y: 1466
+        width: 8
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7a4b459a07d3b0a0800000000000000
+      internalID: -6866908566355490178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_24
+      rect:
+        serializedVersion: 2
+        x: 2349
+        y: 1148
+        width: 61
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf4252f477bd7f100800000000000000
+      internalID: 141823218760885500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_25
+      rect:
+        serializedVersion: 2
+        x: 1751
+        y: 1394
+        width: 7
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6407e7c5e11584f50800000000000000
+      internalID: 6865826822768980038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_26
+      rect:
+        serializedVersion: 2
+        x: 1775
+        y: 1387
+        width: 11
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f48d9b1c64b93330800000000000000
+      internalID: 3691179746019607793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_27
+      rect:
+        serializedVersion: 2
+        x: 2310
+        y: 1387
+        width: 11
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efdf97ccfced224d0800000000000000
+      internalID: -3160719004390523394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_28
+      rect:
+        serializedVersion: 2
+        x: 2338
+        y: 1394
+        width: 7
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 463c9f04b5dba4fc0800000000000000
+      internalID: -3509784759952096412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_29
+      rect:
+        serializedVersion: 2
+        x: 1747
+        y: 1210
+        width: 19
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6832448d09b51b80800000000000000
+      internalID: -8424624060221998996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_30
+      rect:
+        serializedVersion: 2
+        x: 1767
+        y: 1339
+        width: 10
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0acd11bfeb23e780800000000000000
+      internalID: -8655025750407263734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_31
+      rect:
+        serializedVersion: 2
+        x: 2319
+        y: 1339
+        width: 10
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87c6fa4b762939240800000000000000
+      internalID: 4797339002190392440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_32
+      rect:
+        serializedVersion: 2
+        x: 2330
+        y: 1210
+        width: 19
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a01c7dc219d3331d0800000000000000
+      internalID: -3372284002238480118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_33
+      rect:
+        serializedVersion: 2
+        x: 1677
+        y: 1197
+        width: 10
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0219e68a8c4d336d0800000000000000
+      internalID: -3011829767496363744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_34
+      rect:
+        serializedVersion: 2
+        x: 1730
+        y: 1071
+        width: 21
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d50a5e3cc21aeb860800000000000000
+      internalID: 7547647239156768861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_35
+      rect:
+        serializedVersion: 2
+        x: 2345
+        y: 1071
+        width: 21
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb550c40058816150800000000000000
+      internalID: 5864118067071571387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_36
+      rect:
+        serializedVersion: 2
+        x: 2409
+        y: 1197
+        width: 10
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8eaaec29ac80b5f00800000000000000
+      internalID: 1106487799589022440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_37
+      rect:
+        serializedVersion: 2
+        x: 1628
+        y: 862
+        width: 52
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7471f8b42a1a5d5d0800000000000000
+      internalID: -3038344655167088825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_38
+      rect:
+        serializedVersion: 2
+        x: 1677
+        y: 729
+        width: 25
+        height: 416
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 123884e1eed24e750800000000000000
+      internalID: 6333237476723295009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_39
+      rect:
+        serializedVersion: 2
+        x: 1724
+        y: 1015
+        width: 9
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27788221353025d70800000000000000
+      internalID: 9030283858153080690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_40
+      rect:
+        serializedVersion: 2
+        x: 1749
+        y: 1003
+        width: 12
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4658c68248b7744b0800000000000000
+      internalID: -5456256615991966364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_41
+      rect:
+        serializedVersion: 2
+        x: 1834
+        y: 711
+        width: 36
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a96740d1b17384f0800000000000000
+      internalID: -827692897988548192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_42
+      rect:
+        serializedVersion: 2
+        x: 1866
+        y: 609
+        width: 71
+        height: 409
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1f814afe187196c0800000000000000
+      internalID: -4138394508133822692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_43
+      rect:
+        serializedVersion: 2
+        x: 1932
+        y: 691
+        width: 41
+        height: 492
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 753b7bd0bfc78aee0800000000000000
+      internalID: -1249611478886534313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_44
+      rect:
+        serializedVersion: 2
+        x: 2123
+        y: 691
+        width: 41
+        height: 492
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e302311d9a9e7e30800000000000000
+      internalID: 4503206676806108132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_45
+      rect:
+        serializedVersion: 2
+        x: 2159
+        y: 609
+        width: 71
+        height: 409
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7c7579557cef6bc0800000000000000
+      internalID: -3787548772839097220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_46
+      rect:
+        serializedVersion: 2
+        x: 2226
+        y: 711
+        width: 36
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27dc5bbda466f2fc0800000000000000
+      internalID: -3517480312253330062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_47
+      rect:
+        serializedVersion: 2
+        x: 2335
+        y: 1003
+        width: 12
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 979292915f2fb77d0800000000000000
+      internalID: -2919472798916597383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_48
+      rect:
+        serializedVersion: 2
+        x: 2363
+        y: 1015
+        width: 9
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f6c57404be76df60800000000000000
+      internalID: 8058767894860121849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_49
+      rect:
+        serializedVersion: 2
+        x: 2394
+        y: 729
+        width: 25
+        height: 416
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05d6a7962e41a53b0800000000000000
+      internalID: -5523079030351696560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_50
+      rect:
+        serializedVersion: 2
+        x: 2416
+        y: 862
+        width: 52
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa6535e6bc5768c10800000000000000
+      internalID: 2055459796530976426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_51
+      rect:
+        serializedVersion: 2
+        x: 1705
+        y: 326
+        width: 30
+        height: 683
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb07aad74b49b36a0800000000000000
+      internalID: -6468412936864239429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_52
+      rect:
+        serializedVersion: 2
+        x: 1756
+        y: 877
+        width: 11
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 356f4d5dee1a12b50800000000000000
+      internalID: 6566707778844685907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_53
+      rect:
+        serializedVersion: 2
+        x: 1781
+        y: 600
+        width: 38
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b536dcf165f8be6b0800000000000000
+      internalID: -5265957739216149669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_54
+      rect:
+        serializedVersion: 2
+        x: 2277
+        y: 600
+        width: 38
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 523fa6ade2c3a10f0800000000000000
+      internalID: -1145536983281765595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_55
+      rect:
+        serializedVersion: 2
+        x: 2329
+        y: 877
+        width: 11
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bdcf3373483ea270800000000000000
+      internalID: 8263604228618964402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_56
+      rect:
+        serializedVersion: 2
+        x: 2361
+        y: 326
+        width: 30
+        height: 683
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dd0a2852ad1b5f70800000000000000
+      internalID: 9176961248798576083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_57
+      rect:
+        serializedVersion: 2
+        x: 1867
+        y: 607
+        width: 15
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06373fc2bf43e2aa0800000000000000
+      internalID: -6183946984937524384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_58
+      rect:
+        serializedVersion: 2
+        x: 1926
+        y: 448
+        width: 34
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c1a9a6417c46e910800000000000000
+      internalID: 1866263144992186820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_59
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 448
+        width: 34
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0413e5dd4659d88f0800000000000000
+      internalID: -536608520144015040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_60
+      rect:
+        serializedVersion: 2
+        x: 2214
+        y: 607
+        width: 15
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f027c01d01f40ee60800000000000000
+      internalID: 7989472672600584719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_61
+      rect:
+        serializedVersion: 2
+        x: 1811
+        y: 204
+        width: 56
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05af7b34079afb420800000000000000
+      internalID: 2648021405554702928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_62
+      rect:
+        serializedVersion: 2
+        x: 1887
+        y: 263
+        width: 71
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3969692f5b7a333e0800000000000000
+      internalID: -2075130603386792301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_63
+      rect:
+        serializedVersion: 2
+        x: 1957
+        y: 356
+        width: 16
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4640a2802816b7e0800000000000000
+      internalID: -1750184877277297076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_64
+      rect:
+        serializedVersion: 2
+        x: 1969
+        y: 262
+        width: 17
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69a2074ba5cdf3140800000000000000
+      internalID: 4701718818130504342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_65
+      rect:
+        serializedVersion: 2
+        x: 2110
+        y: 262
+        width: 17
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5dab05a2cda70d10800000000000000
+      internalID: 2091831603441151326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_66
+      rect:
+        serializedVersion: 2
+        x: 2123
+        y: 356
+        width: 16
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 023a48fc15658a020800000000000000
+      internalID: 2353225714675000096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_67
+      rect:
+        serializedVersion: 2
+        x: 2138
+        y: 263
+        width: 71
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0ff1420a0b290f30800000000000000
+      internalID: 4542209021167402766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_68
+      rect:
+        serializedVersion: 2
+        x: 2229
+        y: 204
+        width: 56
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f2d3276c38da8260800000000000000
+      internalID: 7100725516443046642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_69
+      rect:
+        serializedVersion: 2
+        x: 1956
+        y: 235
+        width: 9
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bf8943ca543a4e10800000000000000
+      internalID: 2182614533842505654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_70
+      rect:
+        serializedVersion: 2
+        x: 1984
+        y: 191
+        width: 17
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b7bc8e99a8095f50800000000000000
+      internalID: 6870532231132919730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_71
+      rect:
+        serializedVersion: 2
+        x: 2095
+        y: 191
+        width: 17
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 288454b9049f4ab60800000000000000
+      internalID: 7756598514117068930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_72
+      rect:
+        serializedVersion: 2
+        x: 2131
+        y: 235
+        width: 9
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89d9fde2c216360a0800000000000000
+      internalID: -6889556162553864808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_73
+      rect:
+        serializedVersion: 2
+        x: 1867
+        y: 192
+        width: 6
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b17472dc508a955c0800000000000000
+      internalID: -4226162032440293605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill_shot_feathers0002_74
+      rect:
+        serializedVersion: 2
+        x: 2223
+        y: 192
+        width: 6
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4f138593495a31f0800000000000000
+      internalID: -1064440215113621682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
