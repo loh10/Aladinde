@@ -12,7 +12,7 @@ public class ThornTrap : MonoBehaviour, ITrapEffect
         Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
         LifeManager life = player.GetComponent<LifeManager>();
 
-        if (rb != null) rb.velocity *= speedReduction;
+        if (rb != null) rb.linearVelocity *= speedReduction;
 
         if (damageCoroutine == null && rb != null)
             damageCoroutine = StartCoroutine(DamageOverTime(rb, life));
@@ -31,7 +31,7 @@ public class ThornTrap : MonoBehaviour, ITrapEffect
     {
         while (true)
         {
-            if (rb != null && life != null && rb.velocity.magnitude > 0.1f)
+            if (rb != null && life != null && rb.linearVelocity.magnitude > 0.1f)
             {
                 life.TakeDamage(damagePerSecond);
             }

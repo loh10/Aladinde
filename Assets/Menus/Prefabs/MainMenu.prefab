@@ -1267,7 +1267,6 @@ GameObject:
   - component: {fileID: 6774460618795089457}
   - component: {fileID: 9115084376600824885}
   - component: {fileID: 2162128558458429296}
-  - component: {fileID: 7572981917552683804}
   m_Layer: 5
   m_Name: CustomButton
   m_TagString: Untagged
@@ -1292,7 +1291,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -750, y: 50}
+  m_AnchoredPosition: {x: -599, y: 50}
   m_SizeDelta: {x: 1265, y: 365}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6774460618795089457
@@ -1389,28 +1388,6 @@ MonoBehaviour:
           m_StringArgument: PlayTest
           m_BoolArgument: 0
         m_CallState: 2
---- !u!95 &7572981917552683804
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4550880142965002132}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 66d215c7dd36b7d4484de5727c900809, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4657217328381563641
 GameObject:
   m_ObjectHideFlags: 0
