@@ -1,6 +1,8 @@
 using System.Collections;
+using System.Linq;
 using Unity.Netcode;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 
@@ -82,6 +84,7 @@ public class PlayerLifeManager : NetworkBehaviour
         _currentShield.Value = Mathf.Max(0, _currentShield.Value - amount);
         UpdateShieldBarClientRpc(_currentShield.Value);
     }
+<<<<<<< feat-Player
     
     // *** NEW: Local damage application method ***
     public void ApplyDamage(float damage)
@@ -108,6 +111,8 @@ public class PlayerLifeManager : NetworkBehaviour
             // (Insert any death/respawn logic here.)
         }
     }
+=======
+>>>>>>> Dev
 
     [ServerRpc]
     public void TakeDamageServerRpc(float damage, ulong targetClientId)
@@ -133,9 +138,50 @@ public class PlayerLifeManager : NetworkBehaviour
 
                 if (player._currentHealth.Value <= 0)
                 {
+<<<<<<< feat-Player
                     // TODO: Handle player death.
+=======
+                    //TODO: Add respawn logic
+>>>>>>> Dev
                 }
             }
+        }
+    }
+
+    /// <summary>
+    /// Disconnects the player from the server and sends them back to the main menu
+    /// </summary>
+    /// <param name="player"></param>
+    /// <param name="targetClientId"></param>
+    private void DisconnectPlayer(PlayerLifeManager player, ulong targetClientId)
+    {
+        ClientRpcParams clientRpcParams = new ClientRpcParams
+        {
+            Send = new ClientRpcSendParams
+            {
+                TargetClientIds = new ulong[] { targetClientId }
+            }
+        };
+        ChangeSceneClientRpc("MainMenu", clientRpcParams);
+        player.GetComponent<NetworkObject>().Despawn();
+        FindFirstObjectByType<NetworkManager>().DisconnectClient(targetClientId);
+    }
+
+
+    [ClientRpc]
+    private void ChangeSceneClientRpc(string sceneName, ClientRpcParams clientRpcParams = default)
+    {
+        GetComponent<PlayerSwitchScene>().SwitchScene(sceneName);
+    }
+
+
+    [Rpc(SendTo.NotServer)]
+    private void DisconnectPlayerRpc(ulong targetId)
+    {
+        if (IsOwner && OwnerClientId == targetId)
+        {
+            Debug.Log("Disconnecting player: " + targetId);
+            GetComponent<PlayerSwitchScene>().SwitchScene("MainMenu");
         }
     }
 
