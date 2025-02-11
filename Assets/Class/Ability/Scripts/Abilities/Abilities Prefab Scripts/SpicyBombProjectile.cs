@@ -8,10 +8,12 @@ public class SpicyBombProjectile : NetworkBehaviour
     private float speed;
     private bool exploded = false;
     private GameObject owner;
+    
+    private ulong ownerClientId;
 
     [Header("Explosion Settings")]
     [SerializeField] private float explosionRadius = 3f;
-    [SerializeField] private float immediateDamage = 30f;
+    [SerializeField] private float immediateDamage = 20f;
     [SerializeField] private float burnDamagePerSecond = 5f;
     [SerializeField] private float burnDuration = 3f;    // seconds of burn effect
     [SerializeField] private float cloudDuration = 4f;   // seconds explosion cloud persists
@@ -48,10 +50,14 @@ public class SpicyBombProjectile : NetworkBehaviour
     public void SetOwner(GameObject ownerGameObject)
     {
         owner = ownerGameObject;
+        ownerClientId = ownerGameObject.GetComponent<NetworkObject>()?.OwnerClientId ?? 0;
+    
         Collider2D projCollider = GetComponent<Collider2D>();
-        Collider2D ownerCollider = owner.GetComponent<Collider2D>();
+        Collider2D ownerCollider = ownerGameObject.GetComponent<Collider2D>();
         if (projCollider != null && ownerCollider != null)
+        {
             Physics2D.IgnoreCollision(projCollider, ownerCollider);
+        }
     }
     
     private void OnCollisionEnter2D(Collision2D collision)
@@ -100,12 +106,20 @@ public class SpicyBombProjectile : NetworkBehaviour
     private void ApplyDamageToPlayersRpc(float damage)
     {
         Debug.Log("SpicyBombProjectile attempting to apply damage: " + damage);
-        Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, explosionRadius);
+        Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, explosionRadius, Physics2D.AllLayers);
         Debug.Log("SpicyBombProjectile found " + hitColliders.Length + " colliders");
         foreach (Collider2D collider in hitColliders)
         {
             if (collider.CompareTag("Player"))
             {
+                // Retrieve the NetworkObject from the collider's root GameObject.
+                NetworkObject colliderNetObj = collider.transform.root.GetComponent<NetworkObject>();
+                if (colliderNetObj != null && colliderNetObj.OwnerClientId == ownerClientId)
+                {
+                    // This collider belongs to the caster; skip applying effects.
+                    continue;
+                }
+                
                 Debug.Log("SpicyBombProjectile dealing damage to " + collider.name);
                 PlayerLifeManager lifeManager = collider.GetComponent<PlayerLifeManager>();
                 if (lifeManager != null)

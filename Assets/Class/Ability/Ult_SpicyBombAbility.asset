@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aeeb273ad0816484ba2ba2d4e7607ea1, type: 3}
-  m_Name: SO_CorrosiveSauceAbility
+  m_Script: {fileID: 11500000, guid: 2a6728711e19fd044932722ad7f60120, type: 3}
+  m_Name: Ult_SpicyBombAbility
   m_EditorClassIdentifier: 
-  abilityName: Corrosive Sauce
-  abilityDescription: Projects a corrosive sauce that reduces enemy shields
+  abilityName: Spicy Bomb
+  abilityDescription: Explodes, creating an irritating spice cloud
   cooldown: 0
   range: 0
   damages: 0
@@ -23,6 +23,6 @@ MonoBehaviour:
   mousePos: {x: 0, y: 0}
   spawnTransform: {x: 0, y: 0}
   icon: {fileID: 0}
-  abilityPrefab: {fileID: 7717569807027110694, guid: 0ea7760a729046247b907741a114252d, type: 3}
-  maxRange: 6
+  abilityPrefab: {fileID: 7717569807027110694, guid: 066b7cf3e0dcfc441af7733b3dd0f9ac, type: 3}
+  maxRange: 5
   projectileSpeed: 10

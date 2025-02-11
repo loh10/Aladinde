@@ -25,29 +25,4 @@ public class PoopBomb : Ability
 
         Debug.Log("Poop Bomb activated, explosion position: " + explosionPosition);
     }
-
-    private void SpawnProjectile(Vector2 spawnPos, Vector2 targetPosition, GameObject owner)
-    {
-        if (abilityPrefab != null)
-        {
-            GameObject projectile = Object.Instantiate(abilityPrefab, spawnPos, Quaternion.identity);
-            // Spawn the projectile as a networked object.
-            projectile.GetComponent<NetworkObject>()?.Spawn();
-            // Get the projectile’s component.
-            PoopBombProjectile bombProj = projectile.GetComponent<PoopBombProjectile>();
-            if (bombProj != null)
-            {
-                bombProj.Initialize(targetPosition, projectileSpeed);
-                bombProj.SetOwner(owner);
-            }
-            else
-            {
-                Debug.LogWarning("SpawnProjectile: Projectile prefab is missing a PoopBombProjectile component!");
-            }
-        }
-        else
-        {
-            Debug.LogWarning("SpawnProjectile: No projectile prefab assigned to PoopBomb ability!");
-        }
-    }
 }

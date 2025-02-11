@@ -25,27 +25,4 @@ public class SpicyBomb : Ability
 
         Debug.Log(abilityName + " activated");
     }
-
-    private void SpawnProjectile(Vector2 spawnPos, Vector2 targetPosition)
-    {
-        if (abilityPrefab != null)
-        {
-            GameObject projectile = Object.Instantiate(abilityPrefab, spawnPos, Quaternion.identity);
-            // Spawn the projectile as a networked object.
-            projectile.GetComponent<NetworkObject>()?.Spawn();
-            SpicyBombProjectile bombProj = projectile.GetComponent<SpicyBombProjectile>();
-            if (bombProj != null)
-            {
-                bombProj.Initialize(targetPosition, projectileSpeed);
-            }
-            else
-            {
-                Debug.LogWarning("SpawnProjectile: Projectile prefab is missing a SpicyBombProjectile component!");
-            }
-        }
-        else
-        {
-            Debug.LogWarning("SpawnProjectile: No projectile prefab assigned to SpicyBomb ability!");
-        }
-    }
 }

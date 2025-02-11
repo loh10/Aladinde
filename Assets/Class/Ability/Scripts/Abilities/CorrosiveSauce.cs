@@ -25,27 +25,4 @@ public class CorrosiveSauce : Ability
 
         Debug.Log("Corrosive Sauce activated, target position: " + targetPosition);
     }
-
-    private void SpawnProjectile(Vector2 spawnPos, Vector2 targetPosition, GameObject owner)
-    {
-        if (abilityPrefab != null)
-        {
-            GameObject projectile = Object.Instantiate(abilityPrefab, spawnPos, Quaternion.identity);
-            projectile.GetComponent<NetworkObject>()?.Spawn();
-            CorrosiveSauceProjectile csProj = projectile.GetComponent<CorrosiveSauceProjectile>();
-            if (csProj != null)
-            {
-                csProj.Initialize(targetPosition, projectileSpeed);
-                csProj.SetOwner(owner);
-            }
-            else
-            {
-                Debug.LogWarning("SpawnProjectile: Projectile prefab is missing a CorrosiveSauceProjectile component!");
-            }
-        }
-        else
-        {
-            Debug.LogWarning("SpawnProjectile: No projectile prefab assigned to Corrosive Sauce ability!");
-        }
-    }
 }

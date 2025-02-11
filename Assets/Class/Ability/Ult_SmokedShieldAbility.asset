@@ -9,18 +9,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b1dc45cb923f064692f7a82191fc539, type: 3}
-  m_Name: SO_LeafThrowAbility
+  m_Script: {fileID: 11500000, guid: 74f0f67e8c2a7984f8cc2e3a68f93647, type: 3}
+  m_Name: Ult_SmokedShieldAbility
   m_EditorClassIdentifier: 
-  abilityName: Leaf Throw
-  abilityDescription: Throws a sharp leaf that pierces through enemies
-  cooldown: 0.7
-  range: 6
-  damages: 15
-  chargeGain: 20
-  isChargingCapacity: 0
-  maxCharge: 0
+  abilityName: Smoked Shield
+  abilityDescription: 'Grants a temporary shield with a health bonus '
+  cooldown: 0
+  range: 0
+  damages: 0
+  chargeGain: 0
+  isChargingCapacity: 1
+  maxCharge: 100
   mousePos: {x: 0, y: 0}
   spawnTransform: {x: 0, y: 0}
   icon: {fileID: 0}
   abilityPrefab: {fileID: 0}
+  duration: 7

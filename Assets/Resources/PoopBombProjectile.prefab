@@ -76,7 +76,7 @@ MonoBehaviour:
   ShowTopMostFoldoutHeaderGroup: 1
   explosionRadius: 2
   slowDuration: 5
-  slowMultiplier: 0.8
+  slowMultiplier: 0.5
   explosionEffectPrefab: {fileID: 0}
 --- !u!212 &3214750382478891126
 SpriteRenderer:

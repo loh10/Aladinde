@@ -8,6 +8,8 @@ public class PoopBombProjectile : NetworkBehaviour
     private float speed;
     private bool exploded = false;
     private GameObject owner;
+    
+    private ulong ownerClientId;
 
     [Header("Explosion Settings")]
     [SerializeField] private float explosionRadius = 2f;      // 2 meters radius.
@@ -24,11 +26,16 @@ public class PoopBombProjectile : NetworkBehaviour
     public void SetOwner(GameObject ownerGameObject)
     {
         owner = ownerGameObject;
+        ownerClientId = ownerGameObject.GetComponent<NetworkObject>()?.OwnerClientId ?? 0;
+    
         Collider2D projCollider = GetComponent<Collider2D>();
-        Collider2D ownerCollider = owner.GetComponent<Collider2D>();
+        Collider2D ownerCollider = ownerGameObject.GetComponent<Collider2D>();
         if (projCollider != null && ownerCollider != null)
+        {
             Physics2D.IgnoreCollision(projCollider, ownerCollider);
+        }
     }
+
     
     private void Update()
     {
@@ -84,12 +91,20 @@ public class PoopBombProjectile : NetworkBehaviour
     private void ApplySlowToEnemies()
     {
         Debug.Log("PoopBombProjectile applying slow effect");
-        Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, explosionRadius);
+        Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, explosionRadius, Physics2D.AllLayers);
         Debug.Log("PoopBombProjectile found " + hitColliders.Length + " colliders");
         foreach (Collider2D collider in hitColliders)
         {
-            if (collider.CompareTag("Player") && collider.gameObject != owner)
+            if (collider.CompareTag("Player"))
             {
+                // Retrieve the NetworkObject from the collider's root GameObject.
+                NetworkObject colliderNetObj = collider.transform.root.GetComponent<NetworkObject>();
+                if (colliderNetObj != null && colliderNetObj.OwnerClientId == ownerClientId)
+                {
+                    // This collider belongs to the caster; skip applying effects.
+                    continue;
+                }
+                
                 Debug.Log("Applying slow to " + collider.name);
                 PlayerMovement movement = collider.GetComponent<PlayerMovement>();
                 if (movement != null)

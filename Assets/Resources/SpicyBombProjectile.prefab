@@ -74,8 +74,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
-  explosionRadius: 10
-  immediateDamage: 300
+  explosionRadius: 3
+  immediateDamage: 30
   burnDamagePerSecond: 5
   burnDuration: 3
   cloudDuration: 4

@@ -10,15 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c331b7afed520274c88e93b8698235c4, type: 3}
-  m_Name: SO_SpiceJetAbility
+  m_Name: Simple_SpiceJetAbility
   m_EditorClassIdentifier: 
   abilityName: Spice Jet
   abilityDescription: Shoots a blend of spices in a straight line
   cooldown: 0.6
   range: 3
-  damages: 18
+  damages: 15
   chargeGain: 20
   isChargingCapacity: 0
   maxCharge: 0
+  mousePos: {x: -1.3498821, y: -1.5520227}
+  spawnTransform: {x: 0, y: 0}
   icon: {fileID: 0}
   abilityPrefab: {fileID: 0}
+  critChance: 0.2
+  critMultiplier: 1.5

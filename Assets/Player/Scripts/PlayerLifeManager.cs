@@ -2,11 +2,13 @@ using System.Collections;
 using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlayerLifeManager : NetworkBehaviour
 {
     [SerializeField] private Slider _healthBar;
     [SerializeField] private Slider _shieldBar;
+    [SerializeField] private TMP_Text _healthText;
 
     private float _maxHealth;
     private float _maxShield;
@@ -21,6 +23,11 @@ public class PlayerLifeManager : NetworkBehaviour
         _healthBar.maxValue = _maxHealth;
         _healthBar.value = _maxHealth;
     
+        if (_healthText != null)
+        {
+            _healthText.text = $"{_maxHealth:F0}/{_maxHealth:F0}";
+        }
+        
         _maxShield = GetComponent<PlayerInfos>().characterClass.maxShield;
         _shieldBar.maxValue = _maxShield;
         _shieldBar.value = 0;
@@ -31,6 +38,14 @@ public class PlayerLifeManager : NetworkBehaviour
             _currentHealth.Value = _maxHealth;
             _currentShield.Value = 0;
         }
+        
+        _currentHealth.OnValueChanged += (oldValue, newValue) => {
+            UpdateHealthBarClientRpc(newValue);
+        };
+
+        _currentShield.OnValueChanged += (oldValue, newValue) => {
+            UpdateShieldBarClientRpc(newValue);
+        };
     }
 
     public void ActiShield(float duration)
@@ -142,6 +157,11 @@ public class PlayerLifeManager : NetworkBehaviour
     void UpdateHealthBarClientRpc(float newHealth)
     {
         _healthBar.value = newHealth;
+        
+        if (_healthText != null)
+        {
+            _healthText.text = $"{newHealth:F0}/{_maxHealth:F0}";
+        }
     }
 
     [ClientRpc]
