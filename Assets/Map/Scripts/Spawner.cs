@@ -4,88 +4,88 @@ using UnityEngine.Tilemaps;
 
 public class Spawner : MonoBehaviour
 {
-    [SerializeField] private int _amountOfConsumables;
-    [SerializeField] private Consumable[] _consumables;
-    [SerializeField] private Vector2 _spawnRange = new Vector2(-5f, 5f);
-    [SerializeField] private Tilemap _collisionTilemap;
-    [SerializeField] private Grid _grid;
-    [SerializeField] private LayerMask _obstacleLayer;
+    [Header("Paramètres de spawn")]
+    [SerializeField] private Consumable[] _scriptableObjects;
 
-    private HashSet<Vector3Int> _occupiedCells = new HashSet<Vector3Int>();
+    [SerializeField] private int _spawnCount = 10;
 
+    [Header("Zone de spawn")]
+    [SerializeField] private Vector2 _spawnAreaSize = new Vector2(15f, 15f);
 
-    void Start()
+    [Header("Collision Settings")]
+    [SerializeField] private LayerMask _collisionLayer;
+
+    [SerializeField] private float _checkRadius = 0.5f;
+    [SerializeField] private int _maxAttemptsPerObject = 20;
+
+    private void Start()
     {
-        ScanObstacles();
-        SpawnConsumable();
+        SpawnObjects();
     }
 
-    /// <summary>
-    /// Obstacle Detection by OverlappingBox, if an obstacle with the obstacleLayer and a collider is detected, the cell is marked as occupied
-    /// </summary>
-    private void ScanObstacles()
+    private void SpawnObjects()
     {
-        Collider2D[] colliders = Physics2D.OverlapBoxAll(transform.position, _spawnRange * 2, 0, _obstacleLayer);
-
-        foreach (Collider2D col in colliders)
+        for (int i = 0; i < _spawnCount; i++)
         {
-            Vector3Int cellPosition = _grid.WorldToCell(col.transform.position);
-            _occupiedCells.Add(cellPosition);
-        }
-
-    }
-
-    /// <summary>
-    /// Function to spawn the differents consumables, select a random consumable in the list and make them spawn
-    /// </summary>
-    public void SpawnConsumable()
-    {
-        int spawnedCount = 0;
-        int maxAttempts = _amountOfConsumables * 5;
-        int attempts = 0;
-
-        while (spawnedCount < _amountOfConsumables && attempts < maxAttempts)
-        {
-            Vector2 spawnPosition = new Vector2(
-                Random.Range(transform.position.x - _spawnRange.x, transform.position.x + _spawnRange.x), 
-                Random.Range(transform.position.y - _spawnRange.y, transform.position.y + _spawnRange.y)
-                );
-          
-            Vector3Int cellPosition = _grid.WorldToCell(spawnPosition);
-            Vector2 cellCenter = _grid.GetCellCenterWorld(cellPosition);
-
-            if (IsValidSpawnPosition(cellPosition, cellCenter))
+            Vector2 spawnPosition;
+            bool foundValidPosition = TryGetValidSpawnPosition(out spawnPosition);
+            
+            if (!foundValidPosition)
             {
-                Consumable randomPrefab = _consumables[Random.Range(0, _consumables.Length)];
-
-                Instantiate(randomPrefab, cellCenter, Quaternion.identity);
-                _occupiedCells.Add(cellPosition);
-                spawnedCount++;
+                Debug.LogWarning("Impossible de trouver une position valide après plusieurs tentatives.");
+                continue;
             }
-            attempts++;
-        };
+            
+            Consumable randomData = _scriptableObjects[Random.Range(0, _scriptableObjects.Length)];
 
+            Instantiate(randomData.prefab, spawnPosition, Quaternion.identity);
+        }
     }
 
-    /// <summary>
-    /// Verify if the cells are occupied or not
-    /// </summary>
-    /// <param name="cellPosition"></param>
-    /// <param name="cellCenter"></param>
-    /// <returns></returns>
-    private bool IsValidSpawnPosition(Vector3Int cellPosition, Vector2 cellCenter)
+    private bool TryGetValidSpawnPosition(out Vector2 validPosition)
     {
-        if (_collisionTilemap.HasTile(cellPosition) || _occupiedCells.Contains(cellPosition))
+        for (int attempt = 0; attempt < _maxAttemptsPerObject; attempt++)
         {
-            return false;
+            Vector2 randomPosition = GenerateRandomPositionInArea();
+
+            if (!IsPositionColliding(randomPosition))
+            {
+                validPosition = randomPosition;
+                return true;
+            }
         }
 
-        Collider2D hit = Physics2D.OverlapBox(cellCenter, _grid.cellSize * 0.9f, 0, _obstacleLayer);
-        if (hit != null)
-        {
-            return false;
-        }
+        validPosition = Vector2.zero;
+        return false;
+    }
+    
+    private Vector2 GenerateRandomPositionInArea()
+    {
+        float randomX = Random.Range(transform.position.x - _spawnAreaSize.x / 2,
+            transform.position.x + _spawnAreaSize.x / 2);
+        float randomY = Random.Range(transform.position.y - _spawnAreaSize.y / 2,
+            transform.position.y + _spawnAreaSize.y / 2);
 
-        return true;
+        return new Vector2(randomX, randomY);
+    }
+
+    private bool IsPositionColliding(Vector2 position)
+    {
+        Collider2D hit = Physics2D.OverlapCircle(position, _checkRadius, _collisionLayer);
+        return (hit != null);
+    }
+    
+    private void OnDrawGizmos()
+    {
+        // Définis la couleur 
+        Gizmos.color = new Color(1f, 0f, 0f, 0.2f); // Rouge translucide
+
+        Vector3 center = transform.position;
+        Vector3 size = new Vector3(_spawnAreaSize.x, _spawnAreaSize.y, 1f);
+
+        Gizmos.DrawCube(center, size);
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(center, size);
     }
 }

@@ -11,6 +11,7 @@ public class Consumable : ScriptableObject
     public float increaseSpeed;
     public float slowDuration;
     public float slowPercentageValue;
+    public GameObject prefab;
 
     public void ApplyEffect(PlayerInfos player, LifeManager lifeManager)
     {

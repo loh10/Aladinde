@@ -20,3 +20,4 @@ MonoBehaviour:
   increaseSpeed: 0
   slowDuration: 0
   slowPercentageValue: 0
+  prefab: {fileID: 677497889538908625, guid: df0730a0619ec554ca7ea27848ece13e, type: 3}

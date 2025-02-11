@@ -84,8 +84,6 @@ public class PlayerLifeManager : NetworkBehaviour
         _currentShield.Value = Mathf.Max(0, _currentShield.Value - amount);
         UpdateShieldBarClientRpc(_currentShield.Value);
     }
-<<<<<<< feat-Player
-    
     // *** NEW: Local damage application method ***
     public void ApplyDamage(float damage)
     {
@@ -111,8 +109,6 @@ public class PlayerLifeManager : NetworkBehaviour
             // (Insert any death/respawn logic here.)
         }
     }
-=======
->>>>>>> Dev
 
     [ServerRpc]
     public void TakeDamageServerRpc(float damage, ulong targetClientId)
@@ -138,11 +134,7 @@ public class PlayerLifeManager : NetworkBehaviour
 
                 if (player._currentHealth.Value <= 0)
                 {
-<<<<<<< feat-Player
-                    // TODO: Handle player death.
-=======
-                    //TODO: Add respawn logic
->>>>>>> Dev
+
                 }
             }
         }
