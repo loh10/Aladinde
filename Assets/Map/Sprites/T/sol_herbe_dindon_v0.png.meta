@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: ccab8242952db3c4a8e50bee6b2a2305
+guid: c64d2f6c57e7ae146813c6570f7fb4d3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3720125871624867187
-    second: Ronce_middle_0
-  - first:
-      213: -3227116670248069260
-    second: Ronce_middle_1
+      213: 1143010530117260484
+    second: sol_herbe_dindon_v0_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -116,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ronce_middle_0
+      name: sol_herbe_dindon_v0_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 518
-        width: 1495
-        height: 1012
+        y: 0
+        width: 2048
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,30 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d823f06da357f5cc0800000000000000
-      internalID: -3720125871624867187
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ronce_middle_1
-      rect:
-        serializedVersion: 2
-        x: 2019
-        y: 653
-        width: 29
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4775f158c7af633d0800000000000000
-      internalID: -3227116670248069260
+      spriteID: 4c49b2e650accdf00800000000000000
+      internalID: 1143010530117260484
       vertices: []
       indices: 
       edges: []
@@ -173,8 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Ronce_middle_0: -3720125871624867187
-      Ronce_middle_1: -3227116670248069260
+      sol_herbe_dindon_v0_0: 1143010530117260484
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
