@@ -324,7 +324,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1439395848277829762, guid: 4bed31d3917ba39499db9113c928cd13, type: 3}
       propertyPath: ConnectionData.Address
-      value: 192.168.1.251
+      value: 127.0.0.1
       objectReference: {fileID: 0}
     - target: {fileID: 1439395848277829762, guid: 4bed31d3917ba39499db9113c928cd13, type: 3}
       propertyPath: ConnectionData.ServerListenAddress
@@ -374,10 +374,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: NetworkManager
       objectReference: {fileID: 0}
-    - target: {fileID: 7072066317445817372, guid: 4bed31d3917ba39499db9113c928cd13, type: 3}
-      propertyPath: m_Enabled
+    - target: {fileID: 5929544513175077586, guid: 4bed31d3917ba39499db9113c928cd13, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7072066317445817372, guid: 4bed31d3917ba39499db9113c928cd13, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8782973648821554383, guid: 4bed31d3917ba39499db9113c928cd13, type: 3}
+      propertyPath: NetworkConfig.Prefabs.NetworkPrefabsLists.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8782973648821554383, guid: 4bed31d3917ba39499db9113c928cd13, type: 3}
+      propertyPath: 'NetworkConfig.Prefabs.NetworkPrefabsLists.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 7f8d583d0cdea3449bb83b7ef7fb7ac5, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
