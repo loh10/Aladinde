@@ -535,8 +535,8 @@ MonoBehaviour:
   _playerInLobbyTxt: {fileID: 1042895185}
   _networkManager: {fileID: 731558435}
   _botPrefab: {fileID: 6435510618477332949, guid: bbd14500f05946341b64997b78ee3e1a, type: 3}
-  _nbMaxPlayer: 2
-  _waitingTimeBeforeAddBot: 10
+  _nbMaxPlayer: 10
+  _waitingTimeBeforeAddBot: 20
 --- !u!114 &153345586
 MonoBehaviour:
   m_ObjectHideFlags: 0
