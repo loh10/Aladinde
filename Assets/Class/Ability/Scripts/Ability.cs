@@ -1,3 +1,4 @@
+using UnityEditor.Playables;
 using System;
 using Unity.Netcode;
 using UnityEngine;
@@ -37,6 +38,7 @@ public class Ability : ScriptableObject
         }
         else
         {
+            Debug.Log(abilityName + " triggered by " + user.name);
             IncreaseUltimateCharge(user);
         }
     }
@@ -47,6 +49,7 @@ public class Ability : ScriptableObject
         Ability ultimateAbility = playerInfos.characterClass.abilities[playerInfos.characterClass.abilities.Length - 1];
 
         ultimateAbility.IncreaseCharge(chargeGain);
+        Debug.Log($"Ultimate {ultimateAbility.abilityName} charge increased by {chargeGain}");
     }
 
     public void IncreaseCharge(float amount)
@@ -54,6 +57,7 @@ public class Ability : ScriptableObject
         if (isChargingCapacity)
         {
             _currentCharge = Mathf.Min(maxCharge, _currentCharge + amount);
+            Debug.Log($"Charge {abilityName}: {_currentCharge}/{maxCharge}");
         }
     }
 

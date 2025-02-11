@@ -2,8 +2,6 @@ using System.Collections;
 using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Serialization;
-using UnityEngine.UI;
 
 public class PlayerMovement : NetworkBehaviour
 {
@@ -12,13 +10,12 @@ public class PlayerMovement : NetworkBehaviour
     private Rigidbody2D _rb;
     private float _originalSpeed;
 
-    [FormerlySerializedAs("canMoove")] public bool canMove;
-
     public override void OnNetworkSpawn()
     {
-        gameObject.name = "Player "+OwnerClientId.ToString();
-        canMove = false;
-        if (!IsOwner)
+        gameObject.name = "Player " + OwnerClientId.ToString();
+
+        // Disable input/visuals on non‑owner clients (unless running on the server)
+        if (!IsOwner && !NetworkManager.Singleton.IsServer)
         {
             Debug.Log(gameObject.name + " is connected (non-owner client)");
             GetComponent<PlayerInput>().enabled = false;
@@ -45,9 +42,7 @@ public class PlayerMovement : NetworkBehaviour
     {
         if (_rb == null)
             return;
-        if(canMove)
-            _rb.linearVelocity = _move;
-
+        _rb.linearVelocity = _move;
     }
 
     public void MovementPlayer(InputAction.CallbackContext ctx)

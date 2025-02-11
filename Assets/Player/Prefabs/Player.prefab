@@ -452,7 +452,6 @@ GameObject:
   - component: {fileID: 2007017039774846536}
   - component: {fileID: 8255990840318067249}
   - component: {fileID: 1252895529861924051}
-  - component: {fileID: 4703063581220134226}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -489,7 +488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 1545795393
+  GlobalObjectIdHash: 3673340590
   InScenePlacedSourceGlobalObjectIdHash: 0
   DeferredDespawnTick: 0
   Ownership: 1
@@ -535,8 +534,6 @@ MonoBehaviour:
   _healthText: {fileID: 6812640994812571576}
   isBurning: 0
 --- !u!114 &8808096608503287548
-  _attackToSpawn: {fileID: 6912215052845606259, guid: b74a464c74227ac42859acda48cb09b4, type: 3}
---- !u!114 &4306653359299550863
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -550,10 +547,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
   _attackToSpawn: {fileID: 6912215052845606259, guid: b74a464c74227ac42859acda48cb09b4, type: 3}
-  characterClass: {fileID: 11400000, guid: db995e482d45c4643bf39e4a1bf2be49, type: 2}
-  _isBot: 0
-  _classes: []
-  score: 0
 --- !u!114 &1926682325211748933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -665,23 +658,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
-  canMove: 0
---- !u!114 &345175965247217739
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3852679987547625373}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22fc7262d41656b4eb1128fd1843cd7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ShowTopMostFoldoutHeaderGroup: 1
-  _healthBar: {fileID: 9095311582544447920}
-  _shieldBar: {fileID: 2111532025546970606}
-  isBurning: 0
 --- !u!114 &8302135883283106033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -827,14 +803,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3852679987547625373}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -863,9 +839,6 @@ MonoBehaviour:
   UseRigidBodyForMotion: 0
   AutoUpdateKinematicState: 0
   AutoSetKinematicOnDespawn: 1
-  m_Script: {fileID: 11500000, guid: 02cca164302a263438093c79f5ac0392, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &5580128733161288501
 GameObject:
   m_ObjectHideFlags: 0

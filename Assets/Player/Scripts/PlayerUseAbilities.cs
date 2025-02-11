@@ -96,6 +96,7 @@ public class PlayerUseAbilities : NetworkBehaviour
         if (ctx.phase == InputActionPhase.Started && _canSimpleAttack)
         {
             Debug.Log("Simple Attack");
+            // Activate a simple attack ability (for example, LeafThrow, etc.)
             _playerInfos.characterClass.abilities[1].Activate(gameObject);
             _currentTime = 0;
         }

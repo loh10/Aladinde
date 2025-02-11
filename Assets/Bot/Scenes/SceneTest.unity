@@ -638,41 +638,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6099901685947534850, guid: 4b06e02ceecd2324cbe9452bdf691830, type: 3}
-      insertIndex: 3
-      addedObject: {fileID: 724486328}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b06e02ceecd2324cbe9452bdf691830, type: 3}
---- !u!1 &724486327 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6099901685947534850, guid: 4b06e02ceecd2324cbe9452bdf691830, type: 3}
-  m_PrefabInstance: {fileID: 724486326}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &724486328
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 724486327}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 841968901
-  InScenePlacedSourceGlobalObjectIdHash: 0
-  DeferredDespawnTick: 0
-  Ownership: 1
-  AlwaysReplicateAsRoot: 0
-  SynchronizeTransform: 1
-  ActiveSceneSynchronization: 0
-  SceneMigrationSynchronization: 1
-  SpawnWithObservers: 1
-  DontDestroyWithOwner: 0
-  AutoObjectParentSync: 1
-  SyncOwnerTransformWhenParented: 1
-  AllowOwnerToParent: 0
 --- !u!1 &845504885
 GameObject:
   m_ObjectHideFlags: 0
@@ -815,8 +782,8 @@ MonoBehaviour:
   sightRange: 7
   patrolRange: 20
   damage: 15
-  cooldown: 0
-  firstAbility: {fileID: 0}
+  interval: 2
+  stoppingDistance: 3
   _spriteFront: {fileID: 0}
   _spriteSide: {fileID: 0}
   _spriteBack: {fileID: 0}
@@ -924,6 +891,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d469c91ef6f5c9469a48a38b2338102, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerInfos: {fileID: 0}
   maxHealth: 0
   currentHealth: 0
   maxShield: 0
