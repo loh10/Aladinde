@@ -90,6 +90,26 @@ public class PlayerLifeManager : NetworkBehaviour
                 if (player._currentHealth.Value <= 0)
                 {
                     //TODO: Add respawn logic
+                    
+                    
+                    
+                    //spawn player at random location par rapport au point d'origiines.
+                    
+                    // remettre la vie et le shield a 0%
+                    
+                    //Reset des cooldowns
+                    
+                    //Reset des abilites
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                 }
             }
         }
