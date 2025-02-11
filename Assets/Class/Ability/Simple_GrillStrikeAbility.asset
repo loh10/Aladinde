@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d6bb640916acecf44a28596221b043bc, type: 3}
-  m_Name: SO_GrillStrikeAbility
+  m_Name: Simple_GrillStrikeAbility
   m_EditorClassIdentifier: 
   abilityName: Grill Strike
   abilityDescription: A powerful blow with a heated grill
@@ -20,7 +20,9 @@ MonoBehaviour:
   chargeGain: 20
   isChargingCapacity: 0
   maxCharge: 0
-  mousePos: {x: 4.3887596, y: 4.8793116}
+  mousePos: {x: 0.16774368, y: -1.5433898}
   spawnTransform: {x: 2.9135332, y: 3.8136535}
   icon: {fileID: 0}
   abilityPrefab: {fileID: 6912215052845606259, guid: b74a464c74227ac42859acda48cb09b4, type: 3}
+  _staggerDuration: 10
+  _staggerSpeedMultiplier: 0.5
