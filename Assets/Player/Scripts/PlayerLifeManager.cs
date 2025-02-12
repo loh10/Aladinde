@@ -4,7 +4,9 @@ using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 using TMPro;
+
 
 public class PlayerLifeManager : NetworkBehaviour
 {
@@ -129,6 +131,16 @@ public class PlayerLifeManager : NetworkBehaviour
 
                 if (player._currentHealth.Value <= 0)
                 {
+                    //TODO: Add respawn logic
+                    player.ResetPlayerServer(player.OwnerClientId);            
+                    
+                    //spawn player at random location par rapport au point d'origiines.
+                    // vie a 100%
+                    // remettre la vie et le shield a 0%
+                    
+                    //Reset des cooldowns
+                    
+                    //Reset des abilites
 
                 }
             }
@@ -202,4 +214,57 @@ public class PlayerLifeManager : NetworkBehaviour
     {
         _shieldBar.value = newShield;
     }
+    
+    void ResetPlayerServer(ulong targetClientId)
+    {
+        Debug.Log($"[ResetPlayerServerRpc] called for player {targetClientId}, isServer={IsServer}");
+
+        PlayerLifeManager[] players = FindObjectsOfType<PlayerLifeManager>(true);
+        foreach (var player in players)
+        {
+            if (player.OwnerClientId == targetClientId)
+            {
+                // 1. Teleportation
+                Vector3 spawnPos = GetRandomSpawnPosition(); 
+                player.transform.position = spawnPos; // 2. Déplace le joueur côté serveur
+                player.UpdatePositionClientRpc(spawnPos); // 3. Réplique la position à tous les clients
+
+                // 2. Reset health
+                player._currentHealth.Value = player._maxHealth;
+                player.UpdateHealthBarClientRpc(player._currentHealth.Value);
+
+                // 3. Reset shield
+                player._currentShield.Value = 0;
+                player.UpdateShieldBarClientRpc(player._currentShield.Value);
+
+                // 4. Reset state (ex: burning)
+                player.isBurning = false;
+
+                // 5. (Optionnel) Reset cooldowns / capacités
+                // var abilities = player.GetComponent<PlayerAbilities>();
+                // if (abilities != null) abilities.ResetAllCooldowns();
+
+                Debug.Log($"[ResetPlayerServerRpc] Player {targetClientId} respawned at {spawnPos}. Health={player._currentHealth.Value} Shield={player._currentShield.Value}");
+            }
+        }
+    }
+
+    
+    [ClientRpc]
+    void UpdatePositionClientRpc(Vector3 spawnPos)
+    {
+        transform.position = spawnPos;
+    }
+
+    private Vector3 GetRandomSpawnPosition()
+    {
+        float respawnRadius = 100f;
+        float randomX = Random.Range(-respawnRadius, respawnRadius);
+        float randomY = Random.Range(-respawnRadius, respawnRadius);
+        
+        Debug.Log($"New Random spawn position: ({randomX}, {randomY})");
+        
+        return new Vector3(randomX, randomY, 0f);
+    }
 }
+
