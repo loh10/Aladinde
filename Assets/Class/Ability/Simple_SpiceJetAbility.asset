@@ -26,3 +26,4 @@ MonoBehaviour:
   abilityPrefab: {fileID: 0}
   critChance: 0.2
   critMultiplier: 1.5
+  attackVFXPrefab: {fileID: 6710139492206580332, guid: 3c190f2531868584cb0173e0db57cba3, type: 3}

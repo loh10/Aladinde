@@ -79,7 +79,7 @@ MonoBehaviour:
   burnDamagePerSecond: 5
   burnDuration: 3
   cloudDuration: 4
-  explosionEffectPrefab: {fileID: 0}
+  explosionEffectPrefab: {fileID: 4425129568585013132, guid: 55b9e3e57636748468cf6ce0ea76dd97, type: 3}
 --- !u!212 &3214750382478891126
 SpriteRenderer:
   m_ObjectHideFlags: 0
