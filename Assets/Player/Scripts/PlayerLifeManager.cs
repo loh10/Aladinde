@@ -140,7 +140,7 @@ public class PlayerLifeManager : NetworkBehaviour
     /// </summary>
     /// <param name="player"></param>
     /// <param name="targetClientId"></param>
-    private void DisconnectPlayer(PlayerLifeManager player, ulong targetClientId)
+    public void DisconnectPlayer(PlayerLifeManager player, ulong targetClientId)
     {
         ClientRpcParams clientRpcParams = new ClientRpcParams
         {
