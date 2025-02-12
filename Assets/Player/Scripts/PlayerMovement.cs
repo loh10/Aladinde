@@ -11,25 +11,13 @@ public class PlayerMovement : NetworkBehaviour
     private float _speed;
     private Rigidbody2D _rb;
     private float _originalSpeed;
-
-    [FormerlySerializedAs("canMoove")] public bool canMove;
+    public bool canMove;
 
     public override void OnNetworkSpawn()
     {
-        gameObject.name = "Player "+OwnerClientId.ToString();
-        canMove = false;
-        if (!IsOwner)
-        {
-            Debug.Log(gameObject.name + " is connected (non-owner client)");
-            GetComponent<PlayerInput>().enabled = false;
-            GetComponentInChildren<Camera>().enabled = false;
-            GetComponentInChildren<AudioListener>().enabled = false;
-            GetComponent<SpriteRenderer>().color = Color.red;
-            return;
-        }
+        base.OnNetworkSpawn();
         _rb = GetComponent<Rigidbody2D>();
-        GetComponentInChildren<Camera>().tag = "MainCamera";
-        gameObject.layer = 2;
+        canMove = false;
         GetStats();
     }
 

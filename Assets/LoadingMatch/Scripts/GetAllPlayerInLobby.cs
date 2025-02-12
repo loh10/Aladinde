@@ -10,6 +10,7 @@ public class GetAllPlayerInLobby : NetworkBehaviour
     [SerializeField] private GameObject _botPrefab;
     [SerializeField] private int _nbMaxPlayer = 3;
     [SerializeField] private float _waitingTimeBeforeAddBot = 20f;
+    private float elapsedTime = 0;
 
     public override void OnNetworkSpawn()
     {
@@ -17,19 +18,27 @@ public class GetAllPlayerInLobby : NetworkBehaviour
         if (IsServer)
         {
             Debug.Log("Server");
-            StartCoroutine(CheckPlayerInLobby());
+            if (_networkManager != null)
+            {
+                StartCoroutine(CheckPlayerInLobby());
+            }
+            else
+            {
+                Debug.LogError("NetworkManager is not assigned.");
+            }
         }
     }
 
     IEnumerator CheckPlayerInLobby()
     {
-        float elapsedTime = 0f;
-        while (_networkManager.ConnectedClientsList.Count < _nbMaxPlayer && elapsedTime < _waitingTimeBeforeAddBot)
+        elapsedTime = 0;
+        while (_networkManager.ConnectedClientsList.Count > 0 && elapsedTime < _waitingTimeBeforeAddBot)
         {
             UpdatePlayerInRoomClientRpc(_networkManager.ConnectedClientsList.Count);
             yield return new WaitForSeconds(1f);
-            elapsedTime++;
+            elapsedTime += 1f;
         }
+
         UpdatePlayerInRoomClientRpc(_networkManager.ConnectedClientsList.Count, true);
         SpawnBot();
     }
@@ -37,7 +46,15 @@ public class GetAllPlayerInLobby : NetworkBehaviour
     [ClientRpc]
     private void UpdatePlayerInRoomClientRpc(int playerInRoom, bool useBot = false)
     {
-        _playerInLobbyTxt.text = playerInRoom + " / " + _nbMaxPlayer;
+        if (_playerInLobbyTxt != null)
+        {
+            _playerInLobbyTxt.text = playerInRoom + " / " + _nbMaxPlayer;
+        }
+        else
+        {
+            Debug.LogError("PlayerInLobbyTxt is not assigned.");
+        }
+
         if (playerInRoom >= _nbMaxPlayer || useBot)
         {
             if (NetworkManager.Singleton.LocalClient != null &&
@@ -55,11 +72,24 @@ public class GetAllPlayerInLobby : NetworkBehaviour
 
     public void SpawnBot()
     {
+        if (_botPrefab == null)
+        {
+            Debug.LogError("BotPrefab is not assigned.");
+            return;
+        }
+
         for (int i = 0; i < _nbMaxPlayer - _networkManager.ConnectedClientsList.Count; i++)
         {
             GameObject bot = Instantiate(_botPrefab);
             NetworkObject networkObject = bot.GetComponent<NetworkObject>();
-            networkObject.Spawn();
+            if (networkObject != null)
+            {
+                networkObject.Spawn();
+            }
+            else
+            {
+                Debug.LogError("Bot prefab does not have a NetworkObject component.");
+            }
         }
     }
 }
