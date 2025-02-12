@@ -16,12 +16,13 @@ public class GrillStrike : Ability
         // Execute common ability logic (e.g., charge management)
         base.Activate(user);
 
-        if(Camera.main != null)
+        if (Camera.main != null)
             mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         
         Vector2 direction = (mousePos - (Vector2)user.transform.position).normalized;
 
-        RaycastHit2D hit = Physics2D.Raycast(user.transform.position, direction, range);
+        // Explicitly include all layers in the raycast.
+        RaycastHit2D hit = Physics2D.Raycast(user.transform.position, direction, range, Physics2D.AllLayers);
 
         if (hit && hit.collider.gameObject != user)
         {
@@ -36,6 +37,5 @@ public class GrillStrike : Ability
         }
         
         Debug.Log(abilityName + " activated");
-
     }
 }
