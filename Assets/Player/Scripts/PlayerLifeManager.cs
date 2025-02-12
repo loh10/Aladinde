@@ -1,17 +1,18 @@
-using System;
 using System.Collections;
 using System.Linq;
 using Unity.Netcode;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
+using TMPro;
+
 
 public class PlayerLifeManager : NetworkBehaviour
 {
     [SerializeField] private Slider _healthBar;
     [SerializeField] private Slider _shieldBar;
+    [SerializeField] private TMP_Text _healthText;
 
     private float _maxHealth;
     private float _maxShield;
@@ -25,12 +26,25 @@ public class PlayerLifeManager : NetworkBehaviour
         _maxHealth = GetComponent<PlayerInfos>().characterClass.maxHealth;
         _healthBar.maxValue = _maxHealth;
         _healthBar.value = _maxHealth;
-        _currentHealth = new NetworkVariable<float>(_maxHealth);
-
-
+        
         _maxShield = GetComponent<PlayerInfos>().characterClass.maxShield;
         _shieldBar.maxValue = _maxShield;
         _shieldBar.value = 0;
+
+        // Only the server should initialize the NetworkVariables.
+        if (IsServer)
+        {
+            _currentHealth.Value = _maxHealth;
+            _currentShield.Value = 0;
+        }
+        
+        _currentHealth.OnValueChanged += (oldValue, newValue) => {
+            UpdateHealthBarClientRpc(newValue);
+        };
+
+        _currentShield.OnValueChanged += (oldValue, newValue) => {
+            UpdateShieldBarClientRpc(newValue);
+        };
     }
 
     public void ActiShield(float duration)
@@ -53,7 +67,8 @@ public class PlayerLifeManager : NetworkBehaviour
         float timeElapsed = 0;
         while (timeElapsed < duration)
         {
-            TakeDamageServerRpc(burnDamage, OwnerClientId);
+            // Instead of calling the ServerRPC, apply damage locally.
+            ApplyDamage(burnDamage);
             timeElapsed += 1f;
             yield return new WaitForSeconds(1f);
         }
@@ -63,7 +78,33 @@ public class PlayerLifeManager : NetworkBehaviour
 
     public void ReduceShield(float amount)
     {
-        _currentShield = new NetworkVariable<float>(Mathf.Max(0, _currentShield.Value - amount));
+        _currentShield.Value = Mathf.Max(0, _currentShield.Value - amount);
+        UpdateShieldBarClientRpc(_currentShield.Value);
+    }
+    // *** NEW: Local damage application method ***
+    public void ApplyDamage(float damage)
+    {
+        // First, apply damage to the shield.
+        if (_currentShield.Value > 0)
+        {
+            float shieldDamage = Mathf.Min(_currentShield.Value, damage);
+            _currentShield.Value -= shieldDamage;
+            UpdateShieldBarClientRpc(_currentShield.Value);
+            damage -= shieldDamage;
+        }
+        
+        // Then, apply any remaining damage to health.
+        if (damage > 0)
+        {
+            _currentHealth.Value -= damage;
+            UpdateHealthBarClientRpc(_currentHealth.Value);
+        }
+        
+        if (_currentHealth.Value <= 0)
+        {
+            Debug.Log($"{gameObject.name} has died.");
+            // (Insert any death/respawn logic here.)
+        }
     }
 
     [ServerRpc]
@@ -100,7 +141,7 @@ public class PlayerLifeManager : NetworkBehaviour
                     //Reset des cooldowns
                     
                     //Reset des abilites
-                    
+
                 }
             }
         }
@@ -161,6 +202,11 @@ public class PlayerLifeManager : NetworkBehaviour
     void UpdateHealthBarClientRpc(float newHealth)
     {
         _healthBar.value = newHealth;
+        
+        if (_healthText != null)
+        {
+            _healthText.text = $"{newHealth:F0}/{_maxHealth:F0}";
+        }
     }
 
     [ClientRpc]
@@ -221,3 +267,4 @@ public class PlayerLifeManager : NetworkBehaviour
         return new Vector3(randomX, randomY, 0f);
     }
 }
+

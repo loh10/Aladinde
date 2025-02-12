@@ -15,9 +15,10 @@ public class PlayerUseAbilities : NetworkBehaviour
     private void Start()
     {
         _playerInfos = GetComponent<PlayerInfos>();
-        _ultimate = _playerInfos.characterClass.abilities[2];
+        // Assumes the ultimate ability is always the last in the array.
+        _ultimate = _playerInfos.characterClass.abilities[_playerInfos.characterClass.abilities.Length - 1];
 
-        //set abilities charges to 0 else they save the charge from the previous game 
+        // Reset charges on all abilities.
         foreach (Ability ability in _playerInfos.characterClass.abilities)
         {
             ability.ResetCharge();
@@ -30,15 +31,63 @@ public class PlayerUseAbilities : NetworkBehaviour
         CheckAttack(ref _canSimpleAttack, _playerInfos.characterClass.abilities[1].cooldown);
     }
 
-    private void CheckAttack(ref bool boolAttack, float cooldown)
+    private void CheckAttack(ref bool canAttack, float cooldown)
     {
-        if (_currentTime > cooldown)
+        canAttack = _currentTime > cooldown;
+    }
+    
+    [ServerRpc(RequireOwnership = false)]
+    public void SpawnProjectileServerRpc(string prefabName, Vector3 spawnPosition, Vector3 targetPosition, float projectileSpeed, ServerRpcParams rpcParams = default)
+    {
+        GameObject prefab = Resources.Load<GameObject>(prefabName);
+        if (prefab != null)
         {
-            boolAttack = true;
+            GameObject projectile = Instantiate(prefab, spawnPosition, Quaternion.identity);
+            projectile.GetComponent<NetworkObject>()?.Spawn();
+
+            switch (prefabName)
+            {
+                case "SpicyBombProjectile":
+                    {
+                        SpicyBombProjectile spicyProj = projectile.GetComponent<SpicyBombProjectile>();
+                        if (spicyProj != null)
+                        {
+                            spicyProj.Initialize(targetPosition, projectileSpeed);
+                            spicyProj.SetOwner(gameObject);
+                            return;
+                        }
+                        break;
+                    }
+                case "PoopBombProjectile":
+                    {
+                        PoopBombProjectile poopProj = projectile.GetComponent<PoopBombProjectile>();
+                        if (poopProj != null)
+                        {
+                            poopProj.Initialize(targetPosition, projectileSpeed);
+                            poopProj.SetOwner(gameObject);
+                            return;
+                        }
+                        break;
+                    }
+                case "CorrosiveSauceProjectile":
+                    {
+                        CorrosiveSauceProjectile corrosiveProj = projectile.GetComponent<CorrosiveSauceProjectile>();
+                        if (corrosiveProj != null)
+                        {
+                            corrosiveProj.Initialize(targetPosition, projectileSpeed);
+                            corrosiveProj.SetOwner(gameObject);
+                            return;
+                        }
+                        break;
+                    }
+                default:
+                    Debug.LogWarning("SpawnProjectileServerRpc: Unrecognized projectile prefab name: " + prefabName);
+                    break;
+            }
         }
         else
         {
-            boolAttack = false;
+            Debug.LogWarning("SpawnProjectileServerRpc: Could not find prefab with name: " + prefabName);
         }
     }
 
@@ -64,6 +113,16 @@ public class PlayerUseAbilities : NetworkBehaviour
             {
                 Debug.Log("Ultimate not ready!");
             }
+        }
+    }
+    
+    public void OnPoopAttack(InputAction.CallbackContext ctx)
+    {
+        Debug.Log("OnPoopAttack called, phase: " + ctx.phase);
+        if (ctx.phase == InputActionPhase.Started)
+        {
+            Debug.Log("Poop Attack triggered");
+            _playerInfos.characterClass.abilities[0].Activate(gameObject);
         }
     }
 }

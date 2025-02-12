@@ -5,7 +5,7 @@ using TMPro;
 
 public class UserSession : MonoBehaviour
 {
-    public TextMeshProUGUI pseudoText; // Assigne ce champ dans l'éditeur Unity
+    public string pseudoText; // Assigne ce champ dans l'éditeur Unity
     private string _sessionUrl;
 
     private const string ROOT_URL = "/auth/session.php";
@@ -30,7 +30,7 @@ public class UserSession : MonoBehaviour
         else
         {
             Debug.LogError("URL inconnue, session non définie.");
-            pseudoText.text = "Erreur : URL non reconnue";
+            pseudoText = "Erreur : URL non reconnue";
             return;
         }
 
@@ -46,7 +46,7 @@ public class UserSession : MonoBehaviour
             if (request.result == UnityWebRequest.Result.ConnectionError || request.result == UnityWebRequest.Result.ProtocolError)
             {
                 Debug.LogError("Erreur de connexion : " + request.error);
-                pseudoText.text = "Erreur de connexion";
+                pseudoText = "Erreur de connexion";
             }
             else
             {
@@ -56,7 +56,7 @@ public class UserSession : MonoBehaviour
                 UserResponse response = JsonUtility.FromJson<UserResponse>(json);
                 if (response != null && !string.IsNullOrEmpty(response.pseudo))
                 {
-                    pseudoText.text = "Pseudo : " + response.pseudo;
+                    pseudoText = response.pseudo;
                 }
                 else
                 {
