@@ -78,7 +78,7 @@ MonoBehaviour:
   damage: 20
   shieldReduction: 50
   cloudDuration: 4
-  explosionEffectPrefab: {fileID: 0}
+  explosionEffectPrefab: {fileID: 4425129568585013132, guid: 528dfb8db0f2ef74cb1816f001978d5d, type: 3}
 --- !u!212 &3214750382478891126
 SpriteRenderer:
   m_ObjectHideFlags: 0
