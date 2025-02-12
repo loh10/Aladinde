@@ -14,6 +14,7 @@ public class PlayerMovement : NetworkBehaviour
     public bool canMove;
     public Camera _cam;
     public GameObject spritePlayer;
+    private bool sprint;
 
     public override void OnNetworkSpawn()
     {
@@ -51,7 +52,14 @@ public class PlayerMovement : NetworkBehaviour
             return;
         if (canMove)
         {
-            _rb.linearVelocity = _move;
+            if (sprint)
+            {
+                _rb.linearVelocity = _move * 1.2f;
+            }
+            else
+            {
+                _rb.linearVelocity = _move;
+            }
             RotatePlayer();
         }
 
@@ -61,6 +69,18 @@ public class PlayerMovement : NetworkBehaviour
     {
         Vector2 input = ctx.ReadValue<Vector2>();
         _move = new Vector2(input.x, input.y) * _speed;
+    }
+    
+    public void SprintPlayer(InputAction.CallbackContext ctx)
+    {
+        if (ctx.performed)
+        {
+            sprint = true;
+        }
+        else
+        {
+            sprint = false;
+        }
     }
 
     public void ApplyStagger(float duration, float speedMultiplier)
