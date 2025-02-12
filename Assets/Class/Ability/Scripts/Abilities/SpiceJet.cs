@@ -4,46 +4,49 @@ using Unity.Netcode;
 [CreateAssetMenu(fileName = "SpiceJetAbility", menuName = "Scriptable Objects/Abilities/Spice Jet")]
 public class SpiceJet : Ability
 {
-    // Critical chance (20%) and multiplier (1.5x) as specified in the GDD.
     public float critChance = 0.2f;
     public float critMultiplier = 1.5f;
     
     public override void Activate(GameObject user)
     {
-        // Execute common ability logic (e.g. ultimate charge handling)
+        // Execute common ability logic (ultimate charge handling)
         base.Activate(user);
-        
-        // Convert the mouse position to world space coordinates
+
+        // Convert the mouse position to world space coordinates.
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        
-        // Determine the direction from the user toward the mouse position
+
+        // Calculate the normalized direction from the user to the mouse.
         Vector2 direction = (mousePos - (Vector2)user.transform.position).normalized;
-        
-        // Cast a ray from the user's position in the calculated direction, limited to 'range'
-        RaycastHit2D hit = Physics2D.Raycast(user.transform.position, direction, range);
-        
-        // If the ray hits something (and it isn’t the user itself)
-        if (hit && hit.collider.gameObject != user)
+
+        // Offset the ray start position.
+        Collider2D userCollider = user.GetComponent<Collider2D>();
+        float offset = userCollider != null ? userCollider.bounds.extents.magnitude + 0.1f : 0.5f;
+        Vector2 rayStart = (Vector2)user.transform.position + direction * offset;
+
+        // Cast the ray.
+        RaycastHit2D hit = Physics2D.Raycast(rayStart, direction, range, Physics2D.DefaultRaycastLayers);
+
+        // Debug what we hit.
+        if (hit.collider != null)
+            Debug.Log("SpiceJet hit: " + hit.collider.gameObject.name);
+
+        // If we hit an object that is not part of the user's hierarchy...
+        if (hit && !hit.collider.transform.IsChildOf(user.transform))
         {
-            // Start with the base damage value from the ability asset
             float finalDamage = damages;
-            
-            // Apply critical hit multiplier if a random value is less than the crit chance
             if (Random.value < critChance)
             {
                 finalDamage *= critMultiplier;
                 Debug.Log("Critical Hit!");
             }
-            
-            // Retrieve the NetworkObject from the target to get its OwnerClientId
-            NetworkObject targetNetObj = hit.collider.GetComponent<NetworkObject>();
+
+            NetworkObject targetNetObj = hit.collider.transform.root.GetComponent<NetworkObject>();
             if (targetNetObj != null)
             {
-                // Use the PlayerLifeManager to apply damage via a ServerRPC
                 user.GetComponent<PlayerLifeManager>().TakeDamageServerRpc(finalDamage, targetNetObj.OwnerClientId);
             }
         }
-        
+
         Debug.Log(abilityName + " activated");
     }
 }

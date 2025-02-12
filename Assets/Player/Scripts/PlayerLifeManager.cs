@@ -24,11 +24,6 @@ public class PlayerLifeManager : NetworkBehaviour
         _maxHealth = GetComponent<PlayerInfos>().characterClass.maxHealth;
         _healthBar.maxValue = _maxHealth;
         _healthBar.value = _maxHealth;
-    
-        if (_healthText != null)
-        {
-            _healthText.text = $"{_maxHealth:F0}/{_maxHealth:F0}";
-        }
         
         _maxShield = GetComponent<PlayerInfos>().characterClass.maxShield;
         _shieldBar.maxValue = _maxShield;
