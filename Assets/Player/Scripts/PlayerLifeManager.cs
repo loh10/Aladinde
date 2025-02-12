@@ -258,7 +258,7 @@ public class PlayerLifeManager : NetworkBehaviour
 
     private Vector3 GetRandomSpawnPosition()
     {
-        float respawnRadius = 100f;
+        float respawnRadius = 20f;
         float randomX = Random.Range(-respawnRadius, respawnRadius);
         float randomY = Random.Range(-respawnRadius, respawnRadius);
         
