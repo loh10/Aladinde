@@ -12,6 +12,8 @@ public class PlayerMovement : NetworkBehaviour
     private Rigidbody2D _rb;
     private float _originalSpeed;
     public bool canMove;
+    public Camera _cam;
+    public GameObject spritePlayer;
 
     public override void OnNetworkSpawn()
     {
@@ -29,12 +31,29 @@ public class PlayerMovement : NetworkBehaviour
         _originalSpeed = classSpeed;
     }
 
+    private void RotatePlayer()
+    {
+        Vector3 mousePosition = _cam.ScreenToWorldPoint(Input.mousePosition);
+        mousePosition.z = 0f; // Pour éviter tout problème de profondeur
+
+        Vector3 direction = mousePosition - spritePlayer.transform.position;
+        
+        if (direction != Vector3.zero) // Vérification pour éviter NaN
+        {
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            spritePlayer.transform.rotation = Quaternion.Euler(0f, 0f, angle - 90f);
+        }
+    }
+
     private void Update()
     {
         if (_rb == null)
             return;
-        if(canMove)
+        if (canMove)
+        {
             _rb.linearVelocity = _move;
+            RotatePlayer();
+        }
 
     }
 
