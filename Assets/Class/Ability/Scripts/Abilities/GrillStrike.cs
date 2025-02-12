@@ -16,12 +16,32 @@ public class GrillStrike : Ability
         // Execute common ability logic (charge management)
         base.Activate(user);
 
-        // Get the current mouse position in world space.
-        if (Camera.main != null)
-            mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        bool isBot = user.gameObject.tag != "Player";
+        Vector2 direction;
 
-        // Calculate the normalized direction from the player to the mouse.
-        Vector2 direction = (mousePos - (Vector2)user.transform.position).normalized;
+        if (!isBot)
+        {
+            // Get the current mouse position in world space.
+            if (Camera.main != null)
+                mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+            // Calculate the normalized direction from the player to the mouse.
+            direction = (mousePos - (Vector2)user.transform.position).normalized;
+        }
+        else
+        {
+            // Get the target from the behavior tree
+            EnemyAI enemyAI = user.GetComponent<EnemyAI>();
+            if (enemyAI != null && enemyAI._playerTarget != null)
+            {
+                direction = ((Vector2)enemyAI._playerTarget.transform.position - (Vector2)user.transform.position).normalized;
+            }
+            else
+            {
+                Debug.LogWarning("Bot has no target, GrillStrike cannot be executed correctly.");
+                return;
+            }
+        }
 
         // Offset the ray's start position so it doesn't start inside any of the user's colliders.
         Collider2D userCollider = user.GetComponent<Collider2D>();

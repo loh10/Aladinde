@@ -6,17 +6,37 @@ public class SpiceJet : Ability
 {
     public float critChance = 0.2f;
     public float critMultiplier = 1.5f;
-    
+
     public override void Activate(GameObject user)
     {
-        // Execute common ability logic (ultimate charge handling)
+        // Execute common ability logic (charge management)
         base.Activate(user);
 
-        // Convert the mouse position to world space coordinates.
-        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        bool isBot = user.gameObject.tag != "Player";
+        Vector2 direction;
 
-        // Calculate the normalized direction from the user to the mouse.
-        Vector2 direction = (mousePos - (Vector2)user.transform.position).normalized;
+        if (!isBot)
+        {
+            // Get the current mouse position in world space.
+            if (Camera.main != null)
+                mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+            // Calculate the normalized direction from the player to the mouse.
+            direction = (mousePos - (Vector2)user.transform.position).normalized;
+        }
+        else
+        {
+            EnemyAI enemyAI = user.GetComponent<EnemyAI>();
+            if (enemyAI != null && enemyAI._playerTarget != null)
+            {
+                direction = ((Vector2)enemyAI._playerTarget.transform.position - (Vector2)user.transform.position).normalized;
+            }
+            else
+            {
+                Debug.LogWarning("Bot has no target, GrillStrike cannot be executed correctly.");
+                return;
+            }
+        }
 
         // Offset the ray start position.
         Collider2D userCollider = user.GetComponent<Collider2D>();

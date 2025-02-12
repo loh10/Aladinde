@@ -18,8 +18,8 @@ public class PlayerLifeManager : NetworkBehaviour
     private float _maxShield;
     public bool isBurning = false;
 
-    private NetworkVariable<float> _currentHealth = new NetworkVariable<float>();
-    private NetworkVariable<float> _currentShield = new NetworkVariable<float>();
+    public NetworkVariable<float> _currentHealth = new NetworkVariable<float>();
+    public NetworkVariable<float> _currentShield = new NetworkVariable<float>();
 
     public override void OnNetworkSpawn()
     {
@@ -34,10 +34,12 @@ public class PlayerLifeManager : NetworkBehaviour
         // Only the server should initialize the NetworkVariables.
         if (IsServer)
         {
-            _currentHealth.Value = _maxHealth;
+            _currentHealth = new NetworkVariable<float>(_maxHealth);
             _currentShield.Value = 0;
         }
         
+        _currentShield.Value = 0;
+
         _currentHealth.OnValueChanged += (oldValue, newValue) => {
             UpdateHealthBarClientRpc(newValue);
         };

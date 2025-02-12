@@ -17,7 +17,7 @@ public class EnemyAI : MonoBehaviour
     public PlayerInfos playerInfos;
     public Ability firstAbility;
 
-    private GameObject _playerTarget;
+    public GameObject _playerTarget;
     private Vector3 _patrolCenter;
     private SpriteRenderer _spriteRenderer;
     private bool _isChasing = false;
@@ -77,14 +77,13 @@ public class EnemyAI : MonoBehaviour
 
         foreach (GameObject p in players)
         {
-            targets.Add(p);
+            if (p != gameObject)
+                targets.Add(p);
         }
         foreach (GameObject b in bots)
         {
             if (b != gameObject)
-            {
                 targets.Add(b);
-            }
         }
 
         float minDistance = Mathf.Infinity;
