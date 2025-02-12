@@ -15,28 +15,22 @@ public class GrillStrike : Ability
     {
         // Execute common ability logic (e.g., charge management)
         base.Activate(user);
+
+        if(Camera.main != null)
+            mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         
-        // Convert mouse position to world coordinates
-        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        
-        // Calculate the normalized direction from the user to the mouse
         Vector2 direction = (mousePos - (Vector2)user.transform.position).normalized;
-        
-        // Cast a ray from the user's position in the calculated direction up to the defined range
+
         RaycastHit2D hit = Physics2D.Raycast(user.transform.position, direction, range);
-        
-        // If the ray hits an object that is not the user
+
         if (hit && hit.collider.gameObject != user)
         {
-            // Apply damage to the hit target using its NetworkObject's OwnerClientId
             user.GetComponent<PlayerLifeManager>()
                 .TakeDamageServerRpc(damages, hit.collider.GetComponent<NetworkObject>().OwnerClientId);
-            
-            // Get the target's PlayerMovement component.
+
             PlayerMovement targetMovement = hit.collider.GetComponent<PlayerMovement>();
             if (targetMovement != null)
             {
-                // Use the ServerRpc to propagate the stagger effect,
                 targetMovement.ApplyStaggerServerRpc(_staggerDuration, _staggerSpeedMultiplier);
             }
         }

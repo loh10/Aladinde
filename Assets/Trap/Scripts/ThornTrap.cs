@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.Netcode;
 using UnityEngine;
 
 public class ThornTrap : MonoBehaviour, ITrapEffect
@@ -6,12 +7,13 @@ public class ThornTrap : MonoBehaviour, ITrapEffect
     [SerializeField] private float speedReduction;
     [SerializeField] private float damagePerSecond;
     private Coroutine damageCoroutine;
+    private bool isIn;
 
     public void ApplyEffect(GameObject player)
     {
         Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
-        LifeManager life = player.GetComponent<LifeManager>();
-
+        PlayerLifeManager life = player.GetComponent<PlayerLifeManager>();
+        isIn = true;
         if (rb != null) rb.linearVelocity *= speedReduction;
 
         if (damageCoroutine == null && rb != null)
@@ -24,16 +26,21 @@ public class ThornTrap : MonoBehaviour, ITrapEffect
         {
             StopCoroutine(damageCoroutine);
             damageCoroutine = null;
+            isIn = false;
         }
     }
 
-    private IEnumerator DamageOverTime(Rigidbody2D rb, LifeManager life)
+    private IEnumerator DamageOverTime(Rigidbody2D rb, PlayerLifeManager life)
     {
-        while (true)
+        while (isIn)
         {
             if (rb != null && life != null && rb.linearVelocity.magnitude > 0.1f)
             {
-                life.TakeDamage(damagePerSecond);
+                NetworkObject networkObject = rb.gameObject.GetComponent<NetworkObject>();
+                if (networkObject != null)
+                {
+                    life.TakeDamageServerRpc(damagePerSecond, networkObject.OwnerClientId);
+                }
             }
             yield return new WaitForSeconds(1f);
         }

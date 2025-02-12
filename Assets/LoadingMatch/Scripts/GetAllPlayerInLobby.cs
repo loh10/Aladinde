@@ -32,7 +32,7 @@ public class GetAllPlayerInLobby : NetworkBehaviour
     IEnumerator CheckPlayerInLobby()
     {
         elapsedTime = 0;
-        while (_networkManager.ConnectedClientsList.Count > 0 && elapsedTime < _waitingTimeBeforeAddBot)
+        while (_networkManager.ConnectedClientsList.Count < _nbMaxPlayer && elapsedTime < _waitingTimeBeforeAddBot)
         {
             UpdatePlayerInRoomClientRpc(_networkManager.ConnectedClientsList.Count);
             yield return new WaitForSeconds(1f);

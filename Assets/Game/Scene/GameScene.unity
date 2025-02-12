@@ -706,6 +706,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Map
       objectReference: {fileID: 0}
+    - target: {fileID: 52804347844107227, guid: b8102b976066c1449b79d7473f3ca902, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2082273436070043745, guid: b8102b976066c1449b79d7473f3ca902, type: 3}
+      propertyPath: m_ColliderPaths.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2804596178773407208, guid: b8102b976066c1449b79d7473f3ca902, type: 3}
       propertyPath: m_LocalPosition.x
       value: -18.54
@@ -745,6 +753,58 @@ PrefabInstance:
     - target: {fileID: 2804596178773407208, guid: b8102b976066c1449b79d7473f3ca902, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4119395459352424385, guid: b8102b976066c1449b79d7473f3ca902, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4119395459352424385, guid: b8102b976066c1449b79d7473f3ca902, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4901229872286672045, guid: b8102b976066c1449b79d7473f3ca902, type: 3}
+      propertyPath: m_BodyType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064075597131001894, guid: b8102b976066c1449b79d7473f3ca902, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5226647449827706585, guid: b8102b976066c1449b79d7473f3ca902, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5226647449827706585, guid: b8102b976066c1449b79d7473f3ca902, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5741581759963102872, guid: b8102b976066c1449b79d7473f3ca902, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5741581759963102872, guid: b8102b976066c1449b79d7473f3ca902, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6060961168438502310, guid: b8102b976066c1449b79d7473f3ca902, type: 3}
+      propertyPath: m_BodyType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297446649242949357, guid: b8102b976066c1449b79d7473f3ca902, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7712383367901762809, guid: b8102b976066c1449b79d7473f3ca902, type: 3}
+      propertyPath: m_ColliderPaths.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8342077488680962196, guid: b8102b976066c1449b79d7473f3ca902, type: 3}
+      propertyPath: m_BodyType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9047796656417406949, guid: b8102b976066c1449b79d7473f3ca902, type: 3}
+      propertyPath: m_ColliderPaths.Array.size
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
