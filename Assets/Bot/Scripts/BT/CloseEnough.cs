@@ -14,18 +14,25 @@ public class CloseEnough : Node
         _closeRange = closeRange;
     }
 
+    private bool _hasStopped = false;
+
     public override NodeState Evaluate()
     {
         float distance = Vector3.Distance(_agent.transform.position, _player.transform.position);
 
         if (distance < _closeRange)
         {
-            _agent.isStopped = true;
-            _nodeState = NodeState.SUCCESS;
+            if (!_hasStopped)
+            {
+                _agent.isStopped = true;
+                _hasStopped = true;
+                _nodeState = NodeState.SUCCESS;
+            }
         }
         else
         {
             _agent.isStopped = false;
+            _hasStopped = false;
             _nodeState = NodeState.FAILURE;
         }
 

@@ -23,10 +23,10 @@ public class Attack : Node
 
     public override NodeState Evaluate()
     {
-        if(_player != null)
+        if (_player != null)
         {
             float distance = Vector3.Distance(_botGameObject.transform.position, _player.transform.position);
-            if (distance >= _attackInterval)
+            if (distance >= _firstAbility.range)
             {
                 _isAttacking = false;
                 _nodeState = NodeState.FAILURE;
@@ -34,7 +34,7 @@ public class Attack : Node
             else if (!_isAttacking)
             {
                 _isAttacking = true;
-                _botGameObject.GetComponent<MonoBehaviour>().StartCoroutine(UseAbility());
+                _botGameObject.GetComponent<MonoBehaviour>().StartCoroutine(DelayedAttack());
                 _nodeState = NodeState.RUNNING;
             }
         }
@@ -46,13 +46,13 @@ public class Attack : Node
         return _nodeState;
     }
 
-
-    private IEnumerator UseAbility()
+    private IEnumerator DelayedAttack()
     {
+        yield return new WaitForSeconds(0.5f);
         while (_isAttacking)
         {
             float distance = Vector3.Distance(_botGameObject.transform.position, _player.transform.position);
-            if (distance >= _attackInterval)
+            if (distance >= _firstAbility.range)
             {
                 Debug.Log("Enemy out of range, stopping attack.");
                 _isAttacking = false;
@@ -63,5 +63,4 @@ public class Attack : Node
             yield return new WaitForSeconds(_attackInterval);
         }
     }
-
 }
