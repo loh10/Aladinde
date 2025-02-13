@@ -34,8 +34,9 @@ public class PlayerUseAbilities : NetworkBehaviour
     private void CheckAttack(ref bool canAttack, float cooldown)
     {
         canAttack = _currentTime > cooldown;
+        GetComponentInChildren<DisplayCooldown>().UpdateBasicAttackCooldown(_currentTime);
     }
-    
+
     [ServerRpc(RequireOwnership = false)]
     public void SpawnProjectileServerRpc(string prefabName, Vector3 spawnPosition, Vector3 targetPosition, float projectileSpeed, ServerRpcParams rpcParams = default)
     {
@@ -48,38 +49,41 @@ public class PlayerUseAbilities : NetworkBehaviour
             switch (prefabName)
             {
                 case "SpicyBombProjectile":
+                {
+                    SpicyBombProjectile spicyProj = projectile.GetComponent<SpicyBombProjectile>();
+                    if (spicyProj != null)
                     {
-                        SpicyBombProjectile spicyProj = projectile.GetComponent<SpicyBombProjectile>();
-                        if (spicyProj != null)
-                        {
-                            spicyProj.Initialize(targetPosition, projectileSpeed);
-                            spicyProj.SetOwner(gameObject);
-                            return;
-                        }
-                        break;
+                        spicyProj.Initialize(targetPosition, projectileSpeed);
+                        spicyProj.SetOwner(gameObject);
+                        return;
                     }
+
+                    break;
+                }
                 case "PoopBombProjectile":
+                {
+                    PoopBombProjectile poopProj = projectile.GetComponent<PoopBombProjectile>();
+                    if (poopProj != null)
                     {
-                        PoopBombProjectile poopProj = projectile.GetComponent<PoopBombProjectile>();
-                        if (poopProj != null)
-                        {
-                            poopProj.Initialize(targetPosition, projectileSpeed);
-                            poopProj.SetOwner(gameObject);
-                            return;
-                        }
-                        break;
+                        poopProj.Initialize(targetPosition, projectileSpeed);
+                        poopProj.SetOwner(gameObject);
+                        return;
                     }
+
+                    break;
+                }
                 case "CorrosiveSauceProjectile":
+                {
+                    CorrosiveSauceProjectile corrosiveProj = projectile.GetComponent<CorrosiveSauceProjectile>();
+                    if (corrosiveProj != null)
                     {
-                        CorrosiveSauceProjectile corrosiveProj = projectile.GetComponent<CorrosiveSauceProjectile>();
-                        if (corrosiveProj != null)
-                        {
-                            corrosiveProj.Initialize(targetPosition, projectileSpeed);
-                            corrosiveProj.SetOwner(gameObject);
-                            return;
-                        }
-                        break;
+                        corrosiveProj.Initialize(targetPosition, projectileSpeed);
+                        corrosiveProj.SetOwner(gameObject);
+                        return;
                     }
+
+                    break;
+                }
                 default:
                     Debug.LogWarning("SpawnProjectileServerRpc: Unrecognized projectile prefab name: " + prefabName);
                     break;
@@ -115,7 +119,7 @@ public class PlayerUseAbilities : NetworkBehaviour
             }
         }
     }
-    
+
     public void OnPoopAttack(InputAction.CallbackContext ctx)
     {
         Debug.Log("OnPoopAttack called, phase: " + ctx.phase);
@@ -123,6 +127,48 @@ public class PlayerUseAbilities : NetworkBehaviour
         {
             Debug.Log("Poop Attack triggered");
             _playerInfos.characterClass.abilities[0].Activate(gameObject);
+        }
+    }
+
+    // --- VFX RPC METHODS ---
+    [ServerRpc(RequireOwnership = false)]
+    public void RequestSpawnVFXServerRpc(string effectPrefabName, Vector3 position, ulong ownerClientId, float duration, ServerRpcParams rpcParams = default)
+    {
+        // On the server, call the client RPC so that all clients spawn the effect.
+        SpawnVFXClientRpc(effectPrefabName, position, ownerClientId, duration);
+    }
+
+    [ClientRpc]
+    public void SpawnVFXClientRpc(string effectPrefabName, Vector3 position, ulong ownerClientId, float duration)
+    {
+        GameObject effectPrefab = Resources.Load<GameObject>(effectPrefabName);
+        if (effectPrefab != null)
+        {
+            // Instantiate the effect at the provided position.
+            GameObject instance = Instantiate(effectPrefab, position, Quaternion.identity);
+
+            // Find the player object with the matching ownerClientId.
+            PlayerSpawn[] players = FindObjectsOfType<PlayerSpawn>();
+            foreach (PlayerSpawn player in players)
+            {
+                NetworkObject netObj = player.GetComponent<NetworkObject>();
+                if (netObj != null && netObj.OwnerClientId == ownerClientId)
+                {
+                    // Parent the effect to that player's transform.
+                    instance.transform.SetParent(player.transform, worldPositionStays: true);
+                    break;
+                }
+            }
+
+            // Destroy the instance after 'duration' seconds if duration > 0.
+            if (duration > 0f)
+            {
+                Destroy(instance, duration);
+            }
+        }
+        else
+        {
+            Debug.LogWarning("Effect prefab not found: " + effectPrefabName);
         }
     }
 }

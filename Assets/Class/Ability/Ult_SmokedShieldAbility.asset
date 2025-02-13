@@ -25,3 +25,4 @@ MonoBehaviour:
   icon: {fileID: 0}
   abilityPrefab: {fileID: 0}
   duration: 7
+  shieldVFXPrefab: {fileID: 7177991128484655659, guid: 207573399b7cb1647ae1c5012f2e8f03, type: 3}

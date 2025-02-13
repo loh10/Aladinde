@@ -10,6 +10,9 @@ public class GrillStrike : Ability
     [Header("Grill Strike Settings")]
     [SerializeField] private float _staggerDuration = 0.5f;
     [SerializeField] private float _staggerSpeedMultiplier = 0.5f;
+    
+    [Header("Visual Effects")]
+    [SerializeField] private GameObject attackVFXPrefab;
 
     public override void Activate(GameObject user)
     {
@@ -43,26 +46,34 @@ public class GrillStrike : Ability
             }
         }
 
-        // Offset the ray's start position so it doesn't start inside any of the user's colliders.
+        // Offset the ray's start position so that the ray doesn't immediately hit the player's own colliders.
         Collider2D userCollider = user.GetComponent<Collider2D>();
         float offset = userCollider != null ? userCollider.bounds.extents.magnitude + 0.1f : 0.5f;
         Vector2 rayStart = (Vector2)user.transform.position + direction * offset;
 
-        // Use the default raycast layers (which ignore objects on the "Ignore Raycast" layer).
+        // Cast a ray using the default raycast layers.
         RaycastHit2D hit = Physics2D.Raycast(rayStart, direction, range, Physics2D.DefaultRaycastLayers);
 
-        // Debug what we hit.
+        // Log what we hit.
         if (hit.collider != null)
             Debug.Log("GrillStrike hit: " + hit.collider.gameObject.name);
 
-        // Check if the hit object is not part of the user's hierarchy.
+        // Spawn the visual effect on all clients.
+        if (attackVFXPrefab != null)
+        {
+            Vector3 vfxPosition = hit ? (Vector3)hit.point : (Vector3)rayStart;
+            ulong ownerId = user.GetComponent<NetworkObject>().OwnerClientId;
+            float simpleAttackDuration = 1.5f;
+            user.GetComponent<PlayerUseAbilities>().RequestSpawnVFXServerRpc(attackVFXPrefab.name, vfxPosition, ownerId, simpleAttackDuration);
+        }
+
+        // If we hit an object that is not part of the user's own hierarchy...
         if (hit && !hit.collider.transform.IsChildOf(user.transform))
         {
             NetworkObject targetNetObj = hit.collider.transform.root.GetComponent<NetworkObject>();
             if (targetNetObj != null)
             {
-                user.GetComponent<PlayerLifeManager>()
-                    .TakeDamageServerRpc(damages, targetNetObj.OwnerClientId);
+                user.GetComponent<PlayerLifeManager>().TakeDamageServerRpc(damages, targetNetObj.OwnerClientId);
             }
 
             PlayerMovement targetMovement = hit.collider.GetComponent<PlayerMovement>();

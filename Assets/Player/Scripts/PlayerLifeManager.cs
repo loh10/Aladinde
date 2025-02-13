@@ -157,7 +157,7 @@ public class PlayerLifeManager : NetworkBehaviour
     /// </summary>
     /// <param name="player"></param>
     /// <param name="targetClientId"></param>
-    private void DisconnectPlayer(PlayerLifeManager player, ulong targetClientId)
+    public void DisconnectPlayer(PlayerLifeManager player, ulong targetClientId)
     {
         ClientRpcParams clientRpcParams = new ClientRpcParams
         {
@@ -263,7 +263,7 @@ public class PlayerLifeManager : NetworkBehaviour
 
     private Vector3 GetRandomSpawnPosition()
     {
-        float respawnRadius = 100f;
+        float respawnRadius = 20f;
         float randomX = Random.Range(-respawnRadius, respawnRadius);
         float randomY = Random.Range(-respawnRadius, respawnRadius);
         

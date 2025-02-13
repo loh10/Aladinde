@@ -24,3 +24,4 @@ MonoBehaviour:
   spawnTransform: {x: 0, y: 0}
   icon: {fileID: 0}
   abilityPrefab: {fileID: 0}
+  attackVFXPrefab: {fileID: 5318118474938795680, guid: 350062f526f7e1347b57880b1af4ae47, type: 3}

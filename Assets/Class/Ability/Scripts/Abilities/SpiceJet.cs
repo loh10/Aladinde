@@ -6,12 +6,14 @@ public class SpiceJet : Ability
 {
     public float critChance = 0.2f;
     public float critMultiplier = 1.5f;
+    
+    [Header("Visual Effects")]
+    [SerializeField] private GameObject attackVFXPrefab;
 
     public override void Activate(GameObject user)
     {
         // Execute common ability logic (charge management)
         base.Activate(user);
-
         bool isBot = user.gameObject.tag != "Player";
         Vector2 direction;
 
@@ -38,19 +40,26 @@ public class SpiceJet : Ability
             }
         }
 
-        // Offset the ray start position.
         Collider2D userCollider = user.GetComponent<Collider2D>();
         float offset = userCollider != null ? userCollider.bounds.extents.magnitude + 0.1f : 0.5f;
         Vector2 rayStart = (Vector2)user.transform.position + direction * offset;
-
-        // Cast the ray.
+        
+        // Cast a ray using the default raycast layers.
         RaycastHit2D hit = Physics2D.Raycast(rayStart, direction, range, Physics2D.DefaultRaycastLayers);
-
-        // Debug what we hit.
+        
+        // Debug log what we hit.
         if (hit.collider != null)
             Debug.Log("SpiceJet hit: " + hit.collider.gameObject.name);
-
-        // If we hit an object that is not part of the user's hierarchy...
+        
+        // Spawn the visual effect on all clients.
+        if (attackVFXPrefab != null)
+        {
+            Vector3 vfxPosition = hit ? (Vector3)hit.point : (Vector3)rayStart;
+            ulong ownerId = user.GetComponent<NetworkObject>().OwnerClientId;
+            float simpleAttackDuration = 1.5f;
+            user.GetComponent<PlayerUseAbilities>().RequestSpawnVFXServerRpc(attackVFXPrefab.name, vfxPosition, ownerId, simpleAttackDuration);
+        }
+        
         if (hit && !hit.collider.transform.IsChildOf(user.transform))
         {
             float finalDamage = damages;
@@ -59,14 +68,14 @@ public class SpiceJet : Ability
                 finalDamage *= critMultiplier;
                 Debug.Log("Critical Hit!");
             }
-
+            
             NetworkObject targetNetObj = hit.collider.transform.root.GetComponent<NetworkObject>();
             if (targetNetObj != null)
             {
                 user.GetComponent<PlayerLifeManager>().TakeDamageServerRpc(finalDamage, targetNetObj.OwnerClientId);
             }
         }
-
+        
         Debug.Log(abilityName + " activated");
     }
 }
