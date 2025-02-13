@@ -1,4 +1,5 @@
 using TMPro;
+using Unity.Netcode;
 using UnityEngine;
 
 public class PauseMenu : MonoBehaviour
@@ -7,10 +8,12 @@ public class PauseMenu : MonoBehaviour
     public TMP_Text pseudo;
 
     public PlayerInfos playerInfos;
+    private NetworkManager _networkManager;
 
     private void OnEnable()
     {
-        //get playerInfo
+        _networkManager = FindObjectOfType<NetworkManager>();
+        playerInfos = _networkManager.LocalClient.PlayerObject.GetComponent<PlayerInfos>();
     }
 
     public void CloseMenu()
@@ -21,6 +24,7 @@ public class PauseMenu : MonoBehaviour
     public void MainMenu()
     {
         //deco + open menu
+        _networkManager.LocalClient.PlayerObject.GetComponent<PlayerLifeManager>().DisconnectPlayer(_networkManager.LocalClient.PlayerObject.GetComponent<PlayerLifeManager>(),_networkManager.LocalClient.PlayerObject.OwnerClientId);
     }
 
     public void GetPlayerInfo()
