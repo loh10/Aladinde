@@ -23,6 +23,7 @@ public class Ability : ScriptableObject
 
     public virtual void Activate(GameObject user)
     {
+
         if (isChargingCapacity)
         {
             if (CanUseUltimate())
@@ -45,8 +46,12 @@ public class Ability : ScriptableObject
     {
         PlayerInfos playerInfos = user.GetComponent<PlayerInfos>();
         Ability ultimateAbility = playerInfos.characterClass.abilities[playerInfos.characterClass.abilities.Length - 1];
-
         ultimateAbility.IncreaseCharge(chargeGain);
+        if (user.GetComponentInChildren<DisplayCooldown>() != null)
+        {
+            user.GetComponentInChildren<DisplayCooldown>().UpdateUltimateCooldown(ultimateAbility.GetCurrentCharge());
+        }
+
     }
 
     public void IncreaseCharge(float amount)
@@ -65,6 +70,10 @@ public class Ability : ScriptableObject
     private void UseUltimate(GameObject user)
     {
         Debug.Log(abilityName + " Ultimate activated");
+        if (user.GetComponentInChildren<DisplayCooldown>() != null)
+        {
+            user.GetComponentInChildren<DisplayCooldown>().UpdateUltimateCooldown(0);
+        }
     }
 
     public void ResetCharge()
@@ -72,4 +81,8 @@ public class Ability : ScriptableObject
         _currentCharge = 0f;
     }
 
+    public float GetCurrentCharge()
+    {
+        return _currentCharge;
+    }
 }
