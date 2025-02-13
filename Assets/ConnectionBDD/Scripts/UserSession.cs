@@ -12,10 +12,12 @@ public class UserSession : MonoBehaviour
 
     [Header("Data")]
     public UserResponse dataPlayer;
-
+    private TrophyUpdater trophyUpdater;
     
     void Start()
     {
+        trophyUpdater = GetComponent<TrophyUpdater>();
+        
         string webGLUrl = Application.absoluteURL; // URL PAGE 
         //Debug.Log("WebGL URL: " + webGLUrl);
 
@@ -71,6 +73,8 @@ public class UserSession : MonoBehaviour
                     dataPlayer.trophy_spice = response.trophy_spice;
                     dataPlayer.trophy_herb = response.trophy_herb;
                     dataPlayer.index_hat = response.index_hat;
+                    
+                    //trophyUpdater.StartCoroutine(trophyUpdater.UpdateTrophy(dataPlayer.pseudo, Trophy.trophy_grill.ToString(), Random.Range(1, 10)));
                 }
                 else
                 {
@@ -92,4 +96,13 @@ public class UserResponse
     public int trophy_spice;
     public int trophy_herb;
     public int index_hat;
+}
+
+[System.Serializable]
+public enum Trophy
+{
+    trophy_grill,
+    trophy_spice,
+    trophy_herb,
+    index_hat
 }
