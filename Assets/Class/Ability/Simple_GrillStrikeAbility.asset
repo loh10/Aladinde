@@ -26,3 +26,4 @@ MonoBehaviour:
   abilityPrefab: {fileID: 6912215052845606259, guid: b74a464c74227ac42859acda48cb09b4, type: 3}
   _staggerDuration: 10
   _staggerSpeedMultiplier: 0.5
+  attackVFXPrefab: {fileID: 2360655870356088562, guid: 9c1f53d3f59938c48a20351de4a03fe3, type: 3}

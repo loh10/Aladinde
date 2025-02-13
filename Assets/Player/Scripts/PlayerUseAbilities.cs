@@ -125,4 +125,46 @@ public class PlayerUseAbilities : NetworkBehaviour
             _playerInfos.characterClass.abilities[0].Activate(gameObject);
         }
     }
+    
+    // --- VFX RPC METHODS ---
+    [ServerRpc(RequireOwnership = false)]
+    public void RequestSpawnVFXServerRpc(string effectPrefabName, Vector3 position, ulong ownerClientId, float duration, ServerRpcParams rpcParams = default)
+    {
+        // On the server, call the client RPC so that all clients spawn the effect.
+        SpawnVFXClientRpc(effectPrefabName, position, ownerClientId, duration);
+    }
+
+    [ClientRpc]
+    public void SpawnVFXClientRpc(string effectPrefabName, Vector3 position, ulong ownerClientId, float duration)
+    {
+        GameObject effectPrefab = Resources.Load<GameObject>(effectPrefabName);
+        if (effectPrefab != null)
+        {
+            // Instantiate the effect at the provided position.
+            GameObject instance = Instantiate(effectPrefab, position, Quaternion.identity);
+
+            // Find the player object with the matching ownerClientId.
+            PlayerSpawn[] players = FindObjectsOfType<PlayerSpawn>();
+            foreach (PlayerSpawn player in players)
+            {
+                NetworkObject netObj = player.GetComponent<NetworkObject>();
+                if (netObj != null && netObj.OwnerClientId == ownerClientId)
+                {
+                    // Parent the effect to that player's transform.
+                    instance.transform.SetParent(player.transform, worldPositionStays: true);
+                    break;
+                }
+            }
+
+            // Destroy the instance after 'duration' seconds if duration > 0.
+            if (duration > 0f)
+            {
+                Destroy(instance, duration);
+            }
+        }
+        else
+        {
+            Debug.LogWarning("Effect prefab not found: " + effectPrefabName);
+        }
+    }
 }
