@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 using TMPro;
+using Unity.Collections.LowLevel.Unsafe;
 
 
 public class PlayerLifeManager : NetworkBehaviour
@@ -18,8 +19,8 @@ public class PlayerLifeManager : NetworkBehaviour
     private float _maxShield;
     public bool isBurning = false;
 
-    private NetworkVariable<float> _currentHealth = new NetworkVariable<float>();
-    private NetworkVariable<float> _currentShield = new NetworkVariable<float>();
+    public NetworkVariable<float> _currentHealth = new NetworkVariable<float>();
+    public NetworkVariable<float> _currentShield = new NetworkVariable<float>();
 
     public override void OnNetworkSpawn()
     {
@@ -31,13 +32,17 @@ public class PlayerLifeManager : NetworkBehaviour
         _shieldBar.maxValue = _maxShield;
         _shieldBar.value = 0;
 
+        _currentHealth = new NetworkVariable<float>(_maxHealth);
+        Debug.Log(_currentHealth.Value + " On this target " + gameObject.name);
         // Only the server should initialize the NetworkVariables.
         if (IsServer)
         {
-            _currentHealth.Value = _maxHealth;
+
             _currentShield.Value = 0;
         }
         
+        _currentShield.Value = 0;
+
         _currentHealth.OnValueChanged += (oldValue, newValue) => {
             UpdateHealthBarClientRpc(newValue);
         };
@@ -107,7 +112,7 @@ public class PlayerLifeManager : NetworkBehaviour
         }
     }
 
-    [ServerRpc]
+    [ServerRpc(RequireOwnership = false)]
     public void TakeDamageServerRpc(float damage, ulong targetClientId)
     {
         PlayerLifeManager[] players = FindObjectsByType<PlayerLifeManager>(FindObjectsInactive.Include, FindObjectsSortMode.None);

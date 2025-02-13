@@ -12,13 +12,34 @@ public class CorrosiveSauce : Ability
         // Execute common ability logic (e.g., charge management)
         base.Activate(user);
 
-        // Calculate target position based on the client's mouse position.
+        bool isBot = user.CompareTag("Bot");
         Vector2 userPos = user.transform.position;
-        Vector2 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 direction = mouseWorldPos - userPos;
-        float travelDistance = Mathf.Min(direction.magnitude, maxRange);
-        Vector2 targetPosition = userPos + direction.normalized * travelDistance;
+        Vector2 targetPosition;
 
+        if (!isBot)
+        {
+            // Player: Calculate target position based on the mouse position
+            Vector2 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 direction = mouseWorldPos - userPos;
+            float travelDistance = Mathf.Min(direction.magnitude, maxRange);
+            targetPosition = userPos + direction.normalized * travelDistance;
+        }
+        else
+        {
+            // Bot: Target the enemy assigned in the behavior tree
+            EnemyAI enemyAI = user.GetComponent<EnemyAI>();
+            if (enemyAI != null && enemyAI._playerTarget != null)
+            {
+                Vector2 targetDirection = enemyAI._playerTarget.transform.position - user.transform.position;
+                float travelDistance = Mathf.Min(targetDirection.magnitude, maxRange);
+                targetPosition = userPos + targetDirection.normalized * travelDistance;
+            }
+            else
+            {
+                Debug.LogWarning("Bot has no target, ability canceled.");
+                return;
+            }
+        }
         // Always ask the server (via RPC) to spawn the projectile with the client-provided target.
         string prefabName = abilityPrefab.name;
         user.GetComponent<PlayerUseAbilities>().SpawnProjectileServerRpc(prefabName, userPos, targetPosition, projectileSpeed);

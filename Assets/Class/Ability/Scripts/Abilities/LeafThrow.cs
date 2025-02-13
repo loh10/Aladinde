@@ -11,14 +11,33 @@ public class LeafThrow : Ability
     {
         // Execute common ability logic (charge management)
         base.Activate(user);
-        
-        // Convert mouse position to world coordinates.
-        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        
-        // Calculate the normalized direction from the user's position toward the mouse.
-        Vector2 direction = (mousePos - (Vector2)user.transform.position).normalized;
-        
-        // Offset the ray's start point.
+        bool isBot = user.gameObject.tag != "Player";
+        Vector2 direction;
+
+        if (!isBot)
+        {
+            // Get the current mouse position in world space.
+            if (Camera.main != null)
+                mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+            // Calculate the normalized direction from the player to the mouse.
+            direction = (mousePos - (Vector2)user.transform.position).normalized;
+        }
+        else
+        {
+            // Get the target from the behavior tree
+            EnemyAI enemyAI = user.GetComponent<EnemyAI>();
+            if (enemyAI != null && enemyAI._playerTarget != null)
+            {
+                direction = ((Vector2)enemyAI._playerTarget.transform.position - (Vector2)user.transform.position).normalized;
+            }
+            else
+            {
+                Debug.LogWarning("Bot has no target, GrillStrike cannot be executed correctly.");
+                return;
+            }
+        }
+
         Collider2D userCollider = user.GetComponent<Collider2D>();
         float offset = userCollider != null ? userCollider.bounds.extents.magnitude + 0.1f : 0.5f;
         Vector2 rayStart = (Vector2)user.transform.position + direction * offset;
