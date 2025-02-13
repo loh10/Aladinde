@@ -74,7 +74,7 @@ public class UserSession : MonoBehaviour
                     dataPlayer.trophy_herb = response.trophy_herb;
                     dataPlayer.index_hat = response.index_hat;
                     
-                    //trophyUpdater.StartCoroutine(trophyUpdater.UpdateTrophy(dataPlayer.pseudo, Trophy.trophy_grill.ToString(), Random.Range(1, 10)));
+                    trophyUpdater.StartCoroutine(trophyUpdater.UpdateTrophy(dataPlayer.pseudo, Trophy.trophy_grill.ToString(), Random.Range(1, 10)));
                 }
                 else
                 {

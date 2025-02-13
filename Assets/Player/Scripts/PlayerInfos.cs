@@ -7,6 +7,10 @@ public class PlayerInfos : MonoBehaviour
     [SerializeField] private CharacterClass[] _classes;
     public GameObject canvas;
     public int score;
+    public string name;
+    public int grillTrophy;
+    public int spicesTrophy;
+    public int herbsTrophy;
     private void Awake()
     {
         if (_isBot)

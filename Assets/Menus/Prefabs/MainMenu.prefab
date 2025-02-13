@@ -328,7 +328,10 @@ MonoBehaviour:
   grillClass: {fileID: 11400000, guid: db995e482d45c4643bf39e4a1bf2be49, type: 2}
   spicesClass: {fileID: 11400000, guid: 3027b5649b4ed764b9cee890f969be65, type: 2}
   herbsClass: {fileID: 11400000, guid: 51fe8e3b61fca2541bbaf0f575643c61, type: 2}
-  networkLauncher: {fileID: 0}
+  playerNameText: {fileID: 7346813810437986797}
+  grillTrophyText: {fileID: 2824831716069055835}
+  spicesTrophyText: {fileID: 692056864074003011}
+  herbsTrophyText: {fileID: 1386272852502188467}
 --- !u!1 &8009310270197528056
 GameObject:
   m_ObjectHideFlags: 0
@@ -627,7 +630,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6329754073063728083, guid: 0cfbbe9112ec1f440b028968a7662031, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: HideMenu
+      value: OnPlayButtonPressed
       objectReference: {fileID: 0}
     - target: {fileID: 6329754073063728083, guid: 0cfbbe9112ec1f440b028968a7662031, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -695,6 +698,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1424841734446240138}
     m_Modifications:
+    - target: {fileID: 4385077411542512693, guid: b9761ca81e840b347bab86f7371f9181, type: 3}
+      propertyPath: m_Name
+      value: GrillTrophyText
+      objectReference: {fileID: 0}
     - target: {fileID: 4385077412189487848, guid: b9761ca81e840b347bab86f7371f9181, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -803,11 +810,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 6329754073372556364, guid: b9761ca81e840b347bab86f7371f9181, type: 3}
+      propertyPath: m_Name
+      value: GrillText
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9761ca81e840b347bab86f7371f9181, type: 3}
+--- !u!114 &2824831716069055835 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4385077411542512699, guid: b9761ca81e840b347bab86f7371f9181, type: 3}
+  m_PrefabInstance: {fileID: 2011206700498495840}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &5494092605359819442 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6329754073063728082, guid: b9761ca81e840b347bab86f7371f9181, type: 3}
@@ -821,6 +843,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1424841734446240138}
     m_Modifications:
+    - target: {fileID: 4385077411542512693, guid: b9761ca81e840b347bab86f7371f9181, type: 3}
+      propertyPath: m_Name
+      value: HerbTrophyText
+      objectReference: {fileID: 0}
     - target: {fileID: 6329754073063728081, guid: b9761ca81e840b347bab86f7371f9181, type: 3}
       propertyPath: m_Name
       value: Herbs_Select_Btn
@@ -925,6 +951,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 1a494719534814d9c8cedde17a9251c2, type: 3}
+    - target: {fileID: 6329754073372556364, guid: b9761ca81e840b347bab86f7371f9181, type: 3}
+      propertyPath: m_Name
+      value: HerbText
+      objectReference: {fileID: 0}
     - target: {fileID: 6329754073372556366, guid: b9761ca81e840b347bab86f7371f9181, type: 3}
       propertyPath: m_text
       value: Herbs
@@ -950,6 +980,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9761ca81e840b347bab86f7371f9181, type: 3}
+--- !u!114 &1386272852502188467 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4385077411542512699, guid: b9761ca81e840b347bab86f7371f9181, type: 3}
+  m_PrefabInstance: {fileID: 3451986560243574152}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &8660464653877773914 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6329754073063728082, guid: b9761ca81e840b347bab86f7371f9181, type: 3}
@@ -963,6 +1004,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1424841734446240138}
     m_Modifications:
+    - target: {fileID: 4385077411542512693, guid: b9761ca81e840b347bab86f7371f9181, type: 3}
+      propertyPath: m_Name
+      value: SpiceTrophyText
+      objectReference: {fileID: 0}
     - target: {fileID: 6329754073063728081, guid: b9761ca81e840b347bab86f7371f9181, type: 3}
       propertyPath: m_Name
       value: Spice_Select_Btn
@@ -1067,6 +1112,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 3a72dd58e663846b3bd1f42e4c05fc45, type: 3}
+    - target: {fileID: 6329754073372556364, guid: b9761ca81e840b347bab86f7371f9181, type: 3}
+      propertyPath: m_Name
+      value: SpiceText
+      objectReference: {fileID: 0}
     - target: {fileID: 6329754073372556366, guid: b9761ca81e840b347bab86f7371f9181, type: 3}
       propertyPath: m_text
       value: Spice
@@ -1088,6 +1137,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9761ca81e840b347bab86f7371f9181, type: 3}
+--- !u!114 &692056864074003011 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4385077411542512699, guid: b9761ca81e840b347bab86f7371f9181, type: 3}
+  m_PrefabInstance: {fileID: 3837140142449280632}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &7104304623311087018 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6329754073063728082, guid: b9761ca81e840b347bab86f7371f9181, type: 3}
@@ -1207,3 +1267,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2284566485073237593, guid: 54fa050a9dd376741baacc9df0b9347c, type: 3}
   m_PrefabInstance: {fileID: 8809402752905198880}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7346813810437986797 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2284566485874779341, guid: 54fa050a9dd376741baacc9df0b9347c, type: 3}
+  m_PrefabInstance: {fileID: 8809402752905198880}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

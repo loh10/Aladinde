@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using Unity.Netcode;
 
@@ -6,7 +7,19 @@ public class MainMenu : MonoBehaviour
     public CharacterClass grillClass;
     public CharacterClass spicesClass;
     public CharacterClass herbsClass;
+    public TextMeshProUGUI playerNameText;
+    public TextMeshProUGUI grillTrophyText;
+    public TextMeshProUGUI spicesTrophyText;
+    public TextMeshProUGUI herbsTrophyText;
     // (Other fields as needed.)
+
+    public void DisplayPlayerInfos(string playerName, int grillTrophy, int spicesTrophy, int herbsTrophy)
+    {
+        playerNameText.text = playerName;
+        grillTrophyText.text = grillTrophy.ToString();
+        spicesTrophyText.text = spicesTrophy.ToString();
+        herbsTrophyText.text = herbsTrophy.ToString();
+    }
 
     // Faction selection methods remain the same.
     public void SelectGrillFaction() { AssignFaction(grillClass); }

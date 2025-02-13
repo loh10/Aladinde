@@ -641,6 +641,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
   _attackToSpawn: {fileID: 6912215052845606259, guid: b74a464c74227ac42859acda48cb09b4, type: 3}
+  canAttack: 0
 --- !u!114 &4306653359299550863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -873,7 +874,7 @@ BoxCollider2D:
     drawMode: 1
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.8, y: 0.8}
   m_EdgeRadius: 0
 --- !u!50 &8255990840318067249
 Rigidbody2D:

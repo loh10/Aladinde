@@ -18,11 +18,16 @@ public class PlayerUseAbilities : NetworkBehaviour
         _playerInfos = GetComponent<PlayerInfos>();
 
         // Instantiate each ability so that each player gets their own copy.
-        for (int i = 0; i < _playerInfos.characterClass.abilities.Length; i++)
-        {
-            _playerInfos.characterClass.abilities[i] = Instantiate(_playerInfos.characterClass.abilities[i]);
-            _playerInfos.characterClass.abilities[i].ResetCharge();
-        }
+
+            for (int i = 0; i < _playerInfos.characterClass.abilities.Length; i++)
+            {
+                if (_playerInfos.characterClass.abilities[i] != null)
+                {
+                    _playerInfos.characterClass.abilities[i] = Instantiate(_playerInfos.characterClass.abilities[i]);
+                    _playerInfos.characterClass.abilities[i].ResetCharge();
+                }
+            }
+
 
         // Assumes the ultimate ability is always the last in the array.
         _ultimate = _playerInfos.characterClass.abilities[_playerInfos.characterClass.abilities.Length - 1];

@@ -4,7 +4,6 @@ using UnityEngine.InputSystem;
 
 public class PlayerSpawn : NetworkBehaviour
 {
-    [HideInInspector] public string playerName;
 
     public override void OnNetworkSpawn()
     {
@@ -20,11 +19,15 @@ public class PlayerSpawn : NetworkBehaviour
         if (IsOwner)
         {
             // Set up local player properties.
-            gameObject.layer = 2; // For example, ignore raycasts.
+            gameObject.layer = 2;
             GetComponentInChildren<Camera>().tag = "MainCamera";
-            // Assumes UserSession holds dataPlayer with the pseudo.
-            playerName = FindObjectOfType<UserSession>().dataPlayer.pseudo;
-            gameObject.name = playerName;
+            UserSession usersession= FindObjectOfType<UserSession>();
+            gameObject.name = usersession.dataPlayer.pseudo;
+            gameObject.GetComponent<PlayerInfos>().name = usersession.dataPlayer.pseudo;
+            gameObject.GetComponent<PlayerInfos>().spicesTrophy = usersession.dataPlayer.trophy_spice;
+            gameObject.GetComponent<PlayerInfos>().grillTrophy = usersession.dataPlayer.trophy_grill;
+            gameObject.GetComponent<PlayerInfos>().herbsTrophy = usersession.dataPlayer.trophy_herb;
+            FindFirstObjectByType<MainMenu>().DisplayPlayerInfos(usersession.dataPlayer.pseudo, usersession.dataPlayer.trophy_grill, usersession.dataPlayer.trophy_spice, usersession.dataPlayer.trophy_herb);
         }
         else
         {
