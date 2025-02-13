@@ -21,6 +21,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 18fa99f3616ecaf47ab07445fdc4ffb3, type: 2}
   - {fileID: 11400000, guid: 70b7dfa66fc6ca44295c96e0b4725890, type: 2}
   - {fileID: 11400000, guid: fe1f7f8b653a9874781de9f533afb7bf, type: 2}
-  classDescription: description spicy
-  firstAbilityDescription: ability 1 spice
-  secondAbilityDescription: ability 2 spice
+  classDescription: 'Agile and aggressive, Spicy Turkeys specialize in burst damage
+    and mobility. They rely on critical hits and area damage to quickly eliminate
+    opponents. '
+  firstAbilityDescription: 'Egg Shot: Throws an egg at enemies from mid-range, dealing
+    damage with a 20% chance of a critical hit (1.5x damage). '
+  secondAbilityDescription: 'Rotten Egg: Launches a putrid egg that explodes, creating
+    a 3m-wide stinky cloud that burns enemies for 5 damage per second (up to 15 total).
+    The cloud lingers for 4 seconds, making it excellent for area denial. '

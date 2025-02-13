@@ -21,6 +21,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private TMP_Text damages;
 
     public GameObject playButton;
+    private bool _hasClassBeenSelected = false;
 
     private void Start()
     {
@@ -51,19 +52,19 @@ public class MainMenu : MonoBehaviour
         panel.SetActive(false);
     }
 
-    public void ActiveObject()
-    {
-        if(_selectedCharacterClass != null)
-            playButton.SetActive(true);
-    }
-
     public void SelectClass(CharacterClass characterClass)
     {
         _selectedCharacterClass = characterClass;
         SetClassInfosUI();
+
+        if (!_hasClassBeenSelected)
+        {
+            playButton.SetActive(true);
+            _hasClassBeenSelected = true;
+        }
     }
 
-    void SetClassInfosUI()
+        void SetClassInfosUI()
     {
         className.text = "Class name:  " + _selectedCharacterClass.className;
         classDescription.text = "Desciption:  " + _selectedCharacterClass.classDescription;

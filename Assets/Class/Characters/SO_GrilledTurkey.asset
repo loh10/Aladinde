@@ -21,6 +21,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 18fa99f3616ecaf47ab07445fdc4ffb3, type: 2}
   - {fileID: 11400000, guid: b4d7b50af47bf654fbc7abcdbfab6ba4, type: 2}
   - {fileID: 11400000, guid: 8655bf43f437fb44da69bd53b8cafbb1, type: 2}
-  classDescription: description grill
-  firstAbilityDescription: ability 1 grill
-  secondAbilityDescription: ability 2 grill
+  classDescription: Sturdy and durable, Grilled Turkeys excel in holding the frontlines
+    and controlling areas. With high health and shields, they can withstand heavy
+    damage while disrupting enemy movements.
+  firstAbilityDescription: 'Wing Smash: A powerful melee strike that staggers enemies,
+    slowing them for 0.5 seconds. Short-range but effective for controlling close
+    encounters.'
+  secondAbilityDescription: 'Smoke Shield: Temporarily increases max health by 20%
+    for 7 seconds, granting extra survivability. Also protects against burn effects,
+    making it ideal for resisting damage over time.'
