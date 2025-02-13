@@ -11,6 +11,7 @@ public class NetworkLauncher : MonoBehaviour
         if (Application.platform == RuntimePlatform.LinuxServer || Application.platform == RuntimePlatform.WindowsServer)
         {
             GetComponent<NetworkManager>().StartServer();
+            GetComponent<UnityTransport>().ConnectionData.Address = ("192.168.1.251");
             Debug.Log("Server started");
         }
         else

@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 using TMPro;
-using Unity.Collections.LowLevel.Unsafe;
 
 
 public class PlayerLifeManager : NetworkBehaviour
@@ -19,8 +18,9 @@ public class PlayerLifeManager : NetworkBehaviour
     private float _maxShield;
     public bool isBurning = false;
 
-    public NetworkVariable<float> _currentHealth = new NetworkVariable<float>();
-    public NetworkVariable<float> _currentShield = new NetworkVariable<float>();
+    private NetworkVariable<float> _currentHealth = new NetworkVariable<float>();
+    private NetworkVariable<float> _currentShield = new NetworkVariable<float>();
+    private Transform[] _spawnList;
 
     public override void OnNetworkSpawn()
     {
@@ -32,17 +32,14 @@ public class PlayerLifeManager : NetworkBehaviour
         _shieldBar.maxValue = _maxShield;
         _shieldBar.value = 0;
 
-        _currentHealth = new NetworkVariable<float>(_maxHealth);
-        Debug.Log(_currentHealth.Value + " On this target " + gameObject.name);
         // Only the server should initialize the NetworkVariables.
         if (IsServer)
         {
-
+            _currentHealth.Value = _maxHealth;
             _currentShield.Value = 0;
+            _spawnList = GameObject.Find("SpawnPlayer").GetComponentsInChildren<Transform>();
         }
         
-        _currentShield.Value = 0;
-
         _currentHealth.OnValueChanged += (oldValue, newValue) => {
             UpdateHealthBarClientRpc(newValue);
         };
@@ -138,14 +135,6 @@ public class PlayerLifeManager : NetworkBehaviour
                 {
                     //TODO: Add respawn logic
                     player.ResetPlayerServer(player.OwnerClientId);            
-                    
-                    //spawn player at random location par rapport au point d'origiines.
-                    // vie a 100%
-                    // remettre la vie et le shield a 0%
-                    
-                    //Reset des cooldowns
-                    
-                    //Reset des abilites
 
                 }
             }
@@ -261,15 +250,11 @@ public class PlayerLifeManager : NetworkBehaviour
         transform.position = spawnPos;
     }
 
-    private Vector3 GetRandomSpawnPosition()
+    public Vector3 GetRandomSpawnPosition()
     {
-        float respawnRadius = 20f;
-        float randomX = Random.Range(-respawnRadius, respawnRadius);
-        float randomY = Random.Range(-respawnRadius, respawnRadius);
-        
-        Debug.Log($"New Random spawn position: ({randomX}, {randomY})");
-        
-        return new Vector3(randomX, randomY, 0f);
+        _spawnList = GameObject.Find("SpawnPlayer").GetComponentsInChildren<Transform>();
+        int randomSpawn = Random.Range(0, _spawnList.Length);
+        return _spawnList[randomSpawn].position;
     }
 }
 
