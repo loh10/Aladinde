@@ -21,3 +21,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 18fa99f3616ecaf47ab07445fdc4ffb3, type: 2}
   - {fileID: 11400000, guid: a655c9d491a6ed74e8d2f252e33ab9b4, type: 2}
   - {fileID: 11400000, guid: 870b02ac80d9d7a40925156130883c5b, type: 2}
+  classDescription: herb description
+  firstAbilityDescription: ability 1 herb
+  secondAbilityDescription: ability 2 herb

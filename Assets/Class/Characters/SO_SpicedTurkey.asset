@@ -21,3 +21,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 18fa99f3616ecaf47ab07445fdc4ffb3, type: 2}
   - {fileID: 11400000, guid: 70b7dfa66fc6ca44295c96e0b4725890, type: 2}
   - {fileID: 11400000, guid: fe1f7f8b653a9874781de9f533afb7bf, type: 2}
+  classDescription: description spicy
+  firstAbilityDescription: ability 1 spice
+  secondAbilityDescription: ability 2 spice

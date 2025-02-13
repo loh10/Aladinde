@@ -10,4 +10,11 @@ public class CharacterClass : ScriptableObject
     public float damageBonus;
 
     public Ability[] abilities;
+
+    public string classDescription;
+    public string firstAbilityDescription;
+    public string secondAbilityDescription;
+    //public string life;
+    //public string damages;
+
 }
