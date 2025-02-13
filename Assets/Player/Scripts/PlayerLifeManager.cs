@@ -141,6 +141,13 @@ public class PlayerLifeManager : NetworkBehaviour
         }
     }
 
+    public void IncreaseMaxHealth(float amount)
+    {
+        _maxHealth += amount;
+        _currentHealth.Value = _maxHealth;
+        UpdateHealthBarClientRpc(_currentHealth.Value);
+    }
+
     /// <summary>
     /// Disconnects the player from the server and sends them back to the main menu
     /// </summary>
