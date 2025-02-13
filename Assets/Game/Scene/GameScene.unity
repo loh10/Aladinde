@@ -364,6 +364,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Map
       objectReference: {fileID: 0}
+    - target: {fileID: 2082273436070043745, guid: b8102b976066c1449b79d7473f3ca902, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2804596178773407208, guid: b8102b976066c1449b79d7473f3ca902, type: 3}
       propertyPath: m_LocalPosition.x
       value: -17.958248
@@ -403,6 +407,10 @@ PrefabInstance:
     - target: {fileID: 2804596178773407208, guid: b8102b976066c1449b79d7473f3ca902, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7712383367901762809, guid: b8102b976066c1449b79d7473f3ca902, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
