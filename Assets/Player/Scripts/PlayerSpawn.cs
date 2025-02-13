@@ -16,6 +16,14 @@ public class PlayerSpawn : NetworkBehaviour
             GetComponentInChildren<Camera>().tag = "MainCamera";
             playerName = FindFirstObjectByType<UserSession>().pseudoText;
             gameObject.name = playerName;
+            GetAllPlayerInLobby playerLobby = FindFirstObjectByType<GetAllPlayerInLobby>();
+            Debug.Log(playerLobby._gameState.currentState);
+            if (playerLobby._gameState.currentState == GameStateEnum.InGame)
+            {
+                GetComponent<PlayerMovement>().canMove = true;
+                GetComponent<PlayerUseAbilities>().canAttack = true;
+                playerLobby.gameObject.SetActive(false);
+            }
         }
         else
         {

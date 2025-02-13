@@ -1,5 +1,6 @@
 using System.Collections;
 using TMPro;
+using Unity.Multiplayer.Playmode;
 using Unity.Netcode;
 using UnityEngine;
 
@@ -11,12 +12,19 @@ public class GetAllPlayerInLobby : NetworkBehaviour
     [SerializeField] private int _nbMaxPlayer = 3;
     [SerializeField] private float _waitingTimeBeforeAddBot = 20f;
     private float elapsedTime = 0;
+    public GameState _gameState { get; private set; } = new GameState();
 
     public override void OnNetworkSpawn()
     {
         // S'exécute uniquement côté serveur
+
+
         if (IsServer)
         {
+            if (_networkManager.ConnectedClientsList.Count > 1)
+            {
+                _gameState.currentState = GameStateEnum.InGame;
+            }
             Debug.Log("Server");
             if (_networkManager != null)
             {
@@ -57,15 +65,18 @@ public class GetAllPlayerInLobby : NetworkBehaviour
 
         if (playerInRoom >= _nbMaxPlayer || useBot)
         {
-            if (NetworkManager.Singleton.LocalClient != null &&
-                NetworkManager.Singleton.LocalClient.PlayerObject != null)
+            if (_networkManager.LocalClient != null &&
+                _networkManager.LocalClient.PlayerObject != null)
             {
-                PlayerMovement playerMovement = NetworkManager.Singleton.LocalClient.PlayerObject.GetComponent<PlayerMovement>();
-                if (playerMovement != null)
+                PlayerMovement playerMovement = _networkManager.LocalClient.PlayerObject.GetComponent<PlayerMovement>();
+                PlayerUseAbilities playerUseAbilities = _networkManager.LocalClient.PlayerObject.GetComponent<PlayerUseAbilities>();
+                if (playerMovement != null && playerUseAbilities != null)
                 {
                     playerMovement.canMove = true;
+                    playerUseAbilities.canAttack = true;
                 }
             }
+            _gameState.currentState = GameStateEnum.InGame;
             gameObject.SetActive(false);
         }
     }
