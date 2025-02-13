@@ -1,0 +1,936 @@
+fileFormatVersion: 2
+guid: d97cb3c2eaf05604d9982a472bf1bbe5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8050602848297057595
+    second: Herbs_FactionIcon_0
+  - first:
+      213: 8394207151484138238
+    second: Herbs_FactionIcon_1
+  - first:
+      213: -3248584466098348019
+    second: Herbs_FactionIcon_2
+  - first:
+      213: -8923868219897683427
+    second: Herbs_FactionIcon_3
+  - first:
+      213: -831304013921496650
+    second: Herbs_FactionIcon_4
+  - first:
+      213: 4910582653739453782
+    second: Herbs_FactionIcon_5
+  - first:
+      213: -5742216634501013937
+    second: Herbs_FactionIcon_6
+  - first:
+      213: -2178401414684930604
+    second: Herbs_FactionIcon_7
+  - first:
+      213: -5724391678309780492
+    second: Herbs_FactionIcon_8
+  - first:
+      213: 8019047109558422780
+    second: Herbs_FactionIcon_9
+  - first:
+      213: -3921502181214257859
+    second: Herbs_FactionIcon_10
+  - first:
+      213: -6010276123584353233
+    second: Herbs_FactionIcon_11
+  - first:
+      213: -5952926901676315100
+    second: Herbs_FactionIcon_12
+  - first:
+      213: -6112136506083025059
+    second: Herbs_FactionIcon_13
+  - first:
+      213: -2710147723008450928
+    second: Herbs_FactionIcon_14
+  - first:
+      213: 8728623628223987525
+    second: Herbs_FactionIcon_15
+  - first:
+      213: 6653164386640653465
+    second: Herbs_FactionIcon_16
+  - first:
+      213: 996276114517803163
+    second: Herbs_FactionIcon_17
+  - first:
+      213: 8953261440241838682
+    second: Herbs_FactionIcon_18
+  - first:
+      213: -2127971778497010703
+    second: Herbs_FactionIcon_19
+  - first:
+      213: 8113077724826116531
+    second: Herbs_FactionIcon_20
+  - first:
+      213: -3767288064852264386
+    second: Herbs_FactionIcon_21
+  - first:
+      213: 6153075591252606953
+    second: Herbs_FactionIcon_22
+  - first:
+      213: -8261571198271587439
+    second: Herbs_FactionIcon_23
+  - first:
+      213: 8936792880139077402
+    second: Herbs_FactionIcon_24
+  - first:
+      213: 4557068018058641147
+    second: Herbs_FactionIcon_25
+  - first:
+      213: -8766079408063327627
+    second: Herbs_FactionIcon_26
+  - first:
+      213: 448850746547288634
+    second: Herbs_FactionIcon_27
+  - first:
+      213: 422621540178739496
+    second: Herbs_FactionIcon_28
+  - first:
+      213: -462926501666915062
+    second: Herbs_FactionIcon_29
+  - first:
+      213: 6154281788485576364
+    second: Herbs_FactionIcon_30
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Herbs_FactionIcon_0
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 395
+        width: 50
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3d7e78f2ac79bf60800000000000000
+      internalID: 8050602848297057595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Herbs_FactionIcon_1
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 84
+        width: 364
+        height: 358
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef2714b0ee63e7470800000000000000
+      internalID: 8394207151484138238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Herbs_FactionIcon_2
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 417
+        width: 35
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d002b5bc3a5bae2d0800000000000000
+      internalID: -3248584466098348019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Herbs_FactionIcon_3
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 365
+        width: 103
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d12e99a722d082480800000000000000
+      internalID: -8923868219897683427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Herbs_FactionIcon_4
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 425
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b15add576d9674f0800000000000000
+      internalID: -831304013921496650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Herbs_FactionIcon_5
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 430
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65dc55cf7e4e52440800000000000000
+      internalID: 4910582653739453782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Herbs_FactionIcon_6
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 343
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4e5a3df46c8f40b0800000000000000
+      internalID: -5742216634501013937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Herbs_FactionIcon_7
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 200
+        width: 129
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dd0f7b7473c4c1e0800000000000000
+      internalID: -2178401414684930604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Herbs_FactionIcon_8
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 368
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f3b4230910ee80b0800000000000000
+      internalID: -5724391678309780492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Herbs_FactionIcon_9
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 311
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfc4a520cd0694f60800000000000000
+      internalID: 8019047109558422780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Herbs_FactionIcon_10
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 317
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3dfdce0b860499c0800000000000000
+      internalID: -3921502181214257859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Herbs_FactionIcon_11
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 270
+        width: 23
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2c2ebb95b5379ca0800000000000000
+      internalID: -6010276123584353233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Herbs_FactionIcon_12
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 279
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42e67bbd584f26da0800000000000000
+      internalID: -5952926901676315100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Herbs_FactionIcon_13
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 224
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5f59303b345d2ba0800000000000000
+      internalID: -6112136506083025059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Herbs_FactionIcon_14
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 252
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09e5f31410f936ad0800000000000000
+      internalID: -2710147723008450928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Herbs_FactionIcon_15
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 148
+        width: 46
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54f3f5291fc422970800000000000000
+      internalID: 8728623628223987525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Herbs_FactionIcon_16
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 224
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99ceef972c9c45c50800000000000000
+      internalID: 6653164386640653465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Herbs_FactionIcon_17
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 192
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b904a0009db73dd00800000000000000
+      internalID: 996276114517803163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Herbs_FactionIcon_18
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 130
+        width: 68
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5a21dee7df504c70800000000000000
+      internalID: 8953261440241838682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Herbs_FactionIcon_19
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 155
+        width: 48
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f321a221fce772e0800000000000000
+      internalID: -2127971778497010703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Herbs_FactionIcon_20
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 133
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b1256fa431779070800000000000000
+      internalID: 8113077724826116531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Herbs_FactionIcon_21
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 123
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3a79e70777e7bbc0800000000000000
+      internalID: -3767288064852264386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Herbs_FactionIcon_22
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 113
+        width: 39
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9effcbc56ad146550800000000000000
+      internalID: 6153075591252606953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Herbs_FactionIcon_23
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 73
+        width: 35
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19b7c6054c0095d80800000000000000
+      internalID: -8261571198271587439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Herbs_FactionIcon_24
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a170eeb76cdd50c70800000000000000
+      internalID: 8936792880139077402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Herbs_FactionIcon_25
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 45
+        width: 117
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfebda1d735fd3f30800000000000000
+      internalID: 4557068018058641147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Herbs_FactionIcon_26
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 56
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 572d4891931a85680800000000000000
+      internalID: -8766079408063327627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Herbs_FactionIcon_27
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 77
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3abe193063aa3600800000000000000
+      internalID: 448850746547288634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Herbs_FactionIcon_28
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 57
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82148c83d047dd500800000000000000
+      internalID: 422621540178739496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Herbs_FactionIcon_29
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 52
+        width: 37
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0d7707acca5399f0800000000000000
+      internalID: -462926501666915062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Herbs_FactionIcon_30
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 51
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca6a65a0ea6686550800000000000000
+      internalID: 6154281788485576364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Herbs_FactionIcon_0: 8050602848297057595
+      Herbs_FactionIcon_1: 8394207151484138238
+      Herbs_FactionIcon_10: -3921502181214257859
+      Herbs_FactionIcon_11: -6010276123584353233
+      Herbs_FactionIcon_12: -5952926901676315100
+      Herbs_FactionIcon_13: -6112136506083025059
+      Herbs_FactionIcon_14: -2710147723008450928
+      Herbs_FactionIcon_15: 8728623628223987525
+      Herbs_FactionIcon_16: 6653164386640653465
+      Herbs_FactionIcon_17: 996276114517803163
+      Herbs_FactionIcon_18: 8953261440241838682
+      Herbs_FactionIcon_19: -2127971778497010703
+      Herbs_FactionIcon_2: -3248584466098348019
+      Herbs_FactionIcon_20: 8113077724826116531
+      Herbs_FactionIcon_21: -3767288064852264386
+      Herbs_FactionIcon_22: 6153075591252606953
+      Herbs_FactionIcon_23: -8261571198271587439
+      Herbs_FactionIcon_24: 8936792880139077402
+      Herbs_FactionIcon_25: 4557068018058641147
+      Herbs_FactionIcon_26: -8766079408063327627
+      Herbs_FactionIcon_27: 448850746547288634
+      Herbs_FactionIcon_28: 422621540178739496
+      Herbs_FactionIcon_29: -462926501666915062
+      Herbs_FactionIcon_3: -8923868219897683427
+      Herbs_FactionIcon_30: 6154281788485576364
+      Herbs_FactionIcon_4: -831304013921496650
+      Herbs_FactionIcon_5: 4910582653739453782
+      Herbs_FactionIcon_6: -5742216634501013937
+      Herbs_FactionIcon_7: -2178401414684930604
+      Herbs_FactionIcon_8: -5724391678309780492
+      Herbs_FactionIcon_9: 8019047109558422780
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
