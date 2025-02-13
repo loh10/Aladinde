@@ -15,14 +15,16 @@ public class PlayerUseAbilities : NetworkBehaviour
     private void Start()
     {
         _playerInfos = GetComponent<PlayerInfos>();
+
+        // Instantiate each ability so that each player gets their own copy.
+        for (int i = 0; i < _playerInfos.characterClass.abilities.Length; i++)
+        {
+            _playerInfos.characterClass.abilities[i] = Instantiate(_playerInfos.characterClass.abilities[i]);
+            _playerInfos.characterClass.abilities[i].ResetCharge();
+        }
+
         // Assumes the ultimate ability is always the last in the array.
         _ultimate = _playerInfos.characterClass.abilities[_playerInfos.characterClass.abilities.Length - 1];
-
-        // Reset charges on all abilities.
-        foreach (Ability ability in _playerInfos.characterClass.abilities)
-        {
-            ability.ResetCharge();
-        }
     }
 
     private void Update()
@@ -109,9 +111,11 @@ public class PlayerUseAbilities : NetworkBehaviour
     {
         if (ctx.phase == InputActionPhase.Performed)
         {
-            if (_ultimate != null && _ultimate.CanUseUltimate())
+            // Always fetch the ultimate from the player's current character class.
+            Ability currentUltimate = _playerInfos.characterClass.abilities[_playerInfos.characterClass.abilities.Length - 1];
+            if (currentUltimate != null && currentUltimate.CanUseUltimate())
             {
-                _ultimate.Activate(gameObject);
+                currentUltimate.Activate(gameObject);
             }
             else
             {
