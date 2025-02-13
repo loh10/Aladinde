@@ -15,8 +15,8 @@ MonoBehaviour:
   abilityName: Leaf Throw
   abilityDescription: Throws a sharp leaf that pierces through enemies
   cooldown: 0.7
-  range: 6
-  damages: 15
+  range: 3
+  damages: 25
   chargeGain: 20
   isChargingCapacity: 0
   maxCharge: 0

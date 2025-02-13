@@ -16,7 +16,7 @@ MonoBehaviour:
   maxHealth: 150
   maxShield: 100
   speed: 3
-  damageBonus: 20
+  damageBonus: 15
   abilities:
   - {fileID: 11400000, guid: 18fa99f3616ecaf47ab07445fdc4ffb3, type: 2}
   - {fileID: 11400000, guid: b4d7b50af47bf654fbc7abcdbfab6ba4, type: 2}
