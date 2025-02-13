@@ -14,7 +14,7 @@ public class PlayerSpawn : NetworkBehaviour
             // Only the local player's instance should be on Ignore Raycast.
             gameObject.layer = 2; // Ignore Raycast
             GetComponentInChildren<Camera>().tag = "MainCamera";
-            playerName = FindFirstObjectByType<UserSession>().pseudoText;
+            playerName = FindFirstObjectByType<UserSession>().dataPlayer.pseudo;
             gameObject.name = playerName;
         }
         else
