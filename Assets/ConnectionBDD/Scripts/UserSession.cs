@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Networking;
 using TMPro;
+using UnityEngine.Serialization;
 
 public class UserSession : MonoBehaviour
 {
@@ -13,10 +14,16 @@ public class UserSession : MonoBehaviour
     private const string LOCAL_URL = "192.168.1.251";
     
     
+    public TMP_Text TMP_pseudoText;
+    public TMP_Text TMP_emailText;
+    public TMP_Text TMP_trophy_grillText;
+    public TMP_Text TMP_trophy_spiceText;
+    public TMP_Text TMP_trophy_herbText;
+    
     void Start()
     {
         string webGLUrl = Application.absoluteURL; // URL PAGE 
-        //Debug.Log("WebGL URL: " + webGLUrl);
+        Debug.Log("WebGL URL: " + webGLUrl);
 
         // Déterminer l'URL racine
         if (webGLUrl.Contains($"{DOMAIN_URL}"))
@@ -54,9 +61,23 @@ public class UserSession : MonoBehaviour
                 //Debug.Log($"Réponse JSON reçue : {json}");
 
                 UserResponse response = JsonUtility.FromJson<UserResponse>(json);
+                
                 if (response != null && !string.IsNullOrEmpty(response.pseudo))
                 {
                     pseudoText = response.pseudo;
+                    
+                    Debug.Log("Pseudo : " + response.pseudo);
+                    Debug.Log("Email : " + response.email);
+                    Debug.Log("Trophée Grill : " + response.trophy_grill);
+                    Debug.Log("Trophée Spice : " + response.trophy_spice);
+                    Debug.Log("Trophée Herb : " + response.trophy_herb);
+                    
+                    
+                    TMP_pseudoText.text = response.pseudo;
+                    TMP_emailText.text = response.email;
+                    TMP_trophy_grillText.text = response.trophy_grill.ToString();
+                    TMP_trophy_spiceText.text = response.trophy_spice.ToString();
+                    TMP_trophy_herbText.text = response.trophy_herb.ToString();
                 }
                 else
                 {
@@ -73,4 +94,8 @@ public class UserResponse
 {
     public string pseudo;
     public string redirect;
+    public string email;
+    public int trophy_grill;
+    public int trophy_spice;
+    public int trophy_herb;
 }
