@@ -1,0 +1,598 @@
+fileFormatVersion: 2
+guid: 7696e493e97138641a53ef6bbd79b2a0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5723758674680189085
+    second: Spice_FactionIcon_White_0
+  - first:
+      213: -6940431929856294592
+    second: Spice_FactionIcon_White_1
+  - first:
+      213: -3433891400091037349
+    second: Spice_FactionIcon_White_2
+  - first:
+      213: -7002336720713336094
+    second: Spice_FactionIcon_White_3
+  - first:
+      213: 574040570484058885
+    second: Spice_FactionIcon_White_4
+  - first:
+      213: 4806789305267079055
+    second: Spice_FactionIcon_White_5
+  - first:
+      213: -7792627071239584749
+    second: Spice_FactionIcon_White_6
+  - first:
+      213: -4867690263577768229
+    second: Spice_FactionIcon_White_7
+  - first:
+      213: -2577952018224880943
+    second: Spice_FactionIcon_White_8
+  - first:
+      213: -267593340867002854
+    second: Spice_FactionIcon_White_9
+  - first:
+      213: -4597505799851786626
+    second: Spice_FactionIcon_White_10
+  - first:
+      213: -3688557319157162579
+    second: Spice_FactionIcon_White_11
+  - first:
+      213: 7175128923600022428
+    second: Spice_FactionIcon_White_12
+  - first:
+      213: -2869274180142456950
+    second: Spice_FactionIcon_White_13
+  - first:
+      213: 9008480012356676591
+    second: Spice_FactionIcon_White_14
+  - first:
+      213: -8690844486522424430
+    second: Spice_FactionIcon_White_15
+  - first:
+      213: 5767527032495930268
+    second: Spice_FactionIcon_White_16
+  - first:
+      213: 3936956067462511075
+    second: Spice_FactionIcon_White_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Spice_FactionIcon_White_0
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 446
+        width: 25
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36f60a7afcf1190b0800000000000000
+      internalID: -5723758674680189085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spice_FactionIcon_White_1
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 404
+        width: 98
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04103298ee1aeaf90800000000000000
+      internalID: -6940431929856294592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spice_FactionIcon_White_2
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 433
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b511e4417fd5850d0800000000000000
+      internalID: -3433891400091037349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spice_FactionIcon_White_3
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 409
+        width: 46
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ea353c3ad3b2de90800000000000000
+      internalID: -7002336720713336094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spice_FactionIcon_White_4
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 399
+        width: 89
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50b6d528bd667f700800000000000000
+      internalID: 574040570484058885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spice_FactionIcon_White_5
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 418
+        width: 61
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f87479ad76525b240800000000000000
+      internalID: 4806789305267079055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spice_FactionIcon_White_6
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 397
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3140caf37f60bd390800000000000000
+      internalID: -7792627071239584749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spice_FactionIcon_White_7
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 414
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdec1d2de7d727cb0800000000000000
+      internalID: -4867690263577768229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spice_FactionIcon_White_8
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 199
+        width: 238
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d264b94c46493cd0800000000000000
+      internalID: -2577952018224880943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spice_FactionIcon_White_9
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 32
+        width: 417
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1ebc553641594cf0800000000000000
+      internalID: -267593340867002854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spice_FactionIcon_White_10
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 314
+        width: 52
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7e390b65d06230c0800000000000000
+      internalID: -4597505799851786626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spice_FactionIcon_White_11
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 284
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dad58f939ac9fccc0800000000000000
+      internalID: -3688557319157162579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spice_FactionIcon_White_12
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 181
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9b6fc49dbd239360800000000000000
+      internalID: 7175128923600022428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spice_FactionIcon_White_13
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 167
+        width: 65
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8f9861d55a4e28d0800000000000000
+      internalID: -2869274180142456950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spice_FactionIcon_White_14
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 152
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: febe9be97dc840d70800000000000000
+      internalID: 9008480012356676591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spice_FactionIcon_White_15
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 108
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2933bae4cfae36780800000000000000
+      internalID: -8690844486522424430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spice_FactionIcon_White_16
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 94
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9bf164474f5a0050800000000000000
+      internalID: 5767527032495930268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spice_FactionIcon_White_17
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 53
+        width: 32
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e9fb693fa0e2a630800000000000000
+      internalID: 3936956067462511075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Spice_FactionIcon_White_0: -5723758674680189085
+      Spice_FactionIcon_White_1: -6940431929856294592
+      Spice_FactionIcon_White_10: -4597505799851786626
+      Spice_FactionIcon_White_11: -3688557319157162579
+      Spice_FactionIcon_White_12: 7175128923600022428
+      Spice_FactionIcon_White_13: -2869274180142456950
+      Spice_FactionIcon_White_14: 9008480012356676591
+      Spice_FactionIcon_White_15: -8690844486522424430
+      Spice_FactionIcon_White_16: 5767527032495930268
+      Spice_FactionIcon_White_17: 3936956067462511075
+      Spice_FactionIcon_White_2: -3433891400091037349
+      Spice_FactionIcon_White_3: -7002336720713336094
+      Spice_FactionIcon_White_4: 574040570484058885
+      Spice_FactionIcon_White_5: 4806789305267079055
+      Spice_FactionIcon_White_6: -7792627071239584749
+      Spice_FactionIcon_White_7: -4867690263577768229
+      Spice_FactionIcon_White_8: -2577952018224880943
+      Spice_FactionIcon_White_9: -267593340867002854
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
