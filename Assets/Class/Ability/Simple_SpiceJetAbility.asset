@@ -15,8 +15,8 @@ MonoBehaviour:
   abilityName: Spice Jet
   abilityDescription: Shoots a blend of spices in a straight line
   cooldown: 0.6
-  range: 3
-  damages: 15
+  range: 2
+  damages: 35
   chargeGain: 20
   isChargingCapacity: 0
   maxCharge: 0
