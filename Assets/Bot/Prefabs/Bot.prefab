@@ -473,8 +473,8 @@ GameObject:
   - component: {fileID: 4480953731293608860}
   - component: {fileID: 2635704912043597912}
   - component: {fileID: 7290472332350196055}
-  - component: {fileID: 1520367288275157413}
   - component: {fileID: 1225012815838334387}
+  - component: {fileID: 1520367288275157413}
   - component: {fileID: 8884244495803040380}
   - component: {fileID: -3188834838363682024}
   - component: {fileID: 7874661815437925974}
@@ -599,28 +599,10 @@ MonoBehaviour:
   cooldown: 0
   playerInfos: {fileID: 0}
   firstAbility: {fileID: 0}
+  _playerTarget: {fileID: 0}
   _spriteFront: {fileID: 0}
   _spriteSide: {fileID: 0}
   _spriteBack: {fileID: 0}
---- !u!114 &1520367288275157413
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6435510618477332949}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cd6c45c9279eac42bbcae1cbb6f339b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterClass: {fileID: 0}
-  _isBot: 1
-  _classes:
-  - {fileID: 11400000, guid: db995e482d45c4643bf39e4a1bf2be49, type: 2}
-  - {fileID: 11400000, guid: 51fe8e3b61fca2541bbaf0f575643c61, type: 2}
-  - {fileID: 11400000, guid: 3027b5649b4ed764b9cee890f969be65, type: 2}
-  score: 0
 --- !u!114 &1225012815838334387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -646,6 +628,29 @@ MonoBehaviour:
   AutoObjectParentSync: 1
   SyncOwnerTransformWhenParented: 1
   AllowOwnerToParent: 0
+--- !u!114 &1520367288275157413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6435510618477332949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cd6c45c9279eac42bbcae1cbb6f339b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
+  characterClass: {fileID: 0}
+  _isBot: 1
+  _classes:
+  - {fileID: 11400000, guid: db995e482d45c4643bf39e4a1bf2be49, type: 2}
+  - {fileID: 11400000, guid: 3027b5649b4ed764b9cee890f969be65, type: 2}
+  - {fileID: 11400000, guid: 51fe8e3b61fca2541bbaf0f575643c61, type: 2}
+  canvas: {fileID: 6814084496173743481}
+  score: 0
+  SelectedClass:
+    m_InternalValue: -1
 --- !u!114 &8884244495803040380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -699,6 +704,10 @@ MonoBehaviour:
   _shieldBar: {fileID: 6045212574441693401}
   _healthText: {fileID: 0}
   isBurning: 0
+  _currentHealth:
+    m_InternalValue: 0
+  _currentShield:
+    m_InternalValue: 0
 --- !u!50 &7874661815437925974
 Rigidbody2D:
   serializedVersion: 5

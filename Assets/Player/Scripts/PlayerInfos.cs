@@ -7,11 +7,16 @@ public class PlayerInfos : MonoBehaviour
     [SerializeField] private CharacterClass[] _classes;
     public GameObject canvas;
     public int score;
+
     private void Awake()
     {
         if (_isBot)
         {
             characterClass = _classes[Random.Range(0, _classes.Length)];
+        }
+        else
+        {
+            characterClass = _classes[PlayerPrefs.GetInt("SelectedClass")];
         }
     }
 }

@@ -8,6 +8,8 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private Transform _settingsWheel;
     
     [SerializeField] private float _settingsWheelSpeed;
+
+    [SerializeField] private CharacterClass _selectedCharacterClass;
     private void Start()
     {
         StartCoroutine(SettingsWheelRotation(_settingsWheelSpeed));
@@ -22,6 +24,7 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene(sceneToLoad);
     }
+
     private IEnumerator SettingsWheelRotation(float time)
     {
         while (true)
@@ -30,4 +33,15 @@ public class MainMenu : MonoBehaviour
             yield return new WaitForSeconds(time);
         }
     }
+
+    public void CloseMenu(GameObject panel)
+    {
+        panel.SetActive(false);
+    }
+
+    public void SelectClass(int classIndex)
+    {
+        PlayerPrefs.SetInt("SelectedClass", classIndex);
+    }
+
 }
