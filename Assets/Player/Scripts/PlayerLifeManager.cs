@@ -107,6 +107,16 @@ public class PlayerLifeManager : NetworkBehaviour
         }
     }
 
+    public void GainHealth(float amount)
+    {
+        _maxHealth += amount;
+        _healthBar.maxValue = _maxHealth;
+
+        _currentHealth.Value = _maxHealth;
+        UpdateHealthBarClientRpc(_currentHealth.Value);
+    }
+
+
     [ServerRpc]
     public void TakeDamageServerRpc(float damage, ulong targetClientId)
     {

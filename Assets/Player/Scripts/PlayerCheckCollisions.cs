@@ -3,13 +3,13 @@ using UnityEngine;
 public class PlayerCheckCollisions : MonoBehaviour
 {
     private PlayerInfos _playerInfos;
-    private LifeManager _lifeManager;
+    private PlayerLifeManager _lifeManager;
     private PlayerUseAbilities _playerUseAbilities;
 
     private void Start()
     {
         _playerInfos = GetComponent<PlayerInfos>();
-        _lifeManager = GetComponent<LifeManager>();
+        _lifeManager = GetComponent<PlayerLifeManager>();
         _playerUseAbilities = GetComponent<PlayerUseAbilities>();
     }
 
