@@ -17,14 +17,8 @@ public class GetAllPlayerInLobby : NetworkBehaviour
     public override void OnNetworkSpawn()
     {
         // S'exécute uniquement côté serveur
-
-
         if (IsServer)
         {
-            if (_networkManager.ConnectedClientsList.Count > 1)
-            {
-                _gameState.currentState = GameStateEnum.InGame;
-            }
             Debug.Log("Server");
             if (_networkManager != null)
             {
@@ -48,7 +42,7 @@ public class GetAllPlayerInLobby : NetworkBehaviour
         }
 
         UpdatePlayerInRoomClientRpc(_networkManager.ConnectedClientsList.Count, true);
-        SpawnBot();
+       // SpawnBot();
     }
 
     [ClientRpc]
