@@ -15,13 +15,6 @@ public class PlayerSpawn : NetworkBehaviour
             GetComponentInChildren<Camera>().tag = "MainCamera";
             playerName = FindFirstObjectByType<UserSession>().dataPlayer.pseudo;
             gameObject.name = playerName;
-            GetComponent<PlayerMovement>().canMove = true;
-            GetComponent<PlayerUseAbilities>().canAttack = true;
-            PlayerLifeManager plm = GetComponent<PlayerLifeManager>();
-            Vector3 spawnPos = plm.GetRandomSpawnPosition();
-            transform.position = spawnPos;
-            Debug.Log(spawnPos + " et " + transform.position);
-            SetPlayerPositionServerRpc(spawnPos, OwnerClientId);
         }
         else
         {
