@@ -34,8 +34,9 @@ public class PlayerUseAbilities : NetworkBehaviour
     private void CheckAttack(ref bool canAttack, float cooldown)
     {
         canAttack = _currentTime > cooldown;
+        GetComponentInChildren<DisplayCooldown>().UpdateBasicAttackCooldown(_currentTime);
     }
-    
+
     [ServerRpc(RequireOwnership = false)]
     public void SpawnProjectileServerRpc(string prefabName, Vector3 spawnPosition, Vector3 targetPosition, float projectileSpeed, ServerRpcParams rpcParams = default)
     {
@@ -48,38 +49,41 @@ public class PlayerUseAbilities : NetworkBehaviour
             switch (prefabName)
             {
                 case "SpicyBombProjectile":
+                {
+                    SpicyBombProjectile spicyProj = projectile.GetComponent<SpicyBombProjectile>();
+                    if (spicyProj != null)
                     {
-                        SpicyBombProjectile spicyProj = projectile.GetComponent<SpicyBombProjectile>();
-                        if (spicyProj != null)
-                        {
-                            spicyProj.Initialize(targetPosition, projectileSpeed);
-                            spicyProj.SetOwner(gameObject);
-                            return;
-                        }
-                        break;
+                        spicyProj.Initialize(targetPosition, projectileSpeed);
+                        spicyProj.SetOwner(gameObject);
+                        return;
                     }
+
+                    break;
+                }
                 case "PoopBombProjectile":
+                {
+                    PoopBombProjectile poopProj = projectile.GetComponent<PoopBombProjectile>();
+                    if (poopProj != null)
                     {
-                        PoopBombProjectile poopProj = projectile.GetComponent<PoopBombProjectile>();
-                        if (poopProj != null)
-                        {
-                            poopProj.Initialize(targetPosition, projectileSpeed);
-                            poopProj.SetOwner(gameObject);
-                            return;
-                        }
-                        break;
+                        poopProj.Initialize(targetPosition, projectileSpeed);
+                        poopProj.SetOwner(gameObject);
+                        return;
                     }
+
+                    break;
+                }
                 case "CorrosiveSauceProjectile":
+                {
+                    CorrosiveSauceProjectile corrosiveProj = projectile.GetComponent<CorrosiveSauceProjectile>();
+                    if (corrosiveProj != null)
                     {
-                        CorrosiveSauceProjectile corrosiveProj = projectile.GetComponent<CorrosiveSauceProjectile>();
-                        if (corrosiveProj != null)
-                        {
-                            corrosiveProj.Initialize(targetPosition, projectileSpeed);
-                            corrosiveProj.SetOwner(gameObject);
-                            return;
-                        }
-                        break;
+                        corrosiveProj.Initialize(targetPosition, projectileSpeed);
+                        corrosiveProj.SetOwner(gameObject);
+                        return;
                     }
+
+                    break;
+                }
                 default:
                     Debug.LogWarning("SpawnProjectileServerRpc: Unrecognized projectile prefab name: " + prefabName);
                     break;
@@ -115,7 +119,7 @@ public class PlayerUseAbilities : NetworkBehaviour
             }
         }
     }
-    
+
     public void OnPoopAttack(InputAction.CallbackContext ctx)
     {
         Debug.Log("OnPoopAttack called, phase: " + ctx.phase);
@@ -125,7 +129,7 @@ public class PlayerUseAbilities : NetworkBehaviour
             _playerInfos.characterClass.abilities[0].Activate(gameObject);
         }
     }
-    
+
     // --- VFX RPC METHODS ---
     [ServerRpc(RequireOwnership = false)]
     public void RequestSpawnVFXServerRpc(string effectPrefabName, Vector3 position, ulong ownerClientId, float duration, ServerRpcParams rpcParams = default)
