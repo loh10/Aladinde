@@ -1,33 +1,59 @@
-using System;
-using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using Unity.Netcode;
 
 public class MainMenu : MonoBehaviour
 {
-    [SerializeField] private Transform _settingsWheel;
+    public CharacterClass grillClass;
+    public CharacterClass spicesClass;
+    public CharacterClass herbsClass;
     
-    [SerializeField] private float _settingsWheelSpeed;
-    private void Start()
+    public void HideMenu()
     {
-        StartCoroutine(SettingsWheelRotation(_settingsWheelSpeed));
+        gameObject.SetActive(false);
+    }
+    
+    // Called by the button for the Grill faction.
+    public void SelectGrillFaction()
+    {
+        AssignFaction(grillClass);
+    }
+    
+    // Called by the button for the Épices faction.
+    public void SelectSpicesFaction()
+    {
+        AssignFaction(spicesClass);
+    }
+    
+    // Called by the button for the Herbes faction.
+    public void SelectHerbsFaction()
+    {
+        AssignFaction(herbsClass);
     }
 
-    public void OpenPanel(GameObject panel)
+    private void AssignFaction(CharacterClass selectedClass)
     {
-        panel.SetActive(true);
-    }
-
-    public void LoadSceneByName(string sceneToLoad)
-    {
-        SceneManager.LoadScene(sceneToLoad);
-    }
-    private IEnumerator SettingsWheelRotation(float time)
-    {
-        while (true)
+        // Get the local player's NetworkObject.
+        var localPlayerObject = NetworkManager.Singleton.LocalClient.PlayerObject;
+        if (localPlayerObject != null)
         {
-            _settingsWheel.rotation = Quaternion.Euler(0, 0, _settingsWheel.rotation.eulerAngles.z+0.1f);
-            yield return new WaitForSeconds(time);
+            // Get the PlayerInfos component.
+            PlayerInfos playerInfos = localPlayerObject.GetComponent<PlayerInfos>();
+            if (playerInfos != null)
+            {
+                playerInfos.characterClass = selectedClass;
+                Debug.Log("Faction selected: " + selectedClass.className);
+            }
+            else
+            {
+                Debug.LogWarning("PlayerInfos component not found on local player.");
+            }
         }
+        else
+        {
+            Debug.LogWarning("Local player object not found.");
+        }
+        
+        // Optionally hide the main menu once a selection is made.
+        gameObject.SetActive(false);
     }
 }
