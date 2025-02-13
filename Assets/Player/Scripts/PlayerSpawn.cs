@@ -4,8 +4,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerSpawn : NetworkBehaviour
 {
-    [HideInInspector]
-    public string playerName;
+    [HideInInspector] public string playerName;
 
     public override void OnNetworkSpawn()
     {
@@ -16,6 +15,13 @@ public class PlayerSpawn : NetworkBehaviour
             GetComponentInChildren<Camera>().tag = "MainCamera";
             playerName = FindFirstObjectByType<UserSession>().pseudoText;
             gameObject.name = playerName;
+            GetComponent<PlayerMovement>().canMove = true;
+            GetComponent<PlayerUseAbilities>().canAttack = true;
+            PlayerLifeManager plm = GetComponent<PlayerLifeManager>();
+            Vector3 spawnPos = plm.GetRandomSpawnPosition();
+            transform.position = spawnPos;
+            Debug.Log(spawnPos + " et " + transform.position);
+            SetPlayerPositionServerRpc(spawnPos, OwnerClientId);
         }
         else
         {
@@ -26,6 +32,19 @@ public class PlayerSpawn : NetworkBehaviour
             GetComponentInChildren<Camera>().enabled = false;
             GetComponentInChildren<AudioListener>().enabled = false;
             GetComponentInChildren<DisplayCooldown>().enabled = false;
+        }
+    }
+
+    [ServerRpc]
+    public void SetPlayerPositionServerRpc(Vector3 position,ulong targetClientId)
+    {
+        PlayerLifeManager[] players = FindObjectsOfType<PlayerLifeManager>(true);
+        foreach (var player in players)
+        {
+            if (player.OwnerClientId == targetClientId)
+            {
+                player.transform.position = position;
+            }
         }
     }
 }

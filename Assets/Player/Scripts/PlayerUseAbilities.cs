@@ -11,6 +11,7 @@ public class PlayerUseAbilities : NetworkBehaviour
     private float _currentTime;
     private bool _canSimpleAttack;
     public GameObject _attackToSpawn;
+    [HideInInspector]public bool canAttack = false;
 
     private void Start()
     {
@@ -97,7 +98,7 @@ public class PlayerUseAbilities : NetworkBehaviour
 
     public void OnSimpleAttack(InputAction.CallbackContext ctx)
     {
-        if (ctx.phase == InputActionPhase.Started && _canSimpleAttack)
+        if (ctx.phase == InputActionPhase.Started && _canSimpleAttack && canAttack)
         {
             Debug.Log("Simple Attack");
             _playerInfos.characterClass.abilities[1].Activate(gameObject);
@@ -107,7 +108,7 @@ public class PlayerUseAbilities : NetworkBehaviour
 
     public void OnSpecialAttack(InputAction.CallbackContext ctx)
     {
-        if (ctx.phase == InputActionPhase.Performed)
+        if (ctx.phase == InputActionPhase.Performed && canAttack)
         {
             if (_ultimate != null && _ultimate.CanUseUltimate())
             {
