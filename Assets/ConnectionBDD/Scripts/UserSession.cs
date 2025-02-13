@@ -1,29 +1,23 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Networking;
-using TMPro;
-using UnityEngine.Serialization;
 
 public class UserSession : MonoBehaviour
 {
-    public string pseudoText; // Assigne ce champ dans l'éditeur Unity
     private string _sessionUrl;
 
     private const string ROOT_URL = "/auth/session.php";
     private const string DOMAIN_URL = "aladinde.ddns.net";
     private const string LOCAL_URL = "192.168.1.251";
-    
-    
-    public TMP_Text TMP_pseudoText;
-    public TMP_Text TMP_emailText;
-    public TMP_Text TMP_trophy_grillText;
-    public TMP_Text TMP_trophy_spiceText;
-    public TMP_Text TMP_trophy_herbText;
+
+    [Header("Data")]
+    public UserResponse dataPlayer;
+
     
     void Start()
     {
         string webGLUrl = Application.absoluteURL; // URL PAGE 
-        Debug.Log("WebGL URL: " + webGLUrl);
+        //Debug.Log("WebGL URL: " + webGLUrl);
 
         // Déterminer l'URL racine
         if (webGLUrl.Contains($"{DOMAIN_URL}"))
@@ -37,7 +31,7 @@ public class UserSession : MonoBehaviour
         else
         {
             Debug.LogError("URL inconnue, session non définie.");
-            pseudoText = "Erreur : URL non reconnue";
+            dataPlayer.pseudo = "Erreur : URL non reconnue";
             return;
         }
 
@@ -53,7 +47,7 @@ public class UserSession : MonoBehaviour
             if (request.result == UnityWebRequest.Result.ConnectionError || request.result == UnityWebRequest.Result.ProtocolError)
             {
                 Debug.LogError("Erreur de connexion : " + request.error);
-                pseudoText = "Erreur de connexion";
+                dataPlayer.pseudo = "Erreur de connexion";
             }
             else
             {
@@ -64,20 +58,19 @@ public class UserSession : MonoBehaviour
                 
                 if (response != null && !string.IsNullOrEmpty(response.pseudo))
                 {
-                    pseudoText = response.pseudo;
-                    
                     Debug.Log("Pseudo : " + response.pseudo);
                     Debug.Log("Email : " + response.email);
                     Debug.Log("Trophée Grill : " + response.trophy_grill);
                     Debug.Log("Trophée Spice : " + response.trophy_spice);
                     Debug.Log("Trophée Herb : " + response.trophy_herb);
+                    Debug.Log("Index Hat : " + response.index_hat);
                     
-                    
-                    TMP_pseudoText.text = response.pseudo;
-                    TMP_emailText.text = response.email;
-                    TMP_trophy_grillText.text = response.trophy_grill.ToString();
-                    TMP_trophy_spiceText.text = response.trophy_spice.ToString();
-                    TMP_trophy_herbText.text = response.trophy_herb.ToString();
+                    dataPlayer.pseudo= response.pseudo;
+                    dataPlayer.email = response.email;
+                    dataPlayer.trophy_grill = response.trophy_grill;
+                    dataPlayer.trophy_spice = response.trophy_spice;
+                    dataPlayer.trophy_herb = response.trophy_herb;
+                    dataPlayer.index_hat = response.index_hat;
                 }
                 else
                 {
@@ -98,4 +91,5 @@ public class UserResponse
     public int trophy_grill;
     public int trophy_spice;
     public int trophy_herb;
+    public int index_hat;
 }
