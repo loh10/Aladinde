@@ -12,14 +12,36 @@ public class PoopBomb : Ability
         // Execute common ability logic (charge management, etc.)
         base.Activate(user);
 
-        // Calculate the explosion position from the client's mouse position.
+        bool isBot = !user.CompareTag("Player");
         Vector2 userPos = user.transform.position;
-        Vector2 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 direction = mouseWorldPos - userPos;
-        float travelDistance = Mathf.Min(direction.magnitude, maxRange);
-        Vector2 explosionPosition = userPos + direction.normalized * travelDistance;
+        Vector2 explosionPosition;
 
-        // Always call the ServerRPC branch (using the client's computed explosion position).
+        if (!isBot)
+        {
+            // Player: Calculate target position based on the mouse position
+            Vector2 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 direction = mouseWorldPos - userPos;
+            float travelDistance = Mathf.Min(direction.magnitude, maxRange);
+            explosionPosition = userPos + direction.normalized * travelDistance;
+        }
+        else
+        {
+            // Bot: Target the enemy assigned in the behavior tree
+            EnemyAI enemyAI = user.GetComponent<EnemyAI>();
+            if (enemyAI != null && enemyAI._playerTarget != null)
+            {
+                Vector2 targetDirection = enemyAI._playerTarget.transform.position - user.transform.position;
+                float travelDistance = Mathf.Min(targetDirection.magnitude, maxRange);
+                explosionPosition = userPos + targetDirection.normalized * travelDistance;
+            }
+            else
+            {
+                Debug.LogWarning("Bot has no target, ability canceled.");
+                return;
+            }
+        }
+
+        // Always call the ServerRPC branch (using the computed explosion position).
         string prefabName = abilityPrefab.name;
         user.GetComponent<PlayerUseAbilities>().SpawnProjectileServerRpc(prefabName, userPos, explosionPosition, projectileSpeed);
 

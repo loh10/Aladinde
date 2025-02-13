@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -13,9 +14,10 @@ public class EnemyAI : MonoBehaviour
     public float damage;
     public float cooldown;
 
+    public PlayerInfos playerInfos;
     public Ability firstAbility;
 
-    private GameObject _playerTarget;
+    public GameObject _playerTarget;
     private Vector3 _patrolCenter;
     private SpriteRenderer _spriteRenderer;
     private bool _isChasing = false;
@@ -32,6 +34,7 @@ public class EnemyAI : MonoBehaviour
         agent.updateRotation = false;
         agent.updateUpAxis = false;
 
+        playerInfos = GetComponent<PlayerInfos>();
         _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         GetAbilityValues();
 
@@ -40,10 +43,11 @@ public class EnemyAI : MonoBehaviour
 
     private void GetAbilityValues()
     {
-        firstAbility = GetComponentInChildren<PlayerInfos>().characterClass.abilities[1];
+        firstAbility = playerInfos.characterClass.abilities[1];
         cooldown = firstAbility.cooldown;
         closeRange = firstAbility.range;
         damage = firstAbility.damages;
+        agent.speed = playerInfos.characterClass.speed;
     }
 
     void Update()
@@ -59,34 +63,50 @@ public class EnemyAI : MonoBehaviour
     {
         while (true)
         {
-            FindClosestPlayer();
+            FindClosestTarget();
             yield return new WaitForSeconds(0.5f);
         }
     }
 
-    private void FindClosestPlayer()
+    private void FindClosestTarget()
     {
         GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-        float minDistance = Mathf.Infinity;
-        GameObject closestPlayer = null;
+        GameObject[] bots = GameObject.FindGameObjectsWithTag("Bot");
+
+        List<GameObject> targets = new List<GameObject>();
 
         foreach (GameObject p in players)
         {
-            float distance = Vector3.Distance(transform.position, p.transform.position);
+            if (p != gameObject)
+                targets.Add(p);
+        }
+        foreach (GameObject b in bots)
+        {
+            if (b != gameObject)
+                targets.Add(b);
+        }
+
+        float minDistance = Mathf.Infinity;
+        GameObject closestTarget = null;
+
+        foreach (GameObject t in targets)
+        {
+            float distance = Vector3.Distance(transform.position, t.transform.position);
             if (distance < minDistance)
             {
                 minDistance = distance;
-                closestPlayer = p;
+                closestTarget = t;
             }
         }
 
-        if (closestPlayer != _playerTarget)
+        if (closestTarget != _playerTarget)
         {
-            _playerTarget = closestPlayer;
+            _playerTarget = closestTarget;
             _isChasing = (_playerTarget != null);
             UpdateBehaviorTree();
         }
     }
+
 
     private void UpdateBehaviorTree()
     {

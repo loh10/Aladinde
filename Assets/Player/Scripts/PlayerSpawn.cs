@@ -25,7 +25,7 @@ public class PlayerSpawn : NetworkBehaviour
             GetComponent<PlayerInput>().enabled = false;
             GetComponentInChildren<Camera>().enabled = false;
             GetComponentInChildren<AudioListener>().enabled = false;
-            GetComponent<SpriteRenderer>().color = Color.red;
+            GetComponentInChildren<DisplayCooldown>().enabled = false;
         }
     }
 }
