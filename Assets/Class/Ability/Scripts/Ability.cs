@@ -47,6 +47,7 @@ public class Ability : ScriptableObject
         PlayerInfos playerInfos = user.GetComponent<PlayerInfos>();
         Ability ultimateAbility = playerInfos.characterClass.abilities[playerInfos.characterClass.abilities.Length - 1];
         ultimateAbility.IncreaseCharge(chargeGain);
+        Debug.Log("Ultimate charge: " + ultimateAbility.GetCurrentCharge());
         if (user.GetComponentInChildren<DisplayCooldown>() != null)
         {
             user.GetComponentInChildren<DisplayCooldown>().UpdateUltimateCooldown(ultimateAbility.GetCurrentCharge());

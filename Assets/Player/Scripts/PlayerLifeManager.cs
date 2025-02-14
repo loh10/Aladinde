@@ -7,6 +7,7 @@ using UnityEngine.UI;
 using Random = UnityEngine.Random;
 using TMPro;
 using Unity.Collections.LowLevel.Unsafe;
+using UnityEngine.Serialization;
 
 
 public class PlayerLifeManager : NetworkBehaviour
@@ -15,26 +16,26 @@ public class PlayerLifeManager : NetworkBehaviour
     [SerializeField] private Slider _shieldBar;
     [SerializeField] private TMP_Text _healthText;
 
-    private float _maxHealth;
+    public  float maxHealth;
     private float _maxShield;
     public bool isBurning = false;
 
-    private NetworkVariable<float> _currentHealth = new NetworkVariable<float>();
+    public NetworkVariable<float> currentHealth = new NetworkVariable<float>();
     private NetworkVariable<float> _currentShield = new NetworkVariable<float>();
     private Transform[] _spawnList;
 
     public override void OnNetworkSpawn()
     {
-        _maxHealth = GetComponent<PlayerInfos>().characterClass.maxHealth;
-        _healthBar.maxValue = _maxHealth;
-        _healthBar.value = _maxHealth;
+        maxHealth = GetComponent<PlayerInfos>().characterClass.maxHealth;
+        _healthBar.maxValue = maxHealth;
+        _healthBar.value = maxHealth;
         
         _maxShield = GetComponent<PlayerInfos>().characterClass.maxShield;
         _shieldBar.maxValue = _maxShield;
         _shieldBar.value = 0;
 
-        _currentHealth = new NetworkVariable<float>(_maxHealth);
-        Debug.Log(_currentHealth.Value + " On this target " + gameObject.name);
+        currentHealth = new NetworkVariable<float>(maxHealth);
+        Debug.Log(currentHealth.Value + " On this target " + gameObject.name);
         // Only the server should initialize the NetworkVariables.
         if (IsServer)
         {
@@ -43,9 +44,9 @@ public class PlayerLifeManager : NetworkBehaviour
             _spawnList = GameObject.Find("SpawnPlayer").GetComponentsInChildren<Transform>();
         }
         
-        _currentShield.Value = 0;
+        _currentShield = new NetworkVariable<float>(0);
 
-        _currentHealth.OnValueChanged += (oldValue, newValue) => {
+        currentHealth.OnValueChanged += (oldValue, newValue) => {
             UpdateHealthBarClientRpc(newValue);
         };
 
@@ -103,11 +104,11 @@ public class PlayerLifeManager : NetworkBehaviour
         // Then, apply any remaining damage to health.
         if (damage > 0)
         {
-            _currentHealth.Value -= damage;
-            UpdateHealthBarClientRpc(_currentHealth.Value);
+            currentHealth.Value -= damage;
+            UpdateHealthBarClientRpc(currentHealth.Value);
         }
         
-        if (_currentHealth.Value <= 0)
+        if (currentHealth.Value <= 0)
         {
             Debug.Log($"{gameObject.name} has died.");
             // (Insert any death/respawn logic here.)
@@ -132,11 +133,11 @@ public class PlayerLifeManager : NetworkBehaviour
 
                 if (damage > 0)
                 {
-                    player._currentHealth.Value -= damage;
-                    player.UpdateHealthBarClientRpc(player._currentHealth.Value);
+                    player.currentHealth.Value -= damage;
+                    player.UpdateHealthBarClientRpc(player.currentHealth.Value);
                 }
 
-                if (player._currentHealth.Value <= 0)
+                if (player.currentHealth.Value <= 0)
                 {
                     //TODO: Add respawn logic
                     player.ResetPlayerServer(player.OwnerClientId);            
@@ -204,7 +205,7 @@ public class PlayerLifeManager : NetworkBehaviour
         
         if (_healthText != null)
         {
-            _healthText.text = $"{newHealth:F0}/{_maxHealth:F0}";
+            _healthText.text = $"{newHealth:F0}/{maxHealth:F0}";
         }
     }
 
@@ -229,8 +230,8 @@ public class PlayerLifeManager : NetworkBehaviour
                 player.UpdatePositionClientRpc(spawnPos); // 3. Réplique la position à tous les clients
 
                 // 2. Reset health
-                player._currentHealth.Value = player._maxHealth;
-                player.UpdateHealthBarClientRpc(player._currentHealth.Value);
+                player.currentHealth.Value = player.maxHealth;
+                player.UpdateHealthBarClientRpc(player.currentHealth.Value);
 
                 // 3. Reset shield
                 player._currentShield.Value = 0;
@@ -243,7 +244,7 @@ public class PlayerLifeManager : NetworkBehaviour
                 // var abilities = player.GetComponent<PlayerAbilities>();
                 // if (abilities != null) abilities.ResetAllCooldowns();
 
-                Debug.Log($"[ResetPlayerServerRpc] Player {targetClientId} respawned at {spawnPos}. Health={player._currentHealth.Value} Shield={player._currentShield.Value}");
+                Debug.Log($"[ResetPlayerServerRpc] Player {targetClientId} respawned at {spawnPos}. Health={player.currentHealth.Value} Shield={player._currentShield.Value}");
             }
         }
     }

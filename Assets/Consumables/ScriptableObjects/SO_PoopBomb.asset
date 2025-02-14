@@ -15,8 +15,9 @@ MonoBehaviour:
   consumableName: 
   type: 4
   increaseHealth: 0
-  increaseUltimateCharge: 0
+  increaseAbilityCharge: 0
   increaseDamageBonus: 0
   increaseSpeed: 0
   slowDuration: 5
   slowPercentageValue: 0
+  prefab: {fileID: 7717569807027110694, guid: 0c1f8812417e8304eb934d71e9ba6086, type: 3}

@@ -1,5 +1,7 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.Tilemaps;
 
 public class Spawner : MonoBehaviour
@@ -7,7 +9,7 @@ public class Spawner : MonoBehaviour
     [Header("Paramètres de spawn")]
     [SerializeField] private Consumable[] _scriptableObjects;
 
-    [SerializeField] private int _spawnCount = 10;
+    [SerializeField] private int _spawnTimer = 10;
 
     [Header("Zone de spawn")]
     [SerializeField] private Vector2 _spawnAreaSize = new Vector2(15f, 15f);
@@ -20,26 +22,22 @@ public class Spawner : MonoBehaviour
 
     private void Start()
     {
-        SpawnObjects();
+        StartCoroutine(SpawnObjects());
     }
 
-    private void SpawnObjects()
+    IEnumerator SpawnObjects()
     {
-        for (int i = 0; i < _spawnCount; i++)
+        Vector2 spawnPosition;
+        bool foundValidPosition = TryGetValidSpawnPosition(out spawnPosition);
+
+        if (foundValidPosition)
         {
-            Vector2 spawnPosition;
-            bool foundValidPosition = TryGetValidSpawnPosition(out spawnPosition);
-            
-            if (!foundValidPosition)
-            {
-                Debug.LogWarning("Impossible de trouver une position valide après plusieurs tentatives.");
-                continue;
-            }
-            
             Consumable randomData = _scriptableObjects[Random.Range(0, _scriptableObjects.Length)];
 
             Instantiate(randomData.prefab, spawnPosition, Quaternion.identity);
         }
+        yield return new WaitForSeconds(_spawnTimer);
+        StartCoroutine(SpawnObjects());
     }
 
     private bool TryGetValidSpawnPosition(out Vector2 validPosition)

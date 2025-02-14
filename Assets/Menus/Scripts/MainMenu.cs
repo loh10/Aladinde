@@ -57,6 +57,7 @@ public class MainMenu : MonoBehaviour
         var localPlayerObject = NetworkManager.Singleton.LocalClient.PlayerObject;
         if (localPlayerObject != null)
         {
+
             // Get a valid spawn position using your existing logic.
             PlayerLifeManager lifeManager = localPlayerObject.GetComponent<PlayerLifeManager>();
             if (lifeManager != null)

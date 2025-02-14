@@ -1,3 +1,4 @@
+using Unity.Netcode;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "NewConsumable", menuName = "Scriptable Objects/Consumable")]
@@ -13,13 +14,13 @@ public class Consumable : ScriptableObject
     public float slowPercentageValue;
     public GameObject prefab;
 
-    public void ApplyEffect(PlayerInfos player, LifeManager lifeManager)
+    public void ApplyEffect(PlayerInfos player, PlayerLifeManager lifeManager)
     {
         switch (type)
         {
             case ConsumableType.HealAndIncreaseHP:
                 lifeManager.maxHealth += increaseHealth;
-                lifeManager.currentHealth = lifeManager.maxHealth;
+                lifeManager.currentHealth = new NetworkVariable<float>(lifeManager.maxHealth);
                 break;
             case ConsumableType.IncreaseUltimateCharge:
                 player.characterClass.abilities[2].IncreaseCharge(increaseAbilityCharge);

@@ -61,7 +61,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &3928903491480468070
 MonoBehaviour:
@@ -576,6 +576,7 @@ GameObject:
   - component: {fileID: 4703063581220134226}
   - component: {fileID: -2844766134637473849}
   - component: {fileID: -8862334153203131113}
+  - component: {fileID: -1709899049252991290}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -659,6 +660,10 @@ MonoBehaviour:
   _classes: []
   canvas: {fileID: 176439972957124604}
   score: 0
+  name: 
+  grillTrophy: 0
+  spicesTrophy: 0
+  herbsTrophy: 0
 --- !u!114 &1926682325211748933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -928,7 +933,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
-  playerName: 
 --- !u!114 &-8862334153203131113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -939,6 +943,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b92a18d82bf0bf4c97149aa14f4ec5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-1709899049252991290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3852679987547625373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c825ec2b934bbc41bb1b41c6b1d0359, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &5580128733161288501
@@ -1263,13 +1279,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2634619282966136154}
     m_Modifications:
+    - target: {fileID: 4181997302122695765, guid: a217049df32e9304db0b2881c9712a57, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4258706466934656065, guid: a217049df32e9304db0b2881c9712a57, type: 3}
+      propertyPath: m_FillAmount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4258706466934656065, guid: a217049df32e9304db0b2881c9712a57, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4258706466934656065, guid: a217049df32e9304db0b2881c9712a57, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5161217054468378466, guid: a217049df32e9304db0b2881c9712a57, type: 3}
       propertyPath: m_Name
       value: PlayerHud
-      objectReference: {fileID: 0}
-    - target: {fileID: 7187379982230045420, guid: a217049df32e9304db0b2881c9712a57, type: 3}
-      propertyPath: m_Name
-      value: UltimateAttackCooldown
       objectReference: {fileID: 0}
     - target: {fileID: 7676744207160784007, guid: a217049df32e9304db0b2881c9712a57, type: 3}
       propertyPath: m_Pivot.x
@@ -1349,14 +1377,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7676744207160784007, guid: a217049df32e9304db0b2881c9712a57, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8755941059060912008, guid: a217049df32e9304db0b2881c9712a57, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8836881846649157626, guid: a217049df32e9304db0b2881c9712a57, type: 3}
-      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

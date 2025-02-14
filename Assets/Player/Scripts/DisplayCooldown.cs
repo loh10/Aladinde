@@ -4,24 +4,25 @@ using UnityEngine.UI;
 
 public class DisplayCooldown : MonoBehaviour
 {
-    public Slider basicAttackSlider;
-    public Slider ultimateSlider;
+    public Image basicAttackSlider;
+    public Image ultimateSlider;
     private PlayerInfos _playerInfos;
 
     private void Start()
     {
         _playerInfos = GetComponentInParent<PlayerInfos>();
-        basicAttackSlider.maxValue = _playerInfos.characterClass.abilities[1].cooldown;
-        ultimateSlider.maxValue = _playerInfos.characterClass.abilities[2].maxCharge;
+        basicAttackSlider.fillAmount = _playerInfos.characterClass.abilities[1].cooldown;
+        ultimateSlider.fillAmount = _playerInfos.characterClass.abilities[2].maxCharge;
     }
 
     public void UpdateBasicAttackCooldown(float currentTime)
     {
-        basicAttackSlider.value = currentTime ;
+        basicAttackSlider.fillAmount = currentTime ;
     }
 
     public void UpdateUltimateCooldown(float currentCharge)
     {
-        ultimateSlider.value = currentCharge;
+        ultimateSlider.fillAmount = currentCharge / _playerInfos.characterClass.abilities[2].maxCharge;
+
     }
 }

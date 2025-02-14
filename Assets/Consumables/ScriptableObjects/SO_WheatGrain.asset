@@ -15,8 +15,9 @@ MonoBehaviour:
   consumableName: Wheat Grain
   type: 3
   increaseHealth: 0
-  increaseUltimateCharge: 0
+  increaseAbilityCharge: 0
   increaseDamageBonus: 0
   increaseSpeed: 1
   slowDuration: 0
   slowPercentageValue: 0
+  prefab: {fileID: 677497889538908625, guid: 2251e28aa69629243a376cb9774fb185, type: 3}

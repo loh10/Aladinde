@@ -15,8 +15,9 @@ MonoBehaviour:
   consumableName: Worm
   type: 0
   increaseHealth: 10
-  increaseUltimateCharge: 0
+  increaseAbilityCharge: 0
   increaseDamageBonus: 0
   increaseSpeed: 0
   slowDuration: 0
   slowPercentageValue: 0
+  prefab: {fileID: 677497889538908625, guid: 0950ea155dd8ef44188ed0f7b2b2823b, type: 3}

@@ -15,8 +15,9 @@ MonoBehaviour:
   consumableName: Soy
   type: 2
   increaseHealth: 0
-  increaseUltimateCharge: 0
+  increaseAbilityCharge: 0
   increaseDamageBonus: 2
   increaseSpeed: 0
   slowDuration: 0
   slowPercentageValue: 0
+  prefab: {fileID: 677497889538908625, guid: b7819c5891254754a9f3f86ee00b6b0d, type: 3}
