@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityName: Poop Bomb
   abilityDescription: Throw a poop bomb that slows down the enemies it hits
-  cooldown: 0
+  cooldown: 3
   range: 0
   damages: 0
   chargeGain: 0
