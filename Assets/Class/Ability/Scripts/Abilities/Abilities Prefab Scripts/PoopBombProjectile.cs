@@ -59,9 +59,9 @@ public class PoopBombProjectile : NetworkBehaviour
         }
     }
     
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.gameObject == owner) return;
+        if (other.gameObject == owner) return;
         if (!exploded && NetworkManager.Singleton.IsServer)
             Explode();
     }
